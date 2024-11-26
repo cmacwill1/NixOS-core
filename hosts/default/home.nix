@@ -33,6 +33,23 @@
   # release notes.
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
+  #Styling
+  stylix.targets.waybar.enable = false;
+  stylix.targets.rofi.enable = false;
+  stylix.targets.hyprland.enable = false;
+  gtk = {
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+    gtk3.extraConfig = {
+      gtk-applications-prefer-dark-theme = 1;
+    };
+    gtk4.extraConfig = {
+      gtk-applications-prefer-dark-theme = 1;
+    };
+  };
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
