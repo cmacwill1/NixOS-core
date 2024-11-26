@@ -5,7 +5,11 @@ with lib;
     enable = true;
     xwayland.enable = true;
     systemd.enable = true;
-    settings = {         
+    settings = { 
+          exec-once = [
+            "waybar"
+          ];
+          layerrule = "blur,waybar";        
           general = {
             gaps_in = 5;
             gaps_out = 5;
