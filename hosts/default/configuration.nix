@@ -20,7 +20,7 @@
   #Scheming!
   stylix = {
     enable = true;
-    base16Scheme = ../../theming/base16/gruvbox-dark-medium.yaml;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/brewer.yaml";
     image = ../../theming/wallpapers/ghibli-background-1.jpg;
   };
 

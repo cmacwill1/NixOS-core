@@ -11,7 +11,9 @@
     ../../modules/homeManagerModules/kitty.nix
     ../../modules/homeManagerModules/waybar.nix
     ../../modules/homeManagerModules/rofi.nix
-  ];
+    ../../modules/homeManagerModules/config-emoji.nix
+    ../../modules/homeManagerModules/config-long.nix 
+ ];
 
   programs.git = {
     enable = true;
