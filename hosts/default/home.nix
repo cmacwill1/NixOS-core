@@ -9,6 +9,7 @@
   imports = [
     ../../modules/homeManagerModules/hyprland.nix
     ../../modules/homeManagerModules/kitty.nix
+    ../../modules/homeManagerModules/waybar.nix
   ];
 
   programs.git = {
