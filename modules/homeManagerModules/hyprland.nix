@@ -9,7 +9,10 @@ with lib;
           exec-once = [
             "waybar"
           ];
-          layerrule = "blur,waybar";        
+          layerrule = [
+            "blur, waybar"
+            "blur, rofi"
+          ];       
           general = {
             gaps_in = 5;
             gaps_out = 5;
@@ -53,6 +56,7 @@ with lib;
               "borderangle, 1, 8, default"
               "fade, 1, 2, default"
               "workspaces, 1, 3, default"
+              "layers, 1, 5, myBezier, slide bottom"
             ];
           };
           dwindle = {

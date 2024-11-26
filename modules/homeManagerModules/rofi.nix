@@ -6,15 +6,13 @@
       enable = true;
       package = pkgs.rofi-wayland;
       extraConfig = {
-        modi = "drun,filebrowser,run";
+        modi = "drun";
         show-icons = true;
         icon-theme = "Papirus";
         location = 0;
         font = "JetBrainsMono Nerd Font Mono 12";
         drun-display-format = "{icon} {name}";
         display-drun = " Apps";
-        display-run = " Run";
-        display-filebrowser = " File";
       };
       theme =
         let
@@ -22,7 +20,7 @@
         in
         {
           "*" = {
-            bg = mkLiteral "#${config.lib.stylix.colors.base00}";
+            bg = mkLiteral "#${config.lib.stylix.colors.base00}99";
             bg-alt = mkLiteral "#${config.lib.stylix.colors.base09}";
             foreground = mkLiteral "#${config.lib.stylix.colors.base01}";
             selected = mkLiteral "#${config.lib.stylix.colors.base08}";
@@ -33,14 +31,14 @@
             urgent = mkLiteral "#${config.lib.stylix.colors.base0E}";
           };
           "window" = {
-            width = mkLiteral "50%";
+            width = mkLiteral "30%";
             transparency = "real";
             orientation = mkLiteral "vertical";
             cursor = mkLiteral "default";
             spacing = mkLiteral "0px";
             border = mkLiteral "2px";
             border-color = "@border-color";
-            border-radius = mkLiteral "20px";
+            border-radius = mkLiteral "10px";
             background-color = mkLiteral "@bg";
           };
           "mainbox" = {
@@ -55,7 +53,7 @@
           };
           "inputbar" = {
             enabled = true;
-            padding = mkLiteral "10px 10px 200px 10px";
+            padding = mkLiteral "10px 10px 100px 10px";
             margin = mkLiteral "10px";
             background-color = mkLiteral "transparent";
             border-radius = "25px";
@@ -65,18 +63,18 @@
               "dummy"
               "mode-switcher"
             ];
-            # background-image = mkLiteral ''url("~/Pictures/Wallpapers/beautifulmountainscape.jpg", width)'';
+            background-image = mkLiteral ''url("${config.stylix.image}", width)'';
           };
           "entry" = {
             enabled = true;
             expand = false;
-            width = mkLiteral "20%";
+            width = mkLiteral "15%";
             padding = mkLiteral "10px";
             border-radius = mkLiteral "12px";
             background-color = mkLiteral "@selected";
             text-color = mkLiteral "@text-selected";
             cursor = mkLiteral "text";
-            placeholder = "🖥️ Search ";
+            placeholder = " Search ";
             placeholder-color = mkLiteral "inherit";
           };
           "listbox" = {
@@ -98,7 +96,7 @@
             scrollbar = false;
             layout = mkLiteral "vertical";
             reverse = false;
-            fixed-height = false;
+            fixed-height = true;
             fixed-columns = true;
             spacing = mkLiteral "10px";
             background-color = mkLiteral "transparent";
