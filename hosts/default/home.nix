@@ -10,6 +10,7 @@
     ../../modules/homeManagerModules/hyprland.nix
     ../../modules/homeManagerModules/kitty.nix
     ../../modules/homeManagerModules/waybar.nix
+    ../../modules/homeManagerModules/rofi.nix
   ];
 
   programs.git = {
