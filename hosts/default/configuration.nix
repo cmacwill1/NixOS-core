@@ -21,7 +21,7 @@
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/solarflare.yaml";
-    image = ../../theming/wallpapers/ghibli-background-1.jpg;
+    image = ../../wallpapers/ghibli-background-1.jpg;
   };
 
   networking.hostName = "nixos"; # Define your hostname.
