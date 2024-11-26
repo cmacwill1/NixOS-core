@@ -20,7 +20,6 @@
   #Scheming!
   stylix = {
     enable = true;
-    autoEnable = true;
     base16Scheme = ../../theming/base16/gruvbox-dark-medium.yaml;
     image = ../../theming/wallpapers/ghibli-background-1.jpg;
   };
