@@ -65,7 +65,7 @@
               "dummy"
               "mode-switcher"
             ];
-            background-image = mkLiteral ''url("~/Pictures/Wallpapers/beautifulmountainscape.jpg", width)'';
+            # background-image = mkLiteral ''url("~/Pictures/Wallpapers/beautifulmountainscape.jpg", width)'';
           };
           "entry" = {
             enabled = true;
@@ -91,7 +91,7 @@
           };
           "listview" = {
             enabled = true;
-            columns = 2;
+            columns = 1;
             lines = 6;
             cycle = true;
             dynamic = true;
