@@ -75,6 +75,7 @@ with lib;
             "$mainMod, right, movefocus, r"
             "$mainMod, up, movefocus, u"
             "$mainMod, down, movefocus, d"
+            "$mainMod, SPACE, exec, rofi -show drun"
             "$mainMod, 1, workspace, 1"
             "$mainMod, 2, workspace, 2"
             "$mainMod, 3, workspace, 3"
