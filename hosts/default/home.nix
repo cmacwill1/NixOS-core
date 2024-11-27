@@ -13,7 +13,13 @@
     ../../modules/homeManagerModules/rofi.nix
     ../../modules/homeManagerModules/config-emoji.nix
     ../../modules/homeManagerModules/config-long.nix 
- ];
+  ];
+
+  #Scripts
+  home.packages = [
+    (import ../../scripts/current-generation.nix {inherit pkgs; })
+  ];
+
 
   programs.git = {
     enable = true;

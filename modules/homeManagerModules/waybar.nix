@@ -32,7 +32,7 @@ with lib;
         "custom/logo" = {
 	  font-family = "JetBrainsMono Nerd Font";          
           format = "󱄅";
-          tooltip = false;
+          tooltip-format = "current-generation";
         };
 
         "disk" = {
