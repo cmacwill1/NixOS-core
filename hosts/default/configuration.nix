@@ -17,12 +17,6 @@
 
   programs.hyprland.enable = true;
 
-  #Scheming!
-  stylix = {
-    enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
-    image = ../../wallpapers/ghibli-background-1.jpg;
-  };
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -81,6 +75,11 @@
     packages = with pkgs; [];
   };
 
+  stylix = {
+    enable = true;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+    image = ../../wallpapers/ghibli-background-1.jpg;
+  };
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
@@ -88,6 +87,9 @@
       "cmacwill" = import ./home.nix;
     };
   };
+
+
+
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

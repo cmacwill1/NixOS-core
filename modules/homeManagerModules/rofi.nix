@@ -56,7 +56,7 @@
             padding = mkLiteral "10px 10px 100px 10px";
             margin = mkLiteral "10px";
             background-color = mkLiteral "transparent";
-            border-radius = "25px";
+            border-radius = "10px";
             orientation = mkLiteral "horizontal";
             children = map mkLiteral [
               "entry"
@@ -70,7 +70,7 @@
             expand = false;
             width = mkLiteral "15%";
             padding = mkLiteral "10px";
-            border-radius = mkLiteral "12px";
+            border-radius = mkLiteral "10px";
             background-color = mkLiteral "@selected";
             text-color = mkLiteral "@text-selected";
             cursor = mkLiteral "text";
@@ -134,7 +134,7 @@
             enabled = true;
             spacing = mkLiteral "10px";
             padding = mkLiteral "10px";
-            border-radius = mkLiteral "12px";
+            border-radius = mkLiteral "10px";
             background-color = mkLiteral "transparent";
             cursor = mkLiteral "pointer";
           };
@@ -202,7 +202,7 @@
           };
           "error-message" = {
             padding = mkLiteral "12px";
-            border-radius = mkLiteral "20px";
+            border-radius = mkLiteral "10px";
             background-color = mkLiteral "@bg-alt";
             text-color = mkLiteral "@bg";
           };
