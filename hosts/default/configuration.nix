@@ -104,6 +104,7 @@
     greetd.tuigreet
     neofetch
     freecad-wayland
+    bambu-studio
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
