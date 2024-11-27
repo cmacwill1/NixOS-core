@@ -103,6 +103,8 @@
     tree
     greetd.tuigreet
     neofetch
+    htop
+    btop
     freecad-wayland
     bambu-studio
   ];
