@@ -20,7 +20,7 @@
   #Scheming!
   stylix = {
     enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/solarflare.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
     image = ../../wallpapers/ghibli-background-1.jpg;
   };
 
@@ -103,7 +103,7 @@
     tree
     greetd.tuigreet
     neofetch
-    thunar
+    freecad-wayland
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
