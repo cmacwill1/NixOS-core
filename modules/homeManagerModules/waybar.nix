@@ -30,30 +30,33 @@ with lib;
         ];
 
         "custom/logo" = {
-          format = "";
-          icon-size = 40;
+	  font-family = "JetBrainsMono Nerd Font";          
+          format = "󱄅";
           tooltip = false;
         };
 
         "disk" = {
           intervel = 30;
+	  font-family = "JetBrainsMono Nerd Font";          
           format = "󰋊 {percentage_used}%";
           tooltip-format = "{used} used out of {total} on \"{path}\" ({percentage_used}%)";
         };
         "memory" = {
           interval = 10;
+	  font-family = "JetBrainsMono Nerd Font";          
           format = " {used}";
           tooltip-format = "{used}GiB used of {total}GiB ({percentage}%)";
         };
         "cpu" = {
           interval = 10;
-          format = " {usage}%";
+	  font-family = "JetBrainsMono Nerd Font";          
+          format = "  {usage}%";
         };
         "temperature" = {
           interval = 10;
         };
         "clock" = {
-	        timezone = "America/Indiana/Indianapolis";
+	  timezone = "America/Indiana/Indianapolis";
           interval = 1;
           format = ''{:%H:%M:%S}'';
         };
@@ -75,7 +78,6 @@ with lib;
       ''
         window#waybar {
           all: unset;
-          font-family: "JetBrains Mono";
           background-color: rgba(0,0,0,0.01);
           font-size: 1rem;
           border-radius: 10px;
@@ -98,6 +100,20 @@ with lib;
           border-radius: 0.5rem;
           padding: 2px 2px 2px 10px;
         }
+        #custom-logo {
+          font-size: 24px;
+	  color: #${config.lib.stylix.colors.base07};
+          border-radius: 0.5rem;
+          padding-left: 12px;
+	  padding-right: 12px;
+	  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        #custom-logo:hover {
+          background-color: #${config.lib.stylix.colors.base07};
+	  color: #${config.lib.stylix.colors.base00};
+        }
+
+
         #workspaces { 
           border-radius: 0.5rem;
           padding: 2px 2px;
@@ -121,6 +137,7 @@ with lib;
           color: #${config.lib.stylix.colors.base0F};
         }
         #memory {
+          font-family: "JetBrainsMono Nerd Font";
           color: #${config.lib.stylix.colors.base0C};
           padding: 0 0.6rem 0 0;
         } 

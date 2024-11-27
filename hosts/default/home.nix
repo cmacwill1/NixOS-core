@@ -36,6 +36,7 @@
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
   #Styling
+  stylix.targets.waybar.enable = false;
   stylix.targets.rofi.enable = false;
   gtk = {
     iconTheme = {
