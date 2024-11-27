@@ -73,11 +73,11 @@ with lib;
         window#waybar > box {
           border-style: solid;
           border-width: 2px;
-          border-color: #F7C01A;
+          border-color: #${config.lib.stylix.colors.base0A};
           border-radius: 10px;
           margin: 4px;
           background-color: rgba(32, 32, 32, 0.5);
-          box-shadow: 0 0 2px 2px rgba(16,16,16,0.8);
+          box-shadow: 0 0 2px 2px #${config.lib.stylix.colors.base00};
         }
         .modules-left, .modules-center {
           opacity: 1;
@@ -108,22 +108,23 @@ with lib;
           font-weight: bolder;
           border-radius: 0.5rem;
           padding: 0 3px 0 0;
+          color: #${config.lib.stylix.colors.base0F};
         }
         #memory {
-          color: lightpink;
+          color: #${config.lib.stylix.colors.base0C};
           padding: 0 0.6rem 0 0;
         } 
         #disk {
-          color: lightskyblue;    
+          color: #${config.lib.stylix.colors.base0B};    
           padding: 0 0.6rem 0 0;
         } 
         #cpu {
-          color: lightgoldenrodyellow;
+          color: #${config.lib.stylix.colors.base0D};
           padding: 0 0.6rem 0 0;
         }
         #temperature {
           padding: 0 0.6rem 0 0;
-          color: lightslategray;
+          color: #${config.lib.stylix.colors.base0E};
         }
       ''
     ];
