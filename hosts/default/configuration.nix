@@ -77,8 +77,8 @@
 
   stylix = {
     enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/twilight.yaml";
-    image = ../../wallpapers/ghibli-background-1.jpg;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+    image = ../../wallpapers/ghibli-background-2.jpg;
   };
 
   home-manager = {
