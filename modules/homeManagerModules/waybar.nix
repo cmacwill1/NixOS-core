@@ -16,7 +16,10 @@ with lib;
         margin = "1";
         spacing = 10;
         mode = "top";
-        modules-left = [ "hyprland/workspaces" ];
+        modules-left = [ 
+          "custom/logo"
+          "hyprland/workspaces" 
+        ];
         modules-center = [ "hyprland/window" ];
         modules-right = [
           "disk"
@@ -25,6 +28,13 @@ with lib;
           "temperature"
           "clock"
         ];
+
+        "custom/logo" = {
+          format = "";
+          icon-size = 40;
+          tooltip = false;
+        };
+
         "disk" = {
           intervel = 30;
           format = "󰋊 {percentage_used}%";
