@@ -101,6 +101,7 @@
     tree
     greetd.tuigreet
     neofetch
+    thunar
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
