@@ -20,14 +20,14 @@
         in
         {
           "*" = {
-            bg = mkLiteral "#${config.lib.stylix.colors.base00}99";
+            bg = mkLiteral "#${config.lib.stylix.colors.base00}CC";
             bg-alt = mkLiteral "#${config.lib.stylix.colors.base09}";
             foreground = mkLiteral "#${config.lib.stylix.colors.base01}";
-            selected = mkLiteral "#${config.lib.stylix.colors.base08}";
-            active = mkLiteral "#${config.lib.stylix.colors.base0B}";
+            selected = mkLiteral "#${config.lib.stylix.colors.base0A}";
+            active = mkLiteral "#${config.lib.stylix.colors.base0A}";
             text-selected = mkLiteral "#${config.lib.stylix.colors.base00}";
             text-color = mkLiteral "#${config.lib.stylix.colors.base05}";
-            border-color = mkLiteral "#${config.lib.stylix.colors.base0F}";
+            border-color = mkLiteral "#${config.lib.stylix.colors.base0A}";
             urgent = mkLiteral "#${config.lib.stylix.colors.base0E}";
           };
           "window" = {

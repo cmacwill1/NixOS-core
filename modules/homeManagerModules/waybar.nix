@@ -55,11 +55,16 @@ with lib;
         "temperature" = {
           interval = 10;
         };
+
         "clock" = {
-	  timezone = "America/Indiana/Indianapolis";
+          timezone = "America/Indiana/Indianapolis";
           interval = 1;
-          format = ''{:%H:%M:%S}'';
+          format = "  {:%I:%M:%S %p   %m/%d} ";
+          tooltip-format = ''
+            <big>{:%Y %B}</big>
+            <tt><small>{calendar}</small></tt>'';
         };
+
         
         "hyprland/workspaces" = {
           persistent-workspaces = {
@@ -102,10 +107,10 @@ with lib;
         }
         #custom-logo {
 	  color: #${config.lib.stylix.colors.base07};
-          border-radius: 10px;
+          border-radius: 6px;
           font-size: 24px;
 	  padding: 0 20px 0 12px;
-          transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+          transition: ${betterTransition};
         }
         #custom-logo:hover {
           background-color: #${config.lib.stylix.colors.base07};
@@ -130,6 +135,7 @@ with lib;
           font-family: "JetBrainMono Nerd Font";
           color: #${config.lib.stylix.colors.base07};
           padding: 2px 5px;
+          transition: ${betterTransition};
         }
         #clock {
           font-weight: bolder;
