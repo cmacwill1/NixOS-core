@@ -101,12 +101,11 @@ with lib;
           padding: 2px 2px 2px 10px;
         }
         #custom-logo {
-          font-size: 24px;
 	  color: #${config.lib.stylix.colors.base07};
-          border-radius: 0.5rem;
-          padding-left: 12px;
-	  padding-right: 12px;
-	  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+          border-radius: 10px;
+          font-size: 24px;
+	  padding: 0 20px 0 12px;
+          transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
         #custom-logo:hover {
           background-color: #${config.lib.stylix.colors.base07};
@@ -116,18 +115,20 @@ with lib;
 
         #workspaces { 
           border-radius: 0.5rem;
-          padding: 2px 2px;
+          margin: 0 2px 0 2px;
         }
         #workspaces button {
-          color: #FFFFFF;
+          color: #${config.lib.stylix.colors.base07};
     	    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
           font-size: 1rem;
-          padding: 0 0 0 0;
+          padding: 3px 6px 3px 6px;
         }      
         #workspaces button.active {
-	        color: #F7C01A;
+	        color: #${config.lib.stylix.colors.base0A};
         }
         #window {
+          font-family: "JetBrainMono Nerd Font";
+          color: #${config.lib.stylix.colors.base07};
           padding: 2px 5px;
         }
         #clock {
