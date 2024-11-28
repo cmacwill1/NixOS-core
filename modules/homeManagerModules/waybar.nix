@@ -20,6 +20,7 @@ with lib;
           "custom/logo"
           "network"
           "pulseaudio"
+          "bluetooth"
           "hyprland/window" 
         ];
         modules-center = [ "hyprland/workspaces" ];
@@ -78,6 +79,21 @@ with lib;
           };
           on-click = "sleep 0.1 && pavucontrol";
         };
+
+        "bluetooth" = {
+          controller = "controller1";
+          format = "󰂯 {status}";
+          format-on = "󰂯";
+          format-off = "󰂲";
+          format-disabled = "";
+          format-connected = "󰂱 {num_connections}";
+          tooltip-format = "{controller_alias}\t{controller_address}";
+          tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{device_enumerate}";
+          tooltip-format-connected = "{device_enumerate}";
+          tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
+          on-click = "sleep 0.1 && overskride";
+        };
+
         "disk" = {
           intervel = 30;
           format = "󰋊  {percentage_used}%";
@@ -158,13 +174,41 @@ with lib;
           border-radius: 6px;
           font-size: 30px;
           margin: 2px;
-          padding: 0px 15px 0px 5px;
+          padding: 0px 18px 0px 5px;
           transition: ${betterTransition};
         }
         #custom-logo:hover {
           background-color: #${config.lib.stylix.colors.base06};
 	  color: #${config.lib.stylix.colors.base00};
         }
+
+        #network {
+          color: #${config.lib.stylix.colors.base06};
+          border-radius: 6px;
+          margin: 2px;
+          padding: 0px 3px 0px 3px;
+          transition: ${betterTransition};
+        }
+        #network:hover {
+          background-color: #${config.lib.stylix.colors.base06};
+	  color: #${config.lib.stylix.colors.base00};
+        }
+
+        #pulseaudio {
+          color: #${config.lib.stylix.colors.base06};
+          border-radius: 6px;
+          margin: 2px;
+          padding: 0px 3px 0px 3px;
+          transition: ${betterTransition};
+        }
+        #pulseaudio:hover {
+          background-color: #${config.lib.stylix.colors.base06};
+	  color: #${config.lib.stylix.colors.base00};
+        }
+
+
+
+
 
         #workspaces {
           padding: 8px 8px;
