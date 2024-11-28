@@ -30,11 +30,12 @@ with lib;
         ];
 
         "custom/logo" = {
-	  font-family = "JetBrainsMono Nerd Font";          
-          format = "󱄅{}";
-          tooltip-format = "{}";
+	  font-family = "JetBrainsMono Nerd Font";
+          return-type = "json";          
+          format = "{}";
           exec = "current-generation";
           interval = 60;
+          tooltip = "true";
         };
 
         "disk" = {
