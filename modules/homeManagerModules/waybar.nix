@@ -212,7 +212,7 @@ with lib;
           color: #${config.lib.stylix.colors.base06};
           border-radius: 6px;
           margin: 2px;
-          padding: 0px 3px 0px 3px;
+          padding: 0px 10px 0px 10px;
           transition: ${betterTransition};
         }
         #bluetooth:hover {
