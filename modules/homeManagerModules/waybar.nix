@@ -88,8 +88,10 @@ with lib;
           format-disabled = "";
           format-connected = "󰂱 {num_connections}";
           tooltip-format = "{controller_alias}\t{controller_address}";
-          tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{device_enumerate}";
-          tooltip-format-connected = "{device_enumerate}";
+          tooltip-format-connected = [
+            "{controller_alias}\t{controller_address}\n\n{device_enumerate}"
+            "{device_enumerate}"
+          ];
           tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
           on-click = "sleep 0.1 && overskride";
         };
