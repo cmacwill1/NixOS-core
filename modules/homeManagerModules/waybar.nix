@@ -14,12 +14,13 @@ with lib;
         position = "top";
         height = 50;
         margin = "1";
+        spacing = 10;
         mode = "top";
         modules-left = [ 
           "custom/logo"
-          "hyprland/workspaces" 
+          "hyprland/window" 
         ];
-        modules-center = [ "hyprland/window" ];
+        modules-center = [ "hyprland/workspaces" ];
         modules-right = [
           "disk"
           "memory"
@@ -29,7 +30,6 @@ with lib;
         ];
 
         "custom/logo" = {
-	  font-family = "JetBrainsMono Nerd Font";
           return-type = "json";          
           format = "{}";
           exec = "current-generation";
@@ -39,19 +39,16 @@ with lib;
 
         "disk" = {
           intervel = 30;
-	  font-family = "JetBrainsMono Nerd Font";          
           format = "󰋊 {percentage_used}%";
           tooltip-format = "{used} used out of {total} on \"{path}\" ({percentage_used}%)";
         };
         "memory" = {
-          interval = 10;
-	  font-family = "JetBrainsMono Nerd Font";          
+          interval = 5;
           format = " {used}";
           tooltip-format = "{used}GiB used of {total}GiB ({percentage}%)";
         };
         "cpu" = {
           interval = 10;
-	  font-family = "JetBrainsMono Nerd Font";          
           format = "  {usage}%";
         };
         "temperature" = {
@@ -67,17 +64,19 @@ with lib;
             <tt><small>{calendar}</small></tt>'';
         };
 
-        
-        "hyprland/workspaces" = {
-          persistent-workspaces = {
-            "*" = [1 2 3 4 5 6 7 8 9 10];
+       "hyprland/workspaces" = {
+          format = "{name}";
+          format-icons = {
+            default = " ";
+            active = " ";
+            urgent = " ";
+       
           };
-	        icon-size = 32;
-          spacing = 16;
+ 
         };
         "hyprland/window" = {
           icon = true;
-          icon-size = 22;
+          icon-size = 24;
         };
       }
     ];
@@ -94,50 +93,84 @@ with lib;
           border-width: 2px;
           border-color: #${config.lib.stylix.colors.base0A};
           border-radius: 10px;
+          margin: 4px;
           background-color: rgba(32, 32, 32, 0.5);
           box-shadow: 0 0 2px 2px #${config.lib.stylix.colors.base00};
         }
-        .modules-left, .modules-center {
-          opacity: 1;
-        }
+
+
         .modules-right {
           opacity: 1;
           border-radius: 0.5rem;
           padding: 2px 2px 2px 10px;
         }
         #custom-logo {
-	  color: #${config.lib.stylix.colors.base07};
+          font-family: "JetBrainsMono Nerd Font";
+	  color: #${config.lib.stylix.colors.base06};
           border-radius: 6px;
           font-size: 30px;
-          margin: 0px;
-          padding: 0px 15px 0px 3px;
+          margin: 2px;
+          padding: 0px 15px 0px 5px;
           transition: ${betterTransition};
         }
         #custom-logo:hover {
-          background-color: #${config.lib.stylix.colors.base07};
+          background-color: #${config.lib.stylix.colors.base06};
 	  color: #${config.lib.stylix.colors.base00};
         }
 
-
-        #workspaces { 
-          margin: 0px;
-          padding: 0px;
+        #workspaces {
+          color: #${config.lib.stylix.colors.base00};
+          background: #${config.lib.stylix.colors.base01};
+          margin: 4px 4px;
+          padding: 5px 5px;
+          border-radius: 16px;
         }
         #workspaces button {
-          color: #${config.lib.stylix.colors.base07};
-    	    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-          font-size: 1rem;
-        }      
-        #workspaces button.active {
-	        color: #${config.lib.stylix.colors.base0A};
+          font-weight: bold;
+          padding: 0px 5px;
+          margin: 0px 3px;
+          border-radius: 16px;
+          color: #${config.lib.stylix.colors.base00};
+          background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0D});
+          opacity: 0.5;
+          transition: ${betterTransition};
         }
+        #workspaces button.active {
+          font-weight: bold;
+          padding: 0px 5px;
+          margin: 0px 3px;
+          border-radius: 16px;
+          color: #${config.lib.stylix.colors.base00};
+          background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0D});
+          transition: ${betterTransition};
+          opacity: 1.0;
+          min-width: 40px;
+        }
+        #workspaces button:hover {
+          font-weight: bold;
+          border-radius: 16px;
+          color: #${config.lib.stylix.colors.base00};
+          background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0D});
+          opacity: 0.8;
+          transition: ${betterTransition};
+        }
+        tooltip {
+          background: #${config.lib.stylix.colors.base00};
+          border: 1px solid #${config.lib.stylix.colors.base08};
+          border-radius: 12px;
+        }
+        tooltip label {
+          color: #${config.lib.stylix.colors.base08};
+        } 
+
         #window {
           font-family: "JetBrainMono Nerd Font";
-          color: #${config.lib.stylix.colors.base07};
+          color: #${config.lib.stylix.colors.base06};
           padding: 2px 5px;
           transition: ${betterTransition};
         }
         #clock {
+          font-family: "JetBrainsMono Nerd Font";
           font-weight: bolder;
           border-radius: 0.5rem;
           padding: 0 3px 0 0;
@@ -149,14 +182,17 @@ with lib;
           padding: 0 0.6rem 0 0;
         } 
         #disk {
+          font-family: "JetBrainsMono Nerd Font";
           color: #${config.lib.stylix.colors.base0B};    
           padding: 0 0.6rem 0 0;
         } 
         #cpu {
+          font-family: "JetBrainsMono Nerd Font";
           color: #${config.lib.stylix.colors.base0D};
           padding: 0 0.6rem 0 0;
         }
         #temperature {
+          font-family: "JetBrainsMono Nerd Font";
           padding: 0 0.6rem 0 0;
           color: #${config.lib.stylix.colors.base0E};
         }
