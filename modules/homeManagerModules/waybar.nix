@@ -12,9 +12,8 @@ with lib;
       {
         layer = "top";
         position = "top";
-        height = 10;
+        height = 50;
         margin = "1";
-        spacing = 10;
         mode = "top";
         modules-left = [ 
           "custom/logo"
@@ -95,13 +94,11 @@ with lib;
           border-width: 2px;
           border-color: #${config.lib.stylix.colors.base0A};
           border-radius: 10px;
-          margin: 4px;
           background-color: rgba(32, 32, 32, 0.5);
           box-shadow: 0 0 2px 2px #${config.lib.stylix.colors.base00};
         }
         .modules-left, .modules-center {
           opacity: 1;
-          padding: 2px;
         }
         .modules-right {
           opacity: 1;
@@ -111,8 +108,9 @@ with lib;
         #custom-logo {
 	  color: #${config.lib.stylix.colors.base07};
           border-radius: 6px;
-          font-size: 24px;
-	  padding: 0 20px 0 12px;
+          font-size: 30px;
+          margin: 0px;
+          padding: 0px 15px 0px 3px;
           transition: ${betterTransition};
         }
         #custom-logo:hover {
@@ -122,14 +120,13 @@ with lib;
 
 
         #workspaces { 
-          border-radius: 0.5rem;
-          margin: 0 2px 0 2px;
+          margin: 0px;
+          padding: 0px;
         }
         #workspaces button {
           color: #${config.lib.stylix.colors.base07};
     	    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
           font-size: 1rem;
-          padding: 3px 6px 3px 6px;
         }      
         #workspaces button.active {
 	        color: #${config.lib.stylix.colors.base0A};
