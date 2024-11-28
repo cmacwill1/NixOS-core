@@ -31,8 +31,10 @@ with lib;
 
         "custom/logo" = {
 	  font-family = "JetBrainsMono Nerd Font";          
-          format = "󱄅";
-          tooltip-format = "current-generation";
+          format = "󱄅{}";
+          tooltip-format = "{}";
+          exec = "current-generation";
+          interval = 60;
         };
 
         "disk" = {
