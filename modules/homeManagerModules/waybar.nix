@@ -208,7 +208,17 @@ with lib;
 	  color: #${config.lib.stylix.colors.base00};
         }
 
-
+        #bluetooth {
+          color: #${config.lib.stylix.colors.base06};
+          border-radius: 6px;
+          margin: 2px;
+          padding: 0px 3px 0px 3px;
+          transition: ${betterTransition};
+        }
+        #bluetooth:hover {
+          background-color: #${config.lib.stylix.colors.base06};
+	  color: #${config.lib.stylix.colors.base00};
+        }
 
 
 
