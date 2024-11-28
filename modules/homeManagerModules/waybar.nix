@@ -12,7 +12,7 @@ with lib;
       {
         layer = "top";
         position = "top";
-        height = 50;
+        height = 54;
         margin = "1";
         spacing = 10;
         mode = "top";
@@ -66,6 +66,7 @@ with lib;
 
        "hyprland/workspaces" = {
           format = "{name}";
+          on-click = "active";
           format-icons = {
             default = " ";
             active = " ";
@@ -82,6 +83,12 @@ with lib;
     ];
     style = concatStrings [
       ''
+        * {
+          border: none;
+          font-weight: bolder;
+        }
+
+
         window#waybar {
           all: unset;
           background-color: rgba(0,0,0,0.01);
@@ -105,7 +112,6 @@ with lib;
           padding: 2px 2px 2px 10px;
         }
         #custom-logo {
-          font-family: "JetBrainsMono Nerd Font";
 	  color: #${config.lib.stylix.colors.base06};
           border-radius: 6px;
           font-size: 30px;
@@ -119,12 +125,9 @@ with lib;
         }
 
         #workspaces {
-          color: #${config.lib.stylix.colors.base00};
-          background: #${config.lib.stylix.colors.base01};
-          margin: 4px 4px;
-          padding: 5px 5px;
-          border-radius: 16px;
+          padding: 8px 8px;
         }
+
         #workspaces button {
           font-weight: bold;
           padding: 0px 5px;
@@ -164,35 +167,28 @@ with lib;
         } 
 
         #window {
-          font-family: "JetBrainMono Nerd Font";
           color: #${config.lib.stylix.colors.base06};
           padding: 2px 5px;
           transition: ${betterTransition};
         }
         #clock {
-          font-family: "JetBrainsMono Nerd Font";
-          font-weight: bolder;
           border-radius: 0.5rem;
           padding: 0 3px 0 0;
           color: #${config.lib.stylix.colors.base0F};
         }
         #memory {
-          font-family: "JetBrainsMono Nerd Font";
           color: #${config.lib.stylix.colors.base0C};
           padding: 0 0.6rem 0 0;
         } 
         #disk {
-          font-family: "JetBrainsMono Nerd Font";
           color: #${config.lib.stylix.colors.base0B};    
           padding: 0 0.6rem 0 0;
         } 
         #cpu {
-          font-family: "JetBrainsMono Nerd Font";
           color: #${config.lib.stylix.colors.base0D};
           padding: 0 0.6rem 0 0;
         }
         #temperature {
-          font-family: "JetBrainsMono Nerd Font";
           padding: 0 0.6rem 0 0;
           color: #${config.lib.stylix.colors.base0E};
         }
