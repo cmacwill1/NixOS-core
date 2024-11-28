@@ -108,7 +108,6 @@
     enable = true;
     powerOnBoot = true;
   };
-  services.blueman.enable = true;
 
 
   # Allow unfree packages
@@ -130,6 +129,8 @@
     freecad-wayland
     bambu-studio
     nerdfix
+    pavucontrol
+    overskride
   ];
 
   fonts.packages = with pkgs; [

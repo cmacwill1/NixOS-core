@@ -6,14 +6,17 @@
       enable = true;
       package = pkgs.rofi-wayland;
       extraConfig = {
-        modi = "drun";
+        modi = "drun,filebrowser,run";
         show-icons = true;
         icon-theme = "Papirus";
         location = 0;
         font = "JetBrainsMono Nerd Font Mono 12";
         drun-display-format = "{icon} {name}";
         display-drun = " Apps";
+        display-run = " Run";
+        display-filebrowser = " File";
       };
+
       theme =
         let
           inherit (config.lib.formats.rasi) mkLiteral;
@@ -31,7 +34,7 @@
             urgent = mkLiteral "#${config.lib.stylix.colors.base0E}";
           };
           "window" = {
-            width = mkLiteral "30%";
+            width = mkLiteral "50%";
             transparency = "real";
             orientation = mkLiteral "vertical";
             cursor = mkLiteral "default";
@@ -53,7 +56,7 @@
           };
           "inputbar" = {
             enabled = true;
-            padding = mkLiteral "10px 10px 100px 10px";
+            padding = mkLiteral "10px 10px 200px 10px";
             margin = mkLiteral "10px";
             background-color = mkLiteral "transparent";
             border-radius = "10px";
@@ -68,7 +71,7 @@
           "entry" = {
             enabled = true;
             expand = false;
-            width = mkLiteral "15%";
+            width = mkLiteral "20%";
             padding = mkLiteral "10px";
             border-radius = mkLiteral "10px";
             background-color = mkLiteral "@selected";
@@ -87,9 +90,9 @@
               "listview"
             ];
           };
-          "listview" = {
+         "listview" = {
             enabled = true;
-            columns = 1;
+            columns = 2;
             lines = 6;
             cycle = true;
             dynamic = true;

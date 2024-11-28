@@ -12,6 +12,13 @@ with lib;
           layerrule = [
             "blur, waybar"
             "blur, rofi"
+          ];
+
+          windowrule = [
+            "float, io.github.kaii_lb.Overskride"
+            "center, io.github.kaii_lb.Overskride"
+            "size 200 500, io.github.kaii_lb.Overskride"
+            "float, pavucontrol"
           ];       
           general = {
             gaps_in = 5;

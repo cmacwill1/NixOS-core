@@ -18,6 +18,8 @@ with lib;
         mode = "top";
         modules-left = [ 
           "custom/logo"
+          "network"
+          "pulseaudio"
           "hyprland/window" 
         ];
         modules-center = [ "hyprland/workspaces" ];
@@ -35,8 +37,47 @@ with lib;
           exec = "current-generation";
           interval = 60;
           tooltip = "true";
+
+        };
+        
+        "network" = {
+          format-icons = [
+            "󰤯"
+            "󰤟"
+            "󰤢"
+            "󰤥"
+            "󰤨"
+          ];
+          format-ethernet = " {bandwidthDownOctets}";
+          format-wifi = "{icon} {signalStrength}%";
+          format-disconnected = "󰤮";
+          tooltip = false;
+          on-click = "sleep 0.1 && networkmanagerapplet";
         };
 
+
+        "pulseaudio" = {
+          format = "{icon} {volume}% {format_source}";
+          format-bluetooth = "{volume}% {icon} {format_source}";
+          format-bluetooth-muted = " {icon} {format_source}";
+          format-muted = " {format_source}";
+          format-source = " {volume}%";
+          format-source-muted = "";
+          format-icons = {
+            headphone = "";
+            hands-free = "";
+            headset = "";
+            phone = "";
+            portable = "";
+            car = "";
+            default = [
+              ""
+              ""
+              ""
+            ];
+          };
+          on-click = "sleep 0.1 && pavucontrol";
+        };
         "disk" = {
           intervel = 30;
           format = "󰋊  {percentage_used}%";
