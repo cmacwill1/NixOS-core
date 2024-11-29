@@ -13,6 +13,7 @@
     ../../modules/homeManagerModules/rofi.nix
     ../../modules/homeManagerModules/config-emoji.nix
     ../../modules/homeManagerModules/config-long.nix 
+    ../../modules/homeManagerModules/wlogout/wlogout.nix
   ];
 
   #Scripts

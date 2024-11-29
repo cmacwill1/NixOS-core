@@ -38,6 +38,7 @@ with lib;
           exec = "current-generation";
           interval = 60;
           tooltip = "true";
+          on-click = "sleep 0.1 && wlogout";
 
         };
         

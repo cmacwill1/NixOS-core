@@ -87,6 +87,7 @@ with lib;
             "$mainMod, up, movefocus, u"
             "$mainMod, down, movefocus, d"
             "$mainMod, SPACE, exec, rofi -show drun"
+            "$mianMod, ESC, exec, wlogout"
             "$mainMod, 1, workspace, 1"
             "$mainMod, 2, workspace, 2"
             "$mainMod, 3, workspace, 3"
