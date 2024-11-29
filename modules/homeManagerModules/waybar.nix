@@ -53,7 +53,6 @@ with lib;
           format-wifi = "{icon} {signalStrength}%";
           format-disconnected = "󰤮";
           tooltip = false;
-          on-click = "sleep 0.1 && networkmanagerapplet";
         };
 
 
@@ -172,7 +171,7 @@ with lib;
           padding: 2px 2px 2px 10px;
         }
         #custom-logo {
-	  color: #${config.lib.stylix.colors.base06};
+	  color: #${config.lib.stylix.colors.base0D};
           border-radius: 6px;
           font-size: 30px;
           margin: 2px;
@@ -185,7 +184,7 @@ with lib;
         }
 
         #network {
-          color: #${config.lib.stylix.colors.base06};
+          color: #${config.lib.stylix.colors.base0D};
           border-radius: 6px;
           margin: 2px;
           padding: 0px 3px 0px 3px;
@@ -197,7 +196,7 @@ with lib;
         }
 
         #pulseaudio {
-          color: #${config.lib.stylix.colors.base06};
+          color: #${config.lib.stylix.colors.base0C};
           border-radius: 6px;
           margin: 2px;
           padding: 0px 3px 0px 3px;
@@ -209,7 +208,8 @@ with lib;
         }
 
         #bluetooth {
-          color: #${config.lib.stylix.colors.base06};
+          font-size: 22px;
+          color: #${config.lib.stylix.colors.base0C};
           border-radius: 6px;
           margin: 2px;
           padding: 0px 10px 0px 10px;
@@ -232,7 +232,7 @@ with lib;
           margin: 0px 3px;
           border-radius: 16px;
           color: #${config.lib.stylix.colors.base00};
-          background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0D});
+          background: linear-gradient(45deg, #${config.lib.stylix.colors.base09}, #${config.lib.stylix.colors.base0A});
           opacity: 0.5;
           transition: ${betterTransition};
         }
@@ -242,7 +242,7 @@ with lib;
           margin: 0px 3px;
           border-radius: 16px;
           color: #${config.lib.stylix.colors.base00};
-          background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0D});
+          background: linear-gradient(45deg, #${config.lib.stylix.colors.base09}, #${config.lib.stylix.colors.base0A});
           transition: ${betterTransition};
           opacity: 1.0;
           min-width: 40px;
@@ -251,21 +251,22 @@ with lib;
           font-weight: bold;
           border-radius: 16px;
           color: #${config.lib.stylix.colors.base00};
-          background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0D});
+          background: linear-gradient(45deg, #${config.lib.stylix.colors.base09}, #${config.lib.stylix.colors.base0A});
           opacity: 0.8;
           transition: ${betterTransition};
         }
         tooltip {
-          background: #${config.lib.stylix.colors.base00};
-          border: 1px solid #${config.lib.stylix.colors.base08};
+          background: #${config.lib.stylix.colors.base01};
+          opacity: 0.9;
+          border: 2px solid #${config.lib.stylix.colors.base0A};
           border-radius: 12px;
         }
         tooltip label {
-          color: #${config.lib.stylix.colors.base08};
+          color: #${config.lib.stylix.colors.base05};
         } 
 
         #window {
-          color: #${config.lib.stylix.colors.base06};
+          color: #${config.lib.stylix.colors.base05};
           padding: 2px 5px;
           transition: ${betterTransition};
         }
