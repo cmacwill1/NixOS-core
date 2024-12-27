@@ -29,6 +29,7 @@ with lib;
           "memory"
           "cpu"
           "temperature"
+          "battery"
           "clock"
         ];
 
@@ -55,7 +56,30 @@ with lib;
           format-disconnected = "󰤮";
           tooltip = false;
         };
-
+        
+        "battery" = {
+          states = {
+            warning = 30;
+            critical = 15;
+          };
+          format = "{icon} {capacity}%";
+          format-charging = "󰂄 {capacity}%";
+          format-plugged = "󱘖 {capacity}%";
+          format-icons = [
+            "󰁺"
+            "󰁻"
+            "󰁼"
+            "󰁽"
+            "󰁾"
+            "󰁿"
+            "󰂀"
+            "󰂁"
+            "󰂂"
+            "󰁹"
+          ];
+          on-click = "";
+          tooltip = true;
+        };
 
         "pulseaudio" = {
           format = "{icon} {volume}% {format_source}";
@@ -258,7 +282,7 @@ with lib;
         }
         tooltip {
           background: #${config.lib.stylix.colors.base01};
-          opacity: 0.9;
+          opacity: 1;
           border: 2px solid #${config.lib.stylix.colors.base0A};
           border-radius: 12px;
         }
@@ -277,20 +301,26 @@ with lib;
           color: #${config.lib.stylix.colors.base0F};
         }
         #memory {
-          color: #${config.lib.stylix.colors.base0C};
+          color: #${config.lib.stylix.colors.base0B};
           padding: 0 0.6rem 0 0;
         } 
+
+        #battery {
+          color: #${config.lib.stylix.colors.base0E};
+          padding: 0 0.6rem 0 0;
+        }
+
         #disk {
-          color: #${config.lib.stylix.colors.base0B};    
+          color: #${config.lib.stylix.colors.base0A};    
           padding: 0 0.6rem 0 0;
         } 
         #cpu {
-          color: #${config.lib.stylix.colors.base0D};
+          color: #${config.lib.stylix.colors.base0C};
           padding: 0 0.6rem 0 0;
         }
         #temperature {
           padding: 0 0.6rem 0 0;
-          color: #${config.lib.stylix.colors.base0E};
+          color: #${config.lib.stylix.colors.base0D};
         }
       ''
     ];
