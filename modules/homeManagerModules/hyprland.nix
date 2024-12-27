@@ -50,7 +50,7 @@ with lib;
             blur = {
               enabled = true;
               size = 8;
-              passes = 1;
+              passes = 2;
               vibrancy = 0.2;
             };
           };
@@ -65,7 +65,7 @@ with lib;
               "borderangle, 1, 8, default"
               "fade, 1, 5, default"
               "workspaces, 1, 5, default"
-              "layers, 1, 5, myBezier, slide bottom"
+              "layers, 1, 5, myBezier, fade"
             ];
           };
           dwindle = {
