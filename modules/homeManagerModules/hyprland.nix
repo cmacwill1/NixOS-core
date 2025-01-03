@@ -112,6 +112,7 @@ with lib;
             "$mainMod SHIFT, 0, movetoworkspace, 10"
             "$mainMod, mouse_down, workspace, e+1"
             "$mainMod, mouse_up, workspace, e-1"
+            "$mainMod SHIFT, S, exec, hyprshot -m region"
             ",XF86MonBrightnessDown,exec,brightnessctl set 5%-"
             ",XF86MonBrightnessUp,exec,brightnessctl set +5%"
           ];

@@ -19,6 +19,7 @@
   #Scripts
   home.packages = [
     (import ../../scripts/current-generation.nix {inherit pkgs; })
+    (import ../../scripts/purdue-vpn.nix {inherit pkgs; })
   ];
 
 
@@ -26,6 +27,7 @@
     enable = true;
     userName = "cmacwill1";
     userEmail = "charles.macwilliams@gmail.com";
+    extraConfig.credential.helper = "store";
   };
 
   programs = {

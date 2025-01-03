@@ -1,22 +1,26 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.default
-    ];
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.default
+  ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   programs.hyprland.enable = true;
-
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -65,8 +69,8 @@
       vt = 3;
       settings = {
         default_session = {
-         user = "cmacwill";
-         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+          user = "cmacwill";
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
         };
       };
     };
@@ -76,8 +80,11 @@
   users.users.cmacwill = {
     isNormalUser = true;
     description = "cmacwill";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    packages = with pkgs; [ ];
   };
 
   stylix = {
@@ -87,7 +94,9 @@
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {
+      inherit inputs;
+    };
     users = {
       "cmacwill" = import ./home.nix;
     };
@@ -118,16 +127,15 @@
     enable32Bit = true;
   };
 
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  
+
   programs.thunar.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim 
+    vim
     wget
     git
     tree
@@ -142,6 +150,17 @@
     brightnessctl
     zotero
     obsidian
+    openconnect
+    x2goclient
+    blender
+    kicad
+    steam
+    qmk
+    nixd
+    vscode
+    nixfmt-rfc-style
+    hyprshot
+    discordo
   ];
 
   fonts.packages = with pkgs; [
