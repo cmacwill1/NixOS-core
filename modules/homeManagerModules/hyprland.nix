@@ -21,7 +21,10 @@ with lib;
             "center, io.github.kaii_lb.Overskride"
             "size 200 500, io.github.kaii_lb.Overskride"
             "float, pavucontrol"
-          ];       
+          ];      
+          env = [
+            "HYPRSHOT_DIR, ~/Screenshots:$PATH"
+          ]; 
           general = {
             gaps_in = 5;
             gaps_out = 5;
