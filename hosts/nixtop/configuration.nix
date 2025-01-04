@@ -160,6 +160,7 @@
     vscode
     nixfmt-rfc-style
     hyprshot
+    discord
   ];
 
   fonts.packages = with pkgs; [
