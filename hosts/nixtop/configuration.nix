@@ -155,9 +155,6 @@
     kicad
     steam
     qmk
-    nixd
-    nixfmt-rfc-style
-    alejandra
     hyprshot
     discord
   ];

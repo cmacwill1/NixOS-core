@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -14,6 +14,7 @@
     ../../modules/homeManagerModules/config-emoji.nix
     ../../modules/homeManagerModules/config-long.nix 
     ../../modules/homeManagerModules/wlogout/wlogout.nix
+    ../../modules/homeManagerModules/nvim/nvim.nix
   ];
 
   #Scripts
@@ -22,6 +23,25 @@
     (import ../../scripts/purdue-vpn.nix {inherit pkgs; })
   ];
 
+  programs.neovim = {
+    enable = true;
+    
+    viAlias = true;
+    vimAlias = true;
+
+    plugins = with pkgs.vimPlugins; [
+      bufferline-nvim
+      lualine-nvim
+      nvim-lspconfig
+      nvim-web-devicons
+      nvim-cmp
+    ];
+    extraPackages = with pkgs; [
+      wl-clipboard
+      nixd
+      alejandra
+    ];
+  };
 
   programs.git = {
     enable = true;
@@ -30,33 +50,6 @@
     extraConfig.credential.helper = "store";
   };
 
-  programs.nixvim = {
-    enable = true;
-    plugins = {
-
-      lsp = {
-        enable = true;
-	servers = {
-	  nixd.enable = true;
-	};
-      };
-
-      cmp = {
-        enable = true;
-	autoEnableSources = true;
-        settings.sources = [
-          { name = "nvim_lsp"; }
-          { name = "path"; }
-          { name = "buffer"; }
-        ];
-      };
-
-      lualine.enable = true;
-      bufferline.enable = true;
-      web-devicons.enable = true;
-    };
-  };
-  
   
   programs = {
     firefox = {
