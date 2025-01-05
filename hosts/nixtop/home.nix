@@ -33,8 +33,27 @@
   programs.nixvim = {
     enable = true;
     plugins = {
+
+      lsp = {
+        enable = true;
+	servers = {
+	  nixd.enable = true;
+	};
+      };
+
+      cmp = {
+        enable = true;
+	autoEnableSources = true;
+        settings.sources = [
+          { name = "nvim_lsp"; }
+          { name = "path"; }
+          { name = "buffer"; }
+        ];
+      };
+
       lualine.enable = true;
       bufferline.enable = true;
+      web-devicons.enable = true;
     };
   };
   

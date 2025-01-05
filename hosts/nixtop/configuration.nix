@@ -114,7 +114,6 @@
     # Uncomment the following line if you want to use JACK applications
     # jack.enable = true;
   };
-
   #
   # Bluetooth
   #
@@ -157,8 +156,8 @@
     steam
     qmk
     nixd
-    vscode
     nixfmt-rfc-style
+    alejandra
     hyprshot
     discord
   ];
