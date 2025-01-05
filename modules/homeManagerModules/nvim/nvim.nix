@@ -19,5 +19,12 @@
       nixd
       alejandra
     ];
+    extraLuaConfig = ''
+      require("bufferline").setup{}
+      require("lualine").setup({
+        icons_enabled = true,
+      })
+
+    '';
   };
 }
