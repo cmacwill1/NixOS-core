@@ -10,9 +10,11 @@
     plugins = with pkgs.vimPlugins; [
       bufferline-nvim
       lualine-nvim
-      nvim-lspconfig
       nvim-web-devicons
+      nvim-lspconfig
       nvim-cmp
+      lspkind-nvim
+      cmp-nvim-lsp
     ];
     extraPackages = with pkgs; [
       wl-clipboard
@@ -20,11 +22,12 @@
       alejandra
     ];
     extraLuaConfig = ''
-      ${builtins.readFile ./plugins/test.lua}
+      ${builtins.readFile ./plugins/lsp.lua}
       ${builtins.readFile ./plugins/cmp.lua}
-      require("bufferline").setup{}
+      ${builtins.readFile ./extras/options.lua}
+      require("bufferline").setup({})
       require("lualine").setup({})
-
+      require("nvim-web-devicons").setup({})
     '';
   };
 }

@@ -1,5 +1,5 @@
-{lib, config, ... }:
-with lib;
+{lib, ... }:
+
 {
   programs.kitty = {
     enable = true;
@@ -9,6 +9,7 @@ with lib;
       cursor_blink_interval = 0.5;
       cursor_stop_blinking_after = 0;
       confirm_os_window_close = 0;
-    };
+      tab_bar_style = "fade";
+      };
   };
 }

@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   inputs,
   ...
@@ -11,18 +10,20 @@
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
   ];
+ 
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ];
+  # for nixd
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  programs.hyprland.enable = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "nixos"; 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -84,7 +85,6 @@
       "networkmanager"
       "wheel"
     ];
-    packages = with pkgs; [ ];
   };
 
   stylix = {

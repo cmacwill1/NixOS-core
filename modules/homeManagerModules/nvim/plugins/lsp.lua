@@ -1,9 +1,11 @@
+local lspconfig = require("lspconfig")
+
 require("lspconfig").nixd.setup({
   cmd = { "nixd" },
   settings = {
     nixd = {
       nixpkgs = {
-        expr = "import (builtins.getFlake \"~/NixOS-core\").inputs.nixpkgs` { }",
+        expr = "import <nixpkgs> { }",
       },
       formatting = {
         command = { "alejandra" }, -- or nixfmt or nixpkgs-fmt
