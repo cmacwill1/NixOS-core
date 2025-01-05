@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -30,6 +30,15 @@
     extraConfig.credential.helper = "store";
   };
 
+  programs.nixvim = {
+    enable = true;
+    plugins = {
+      lualine.enable = true;
+      bufferline.enable = true;
+    };
+  };
+  
+  
   programs = {
     firefox = {
       enable = true;
