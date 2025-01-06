@@ -43,6 +43,13 @@
     ];
   };
 
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+  };
+
   programs.git = {
     enable = true;
     userName = "cmacwill1";

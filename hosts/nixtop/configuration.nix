@@ -95,6 +95,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+  environment.pathsToLink = [ "/share/zsh" ];
   environment.systemPackages = with pkgs; [
     vim
     wget
