@@ -1,10 +1,9 @@
-{lib, ... }:
+{ ... }:
 
 {
   programs.kitty = {
     enable = true;
     settings = {
-      background_opacity = lib.mkForce 0.75;
       cursor_shape = "beam";
       cursor_blink_interval = 0.5;
       cursor_stop_blinking_after = 0;

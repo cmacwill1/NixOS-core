@@ -22,10 +22,14 @@
       alejandra
     ];
     extraLuaConfig = ''
+      ${builtins.readFile ./extras/options.lua}
       ${builtins.readFile ./plugins/lsp.lua}
       ${builtins.readFile ./plugins/cmp.lua}
-      ${builtins.readFile ./extras/options.lua}
-      require("bufferline").setup({})
+      require("bufferline").setup({
+        options = {
+          themable = true,
+        }
+      })
       require("lualine").setup({})
       require("nvim-web-devicons").setup({})
     '';
