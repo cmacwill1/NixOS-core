@@ -51,6 +51,13 @@
       };
     };
   };
+  
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+  };  
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cmacwill = {
@@ -60,6 +67,7 @@
       "networkmanager"
       "wheel"
     ];
+    shell = pkgs.zsh;
   };
 
   stylix = {
@@ -118,6 +126,8 @@
     qmk
     hyprshot
     discord
+    zsh
+    zsh-powerlevel10k
   ];
 
   fonts.packages = with pkgs; [
