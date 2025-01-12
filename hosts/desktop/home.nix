@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -14,33 +14,49 @@
     ../../modules/homeManagerModules/config-emoji.nix
     ../../modules/homeManagerModules/config-long.nix 
     ../../modules/homeManagerModules/wlogout/wlogout.nix
+    ../../modules/homeManagerModules/nvim/nvim.nix
   ];
 
   #Scripts
   home.packages = [
     (import ../../scripts/current-generation.nix {inherit pkgs; })
+    (import ../../scripts/purdue-vpn.nix {inherit pkgs; })
   ];
 
+  programs.neovim = {
+    enable = true;
+    
+    viAlias = true;
+    vimAlias = true;
+
+    plugins = with pkgs.vimPlugins; [
+      bufferline-nvim
+      lualine-nvim
+      nvim-lspconfig
+      nvim-web-devicons
+      nvim-cmp
+    ];
+    extraPackages = with pkgs; [
+      wl-clipboard
+      nixd
+      alejandra
+    ];
+  };
 
   programs.git = {
     enable = true;
     userName = "cmacwill1";
     userEmail = "charles.macwilliams@gmail.com";
+    extraConfig.credential.helper = "store";
   };
 
+  
   programs = {
     firefox = {
       enable = true;
     };
   };
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  #
-  # You should not change this value, even if you update Home Manager. If you do
-  # want to update the value, then make sure to first check the Home Manager
-  # release notes.
-  home.stateVersion = "24.05"; # Please read the comment before changing.
+  home.stateVersion = "24.05"; 
 
   #Styling
   stylix.targets.waybar.enable = false;
