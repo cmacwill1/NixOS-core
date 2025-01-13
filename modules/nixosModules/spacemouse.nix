@@ -1,0 +1,5 @@
+{ ... }:
+
+{
+  hardware.spacenavd.enable = true;
+}

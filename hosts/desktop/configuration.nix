@@ -15,6 +15,7 @@
     ../../modules/nixosModules/bluetooth.nix
     ../../modules/nixosModules/steam.nix
     ../../modules/nixosModules/amdgpu.nix
+    ../../modules/nixosModules/spacemouse.nix
   ];
  
   nix.settings.experimental-features = [
