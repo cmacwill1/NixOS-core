@@ -132,6 +132,7 @@
     teams-for-linux
     whatsapp-for-linux
     bambu-studio
+    speedtest-cli
   ];
 
   fonts.packages = with pkgs; [

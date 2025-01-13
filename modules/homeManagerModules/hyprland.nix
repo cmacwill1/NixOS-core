@@ -14,13 +14,13 @@
             "blur, rofi"
           ];
           monitor = [
-            ",preferred,auto,1"
+            ",2560x1440@180,auto,1"
           ];
           windowrule = [
             "float, io.github.kaii_lb.Overskride"
             "center, io.github.kaii_lb.Overskride"
             "size 200 500, io.github.kaii_lb.Overskride"
-            "float, pavucontrol"
+            "float, org.pulseaudio.pavucontrol"
           ];      
           env = [
             "HYPRSHOT_DIR, ~/Screenshots:$PATH"
