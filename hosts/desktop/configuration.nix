@@ -122,12 +122,14 @@
     x2goclient
     blender
     kicad
-    steam
     qmk
     hyprshot
     discord
     zsh
     zsh-powerlevel10k
+    teams-for-linux
+    whatsapp-for-linux
+    bambu-studio
   ];
 
   fonts.packages = with pkgs; [
