@@ -15,7 +15,6 @@
     ../../modules/homeManagerModules/config-long.nix 
     ../../modules/homeManagerModules/wlogout/wlogout.nix
     ../../modules/homeManagerModules/nvim/nvim.nix
-    ../../modules/homeManagerModules/steam.nix
   ];
 
   #Scripts
