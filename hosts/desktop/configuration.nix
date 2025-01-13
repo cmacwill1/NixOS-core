@@ -15,6 +15,7 @@
     ../../modules/nixosModules/bluetooth.nix
     ../../modules/nixosModules/steam.nix
     ../../modules/nixosModules/amdgpu.nix
+    ../../modules/nixosModules/cad.nix
   ];
  
   nix.settings.experimental-features = [
@@ -122,8 +123,6 @@
     obsidian
     openconnect
     x2goclient
-    blender
-    kicad
     qmk
     hyprshot
     discord
@@ -131,8 +130,6 @@
     zsh-powerlevel10k
     teams-for-linux
     whatsapp-for-linux
-    bambu-studio
-    speedtest-cli
   ];
 
   fonts.packages = with pkgs; [
