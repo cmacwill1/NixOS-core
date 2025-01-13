@@ -15,7 +15,6 @@
     ../../modules/nixosModules/bluetooth.nix
     ../../modules/nixosModules/steam.nix
     ../../modules/nixosModules/amdgpu.nix
-    ../../modules/nixosModules/cad.nix
   ];
  
   nix.settings.experimental-features = [

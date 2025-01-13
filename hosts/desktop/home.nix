@@ -15,6 +15,8 @@
     ../../modules/homeManagerModules/config-long.nix 
     ../../modules/homeManagerModules/wlogout/wlogout.nix
     ../../modules/homeManagerModules/nvim/nvim.nix
+    ../../modules/homeManagerModules/cad.nix
+    ../../modules/homeManagerModules/git.nix
   ];
 
   #Scripts
@@ -22,26 +24,6 @@
     (import ../../scripts/current-generation.nix {inherit pkgs; })
     (import ../../scripts/purdue-vpn.nix {inherit pkgs; })
   ];
-
-  programs.neovim = {
-    enable = true;
-    
-    viAlias = true;
-    vimAlias = true;
-
-    plugins = with pkgs.vimPlugins; [
-      bufferline-nvim
-      lualine-nvim
-      nvim-lspconfig
-      nvim-web-devicons
-      nvim-cmp
-    ];
-    extraPackages = with pkgs; [
-      wl-clipboard
-      nixd
-      alejandra
-    ];
-  };
 
   programs.git = {
     enable = true;
