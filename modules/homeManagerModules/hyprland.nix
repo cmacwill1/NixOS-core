@@ -35,6 +35,9 @@
             "col.inactive_border" = lib.mkForce "rgba(${config.lib.stylix.colors.base00}ed)";
             allow_tearing = false;
           };
+	  misc = {
+            disable_hyprland_logo = true;
+	  };
          
           input = {
             kb_layout = "us";

@@ -17,6 +17,7 @@
     ../../modules/homeManagerModules/nvim/nvim.nix
     ../../modules/homeManagerModules/cad.nix
     ../../modules/homeManagerModules/git.nix
+    ../../modules/homeManagerModules/office.nix
   ];
 
   #Scripts

@@ -31,7 +31,7 @@
   # Configure keymap in X11
   services = {
     xserver = {
-      enable = false;
+      enable = true;
       xkb = {
         layout = "us";
         variant = "";
@@ -130,6 +130,7 @@
     zsh-powerlevel10k
     teams-for-linux
     whatsapp-for-linux
+    spacenav-cube-example
   ];
 
   fonts.packages = with pkgs; [
