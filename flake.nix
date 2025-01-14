@@ -29,5 +29,14 @@
         inputs.stylix.nixosModules.stylix
       ];
     };
+    nixosConfirgurations.portable = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = {inherit inputs;};
+      modules = [
+        ./hosts/portable/configuration.nix
+        inputs.home-manager.nixosModules.default
+        inputs.stylix.nixosModules.stylix
+      ];
+    };
   };
 }
