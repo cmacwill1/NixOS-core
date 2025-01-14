@@ -15,7 +15,6 @@
     ../../modules/nixosModules/bluetooth.nix
     ../../modules/nixosModules/steam.nix
     ../../modules/nixosModules/amdgpu.nix
-    ../../modules/nixosModules/spacemouse.nix
   ];
  
   nix.settings.experimental-features = [
@@ -99,6 +98,7 @@
     enable32Bit = true;
   };
 
+  hardware.spacenavd.enable = true;
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
