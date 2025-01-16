@@ -15,6 +15,7 @@
     ../../modules/nixosModules/bluetooth.nix
     ../../modules/nixosModules/bootloader.nix
     ../../modules/nixosModules/amdgpu.nix
+    ../../modules/nixosModules/zsh.nix
   ];
  
   nix.settings.experimental-features = [
@@ -35,13 +36,6 @@
     upower.enable = true;
   };
   
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestions.enable = true;
-    promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-  };  
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cmacwill = {
     isNormalUser = true;
