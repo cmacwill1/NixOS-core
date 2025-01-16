@@ -14,6 +14,7 @@
     ../../modules/nixosModules/audio.nix
     ../../modules/nixosModules/bluetooth.nix
     ../../modules/nixosModules/bootloader.nix
+    ../../modules/nixosModules/amdgpu.nix
   ];
  
   nix.settings.experimental-features = [
@@ -26,7 +27,6 @@
   # Configure keymap in X11
   services = {
     xserver = {
-      enable = false;
       xkb = {
         layout = "us";
         variant = "";
@@ -68,13 +68,6 @@
     };
   };
 
-  # Bluetooth
-  #
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-  };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -82,7 +75,6 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.pathsToLink = [ "/share/zsh" ];
   environment.systemPackages = with pkgs; [
     vim
     wget
@@ -90,7 +82,7 @@
     tree
     curl
     greetd.tuigreet
-    neofetch
+    fastfetch
     htop
     btop
     wayland-utils
