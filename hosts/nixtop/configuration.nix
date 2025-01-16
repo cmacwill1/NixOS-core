@@ -18,6 +18,7 @@
     ../../modules/nixosModules/zsh.nix
     ../../modules/nixosModules/common.nix
     ../../modules/nixosModules/laptop.nix
+    ../../modules/nixosModules/stylix.nix
   ];
   
   # Define a user account. Don't forget to set a password with ‘passwd’.
