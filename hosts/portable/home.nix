@@ -7,7 +7,7 @@
   home.homeDirectory = "/home/cmacwill";
  
   imports = [
-    ../../modules/homeManagerModules/hyprland-gaming-monitor.nix
+    ../../modules/homeManagerModules/hyprland.nix
     ../../modules/homeManagerModules/kitty.nix
     ../../modules/homeManagerModules/waybar.nix
     ../../modules/homeManagerModules/rofi.nix
@@ -15,7 +15,6 @@
     ../../modules/homeManagerModules/config-long.nix 
     ../../modules/homeManagerModules/wlogout/wlogout.nix
     ../../modules/homeManagerModules/nvim/nvim.nix
-    ../../modules/homeManagerModules/cad.nix
     ../../modules/homeManagerModules/git.nix
     ../../modules/homeManagerModules/office.nix
   ];

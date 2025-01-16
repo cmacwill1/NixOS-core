@@ -14,7 +14,7 @@
             "blur, rofi"
           ];
           monitor = [
-            ",preffered,auto,1"
+            ",2560x1440@180,auto,1"
           ];
           windowrule = [
             "float, io.github.kaii_lb.Overskride"
