@@ -13,6 +13,7 @@
     ../../modules/nixosModules/networking.nix
     ../../modules/nixosModules/audio.nix
     ../../modules/nixosModules/bluetooth.nix
+    ../../modules/nixosModules/bootloader.nix
   ];
  
   nix.settings.experimental-features = [
@@ -21,10 +22,6 @@
   ];
   # for nixd
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
-
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   # Configure keymap in X11
   services = {
@@ -35,21 +32,7 @@
         variant = "";
       };
     };
-    libinput = {
-      enable = true;
-      touchpad.naturalScrolling.enable = true;
-    };
     upower.enable = true;
-    greetd = {
-      enable = true;
-      vt = 3;
-      settings = {
-        default_session = {
-          user = "cmacwill";
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
-        };
-      };
-    };
   };
   
   programs.zsh = {
@@ -87,10 +70,6 @@
 
   # Bluetooth
   #
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-  };
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -126,7 +105,6 @@
     qmk
     hyprshot
     discord
-    zsh
     zsh-powerlevel10k
   ];
 
