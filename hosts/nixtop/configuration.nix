@@ -61,7 +61,6 @@
     x2goclient
     blender
     kicad
-    steam
     qmk
     hyprshot
     discord
