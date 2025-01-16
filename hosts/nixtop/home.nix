@@ -18,12 +18,7 @@
     ../../modules/homeManagerModules/git.nix
     ../../modules/homeManagerModules/firefox.nix
     ../../modules/homeManagerModules/styling.nix
-  ];
-
-  #Scripts
-  home.packages = [
-    (import ../../scripts/current-generation.nix {inherit pkgs; })
-    (import ../../scripts/purdue-vpn.nix {inherit pkgs; })
+    ../../modules/homeManagerModules/scripts.nix
   ];
 
     
