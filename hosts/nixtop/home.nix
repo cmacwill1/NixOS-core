@@ -20,6 +20,7 @@
     ../../modules/homeManagerModules/styling.nix
     ../../modules/homeManagerModules/scripts.nix
     ../../modules/homeManagerModules/research.nix
+    ../../modules/homeManagerModules/cad.nix
   ];
 
     
