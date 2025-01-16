@@ -16,25 +16,9 @@
     ../../modules/nixosModules/bootloader.nix
     ../../modules/nixosModules/amdgpu.nix
     ../../modules/nixosModules/zsh.nix
+    ../../modules/nixosModules/common.nix
+    ../../modules/nixosModules/laptop.nix
   ];
- 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
-  # for nixd
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
-
-  # Configure keymap in X11
-  services = {
-    xserver = {
-      xkb = {
-        layout = "us";
-        variant = "";
-      };
-    };
-    upower.enable = true;
-  };
   
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cmacwill = {
@@ -47,12 +31,6 @@
     shell = pkgs.zsh;
   };
 
-  stylix = {
-    enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
-    image = ../../wallpapers/ghibli-background-1.jpg;
-  };
-
   home-manager = {
     extraSpecialArgs = {
       inherit inputs;
@@ -62,13 +40,8 @@
     };
   };
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
-  programs.thunar.enable = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
     wget
@@ -91,7 +64,6 @@
     qmk
     hyprshot
     discord
-    zsh-powerlevel10k
   ];
 
   fonts.packages = with pkgs; [
