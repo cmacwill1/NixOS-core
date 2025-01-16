@@ -1,10 +1,18 @@
 { pkgs, ... }:
 
 {
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # Bootloader
+  boot.loader = { 
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
+  };
 
-  # Configure keymap in X11
+  # Install greeter
+  environment.systemPackages = with pkgs; [
+    greetd.tuigreet
+  ];
+
+  # Configure greeter
   services = {
     greetd = {
       enable = true;
