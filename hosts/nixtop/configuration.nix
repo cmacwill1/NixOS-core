@@ -54,12 +54,6 @@
     btop
     wayland-utils
     brightnessctl
-    zotero
-    obsidian
-    openconnect
-    x2goclient
-    blender
-    kicad
     qmk
     hyprshot
     discord

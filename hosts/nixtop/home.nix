@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -19,6 +19,7 @@
     ../../modules/homeManagerModules/firefox.nix
     ../../modules/homeManagerModules/styling.nix
     ../../modules/homeManagerModules/scripts.nix
+    ../../modules/homeManagerModules/research.nix
   ];
 
     
