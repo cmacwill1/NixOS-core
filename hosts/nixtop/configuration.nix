@@ -39,6 +39,7 @@
     users = {
       "cmacwill" = import ./home.nix;
     };
+    useGlobalPkgs = true;
   };
 
 
