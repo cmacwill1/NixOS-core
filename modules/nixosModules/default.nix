@@ -6,7 +6,6 @@
     ./audio.nix
     ./bluetooth.nix
     ./bootloader.nix
-    ./common.nix
     ./generic-gpu.nix
     ./laptop.nix
     ./locale.nix
