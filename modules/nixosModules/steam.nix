@@ -1,13 +1,20 @@
-{ pkgs, ... }:
+{ pkgs, lib, config, ... }:
 
 {
-  programs.steam = {
-    enable = true;
-    gamescopeSession.enable = true;
+  options = {
+    steam.enable = 
+      lib.mkEnableOption "enables steam";
   };
 
-  environment.systemPackages = with pkgs; [
-    mangohud
-  ];
-  programs.gamemode.enable = true;
+  config = lib.mkIf config.steam.enable {
+    programs.steam = {
+      enable = true;
+      gamescopeSession.enable = true;
+    };
+
+    environment.systemPackages = with pkgs; [
+      mangohud
+    ];
+    programs.gamemode.enable = true;
+  };
 }
