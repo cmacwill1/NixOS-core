@@ -10,7 +10,7 @@
     ./generic-gpu.nix
     ./laptop.nix
     ./locale.nix
-    ./netoworking.nix
+    ./networking.nix
     ./spacemouse.nix
     ./steam.nix
     ./stylix.nix
