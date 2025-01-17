@@ -27,6 +27,7 @@
         ./hosts/desktop/configuration.nix
         inputs.home-manager.nixosModules.default
         inputs.stylix.nixosModules.stylix
+	./modules/nixosModules
       ];
     };
     nixosConfigurations.portable = nixpkgs.lib.nixosSystem {
