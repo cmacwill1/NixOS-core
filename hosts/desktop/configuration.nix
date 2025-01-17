@@ -11,7 +11,15 @@
     inputs.home-manager.nixosModules.default
   ];
 
-  steam.enable = false;
+  steam.enable = true;
+
+
+
+
+
+
+
+
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cmacwill = {
@@ -34,27 +42,5 @@
     useGlobalPkgs = true;
   };
 
-
-
-  environment.systemPackages = with pkgs; [
-    vim
-    wget
-    git
-    tree
-    curl
-    fastfetch
-    htop
-    btop
-    wayland-utils
-    brightnessctl
-    qmk
-    hyprshot
-    discord
-  ];
-
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-  ];
-  
   system.stateVersion = "24.05";
 }
