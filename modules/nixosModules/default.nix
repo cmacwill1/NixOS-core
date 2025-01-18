@@ -1,6 +1,7 @@
 { pkgs, inputs, ... }:
 
 {
+  #This imports toggleable options within all hosts. Add new nixosModules, with proper path!
   imports = [
     ./amdgpu.nix
     ./audio.nix
@@ -15,7 +16,8 @@
     ./stylix.nix
     ./zsh.nix
   ];
-
+  
+  #All that follows defines host-agnostic system defaults
   environment.systemPackages = with pkgs; [
     vim
     wget

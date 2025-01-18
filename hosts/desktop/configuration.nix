@@ -12,8 +12,8 @@
   ];
 
   steam.enable = true;
-
-
+  amdgpu.enable = true;
+  audio.enable = false;
 
 
 
