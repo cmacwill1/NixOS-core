@@ -13,7 +13,7 @@
     ./networking.nix
     ./spacemouse.nix
     ./steam.nix
-    ./stylix.nix
+    ./stylixModule.nix
     ./zsh.nix
   ];
   
