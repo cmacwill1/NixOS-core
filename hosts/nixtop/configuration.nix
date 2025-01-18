@@ -24,15 +24,5 @@
   zsh.enable = true;
   users.enable = true;
 
-  home-manager = {
-    extraSpecialArgs = {
-      inherit inputs;
-    };
-    users = {
-      "cmacwill" = import ./home.nix;
-    };
-    useGlobalPkgs = true;
-  };
-
   system.stateVersion = "24.05";
 }

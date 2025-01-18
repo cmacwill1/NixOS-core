@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }:
+{ pkgs, lib, config, inputs, ... }:
 
 {
   options = {
@@ -15,6 +15,16 @@
         "wheel"
       ];
       shell = pkgs.zsh;
+    };
+
+    home-manager = {
+      extraSpecialArgs = {
+        inherit inputs;
+      };
+      users = {
+        "cmacwill" = import ./home.nix;
+      };
+      useGlobalPkgs = true;
     };
   };
 }
