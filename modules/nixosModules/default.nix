@@ -14,6 +14,7 @@
     ./spacemouse.nix
     ./steam.nix
     ./stylixModule.nix
+    ./users.nix
     ./zsh.nix
   ];
   

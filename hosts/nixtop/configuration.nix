@@ -1,5 +1,4 @@
 {
-  pkgs,
   inputs,
   ...
 }:
@@ -23,17 +22,7 @@
   steam.enable = false;
   stylixModule.enable = true;
   zsh.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.cmacwill = {
-    isNormalUser = true;
-    description = "cmacwill";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
-    shell = pkgs.zsh;
-  };
+  users.enable = true;
 
   home-manager = {
     extraSpecialArgs = {
