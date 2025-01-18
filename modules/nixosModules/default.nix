@@ -3,18 +3,23 @@
 {
   #This imports toggleable options within all hosts. Add new nixosModules, with proper path!
   imports = [
+    #Hardware
     ./hardware/amdgpu.nix
+    ./hardware/generic-gpu.nix
+    ./hardware/laptop.nix
+    ./hardware/spacemouse.nix
+    
+    #Localization
+    ./localization/locale.nix
+    ./localization/networkingModule.nix
+    ./localization/users.nix
+    
+    #Software
     ./software/audio.nix
     ./software/bluetooth.nix
     ./software/bootloader.nix
-    ./hardware/generic-gpu.nix
-    ./hardware/laptop.nix
-    ./localization/locale.nix
-    ./localization/networkingModule.nix
-    ./hardware/spacemouse.nix
     ./software/steam.nix
     ./software/stylixModule.nix
-    ./localization/users.nix
     ./software/zsh.nix
   ];
   
