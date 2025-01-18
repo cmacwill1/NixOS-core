@@ -9,18 +9,21 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
-    ../../modules/nixosModules/locale.nix
-    ../../modules/nixosModules/networking.nix
-    ../../modules/nixosModules/audio.nix
-    ../../modules/nixosModules/bluetooth.nix
-    ../../modules/nixosModules/bootloader.nix
-    ../../modules/nixosModules/amdgpu.nix
-    ../../modules/nixosModules/zsh.nix
-    ../../modules/nixosModules/common.nix
-    ../../modules/nixosModules/laptop.nix
-    ../../modules/nixosModules/stylix.nix
   ];
-  
+
+  amdgpu.enable = true;
+  audio.enable = true;
+  bluetooth.enable = true;
+  bootloader.enable = true;
+  generic-gpu.enable = false;
+  laptop.enable = true;
+  locale.enable = true;
+  networkingModule.enable = true;
+  spacemouse.enable = false;
+  steam.enable = false;
+  stylixModule.enable = true;
+  zsh.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cmacwill = {
     isNormalUser = true;
@@ -42,27 +45,5 @@
     useGlobalPkgs = true;
   };
 
-
-
-  environment.systemPackages = with pkgs; [
-    vim
-    wget
-    git
-    tree
-    curl
-    fastfetch
-    htop
-    btop
-    wayland-utils
-    brightnessctl
-    qmk
-    hyprshot
-    discord
-  ];
-
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-  ];
-  
   system.stateVersion = "24.05";
 }

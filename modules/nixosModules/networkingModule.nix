@@ -2,7 +2,7 @@
 
 {
   options = {
-    networking.enable =
+    networkingModule.enable =
       lib.mkEnableOption "enables general networking";
   };
 
