@@ -24,7 +24,7 @@
   zsh.enable = true;
   users.enable = true;
 
-
+  #Home manager stuff; inherit home configuration for cmacwill
   home-manager = {
     extraSpecialArgs = {
       inherit inputs;

@@ -3,19 +3,19 @@
 {
   #This imports toggleable options within all hosts. Add new nixosModules, with proper path!
   imports = [
-    ./amdgpu.nix
-    ./audio.nix
-    ./bluetooth.nix
-    ./bootloader.nix
-    ./generic-gpu.nix
-    ./laptop.nix
-    ./locale.nix
-    ./networkingModule.nix
-    ./spacemouse.nix
-    ./steam.nix
-    ./stylixModule.nix
-    ./users.nix
-    ./zsh.nix
+    ./hardware/amdgpu.nix
+    ./software/audio.nix
+    ./software/bluetooth.nix
+    ./software/bootloader.nix
+    ./hardware/generic-gpu.nix
+    ./hardware/laptop.nix
+    ./localization/locale.nix
+    ./localization/networkingModule.nix
+    ./hardware/spacemouse.nix
+    ./software/steam.nix
+    ./software/stylixModule.nix
+    ./localization/users.nix
+    ./software/zsh.nix
   ];
   
   #All that follows defines host-agnostic system defaults
