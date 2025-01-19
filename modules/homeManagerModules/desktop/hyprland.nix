@@ -103,6 +103,7 @@
             "$mainMod, down, movefocus, d"
             "$mainMod, SPACE, exec, rofi -show drun"
             "$mainMod, escape, exec, rofi -show power-menu"
+	    "$mainMod, S, exec, rofi -show ssh"
             "$mainMod, 1, workspace, 1"
             "$mainMod, 2, workspace, 2"
             "$mainMod, 3, workspace, 3"

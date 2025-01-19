@@ -41,7 +41,7 @@
             urgent = mkLiteral "#${config.lib.stylix.colors.base0E}";
           };
           "window" = {
-            width = mkLiteral "15%";
+            width = mkLiteral "25%";
             transparency = "real";
             orientation = mkLiteral "vertical";
             cursor = mkLiteral "default";
@@ -89,7 +89,7 @@
             background-color = mkLiteral "transparent";
             orientation = mkLiteral "vertical";
             children = map mkLiteral [
-              "message"
+#              "message"
               "listview"
             ];
           };
