@@ -17,8 +17,18 @@
 
   config-emoji.enable = true;
   config-long.enable = true;
+  rofi.enable = true;
   hyprland-gaming-monitor.enable = false;
-    
+  hyprland.enable = true;
+  styling.enable = true;
+  waybar.enable = true;
+  wlogout.enable = true;
+
+  git.enable = true;
+  kitty.enable = true;
+  nvim.enable = true;
+  scripts.enable = true;
+
   programs.home-manager.enable = true;
   home.stateVersion = "24.05"; 
 }
