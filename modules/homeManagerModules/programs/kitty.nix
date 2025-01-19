@@ -16,6 +16,7 @@
       cursor_stop_blinking_after = 0;
       confirm_os_window_close = 0;
       tab_bar_style = "fade";
+      enable_audio_bell = "no";
       };
   };
   };
