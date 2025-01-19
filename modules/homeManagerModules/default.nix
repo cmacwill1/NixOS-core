@@ -9,8 +9,6 @@
     ./applications/research.nix
 
     #Desktop
-    ./desktop/config-emoji.nix
-    ./desktop/config-long.nix
     ./desktop/hyprland-gaming-monitor.nix
     ./desktop/hyprland.nix
     ./desktop/rofi.nix

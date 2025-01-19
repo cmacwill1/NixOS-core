@@ -15,8 +15,6 @@
   office.enable = true;
   research.enable = true;
 
-  config-emoji.enable = false;
-  config-long.enable = false;
   rofi.enable = true;
   hyprland-gaming-monitor.enable = false;
   hyprland.enable = true;
