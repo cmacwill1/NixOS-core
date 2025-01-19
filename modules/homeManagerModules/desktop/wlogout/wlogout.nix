@@ -71,32 +71,32 @@
       #logout {
       	margin: 10px;
       	border-radius: 20px;
-      	background-image: image(url("../../NixOS-core/modules/homeManagerModules/wlogout/logout.png"));
+      	background-image: image(url("../../NixOS-core/modules/homeManagerModules/desktop/wlogout/logout.png"));
       }
       #suspend {
       	margin: 10px;
       	border-radius: 20px;
-      	background-image: image(url("../../NixOS-core/modules/homeManagerModules/wlogout/suspend.png"));
+      	background-image: image(url("../../NixOS-core/modules/homeManagerModules/desktop/wlogout/suspend.png"));
       }
       #shutdown {
       	margin: 10px;
       	border-radius: 20px;
-      	background-image: image(url("../../NixOS-core/modules/homeManagerModules/wlogout/shutdown.png"));
+      	background-image: image(url("../../NixOS-core/modules/homeManagerModules/desktop/wlogout/shutdown.png"));
       }
       #reboot {
       	margin: 10px;
       	border-radius: 20px;
-      	background-image: image(url("../../NixOS-core/modules/homeManagerModules/wlogout/reboot.png"));
+      	background-image: image(url("../../NixOS-core/modules/homeManagerModules/desktop/wlogout/reboot.png"));
       }
       #lock {
       	margin: 10px;
       	border-radius: 20px;
-      	background-image: image(url("../../NixOS-core/modules/homeManagerModules/wlogout/lock.png"));
+      	background-image: image(url("../../NixOS-core/modules/homeManagerModules/desktop/wlogout/lock.png"));
       }
       #hibernate {
       	margin: 10px;
       	border-radius: 20px;
-      	background-image: image(url("../../NixOS-core/modules/homeManagerModules/wlogout/hibernate.png"));
+      	background-image: image(url("../../NixOS-core/modules/homeManagerModules/desktop/wlogout/hibernate.png"));
       }
     '';
   };
