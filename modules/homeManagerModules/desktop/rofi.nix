@@ -8,20 +8,24 @@
 
   config = lib.mkIf config.rofi.enable {
 
+  home.packages = with pkgs; [
+    rofi-power-menu
+  ];
+
   programs = {
     rofi = {
       enable = true;
       package = pkgs.rofi-wayland;
       extraConfig = {
-        modi = "drun,filebrowser,run";
+        modi = "drun,ssh,power-menu:rofi-power-menu";
         show-icons = true;
         icon-theme = "Papirus";
         location = 0;
         font = "JetBrainsMono Nerd Font Mono 12";
         drun-display-format = "{icon} {name}";
-        display-drun = " Apps";
-        display-run = " Run";
-        display-filebrowser = " File";
+        display-drun = " Apps";
+        display-ssh = " ssh";
+        display-power-menu = "Power";
       };
 
       theme =
@@ -41,7 +45,7 @@
             urgent = mkLiteral "#${config.lib.stylix.colors.base0E}";
           };
           "window" = {
-            width = mkLiteral "50%";
+            width = mkLiteral "30%";
             transparency = "real";
             orientation = mkLiteral "vertical";
             cursor = mkLiteral "default";
@@ -63,22 +67,20 @@
           };
           "inputbar" = {
             enabled = true;
-            padding = mkLiteral "10px 10px 200px 10px";
+            padding = mkLiteral "10px 10px 10px 10px";
             margin = mkLiteral "10px";
             background-color = mkLiteral "transparent";
             border-radius = "10px";
             orientation = mkLiteral "horizontal";
             children = map mkLiteral [
               "entry"
-              "dummy"
               "mode-switcher"
             ];
-            background-image = mkLiteral ''url("${config.stylix.image}", width)'';
           };
           "entry" = {
             enabled = true;
             expand = false;
-            width = mkLiteral "20%";
+            width = mkLiteral "10%";
             padding = mkLiteral "10px";
             border-radius = mkLiteral "10px";
             background-color = mkLiteral "@selected";
@@ -89,7 +91,7 @@
           };
           "listbox" = {
             spacing = mkLiteral "10px";
-            padding = mkLiteral "10px";
+            padding = mkLiteral "10px 10px 10px 10px";
             background-color = mkLiteral "transparent";
             orientation = mkLiteral "vertical";
             children = map mkLiteral [
@@ -99,7 +101,7 @@
           };
          "listview" = {
             enabled = true;
-            columns = 2;
+            columns = 1;
             lines = 6;
             cycle = true;
             dynamic = true;
@@ -112,11 +114,7 @@
             background-color = mkLiteral "transparent";
             border = mkLiteral "0px";
           };
-          "dummy" = {
-            expand = true;
-            background-color = mkLiteral "transparent";
-          };
-          "mode-switcher" = {
+         "mode-switcher" = {
             enabled = true;
             spacing = mkLiteral "10px";
             background-color = mkLiteral "transparent";

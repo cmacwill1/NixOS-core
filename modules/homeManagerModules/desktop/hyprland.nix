@@ -102,7 +102,7 @@
             "$mainMod, up, movefocus, u"
             "$mainMod, down, movefocus, d"
             "$mainMod, SPACE, exec, rofi -show drun"
-            "$mainMod, escape, exec, wlogout"
+            "$mainMod, escape, exec, rofi -show power-menu"
             "$mainMod, 1, workspace, 1"
             "$mainMod, 2, workspace, 2"
             "$mainMod, 3, workspace, 3"
