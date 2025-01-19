@@ -22,10 +22,6 @@
         icon-theme = "Papirus";
         location = 0;
         font = "JetBrainsMono Nerd Font Mono 12";
-        drun-display-format = "{icon} {name}";
-        display-drun = " Apps";
-        display-ssh = " ssh";
-        display-power-menu = "Power";
       };
 
       theme =
@@ -45,7 +41,7 @@
             urgent = mkLiteral "#${config.lib.stylix.colors.base0E}";
           };
           "window" = {
-            width = mkLiteral "30%";
+            width = mkLiteral "15%";
             transparency = "real";
             orientation = mkLiteral "vertical";
             cursor = mkLiteral "default";
@@ -56,7 +52,7 @@
             background-color = mkLiteral "@bg";
           };
           "mainbox" = {
-            padding = mkLiteral "15px";
+            padding = mkLiteral "0px";
             enabled = true;
             orientation = mkLiteral "vertical";
             children = map mkLiteral [
@@ -67,20 +63,18 @@
           };
           "inputbar" = {
             enabled = true;
-            padding = mkLiteral "10px 10px 10px 10px";
+            padding = mkLiteral "0px";
             margin = mkLiteral "10px";
             background-color = mkLiteral "transparent";
             border-radius = "10px";
             orientation = mkLiteral "horizontal";
             children = map mkLiteral [
               "entry"
-              "mode-switcher"
             ];
           };
           "entry" = {
             enabled = true;
-            expand = false;
-            width = mkLiteral "10%";
+            expand = true;
             padding = mkLiteral "10px";
             border-radius = mkLiteral "10px";
             background-color = mkLiteral "@selected";
@@ -114,15 +108,10 @@
             background-color = mkLiteral "transparent";
             border = mkLiteral "0px";
           };
-         "mode-switcher" = {
-            enabled = true;
-            spacing = mkLiteral "10px";
-            background-color = mkLiteral "transparent";
-          };
           "button" = {
             width = mkLiteral "5%";
-            padding = mkLiteral "12px";
-            border-radius = mkLiteral "12px";
+            padding = mkLiteral "10px";
+            border-radius = mkLiteral "10px";
             background-color = mkLiteral "@text-selected";
             text-color = mkLiteral "@text-color";
             cursor = mkLiteral "pointer";
