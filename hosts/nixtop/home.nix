@@ -10,6 +10,7 @@
     ../../modules/homeManagerModules
   ];
 
+  hyprland-gaming-monitor.enable = false;
     
   programs.home-manager.enable = true;
   home.stateVersion = "24.05"; 

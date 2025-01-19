@@ -1,6 +1,12 @@
 {lib, config, ... }:
 
 {
+  options = {
+    hyprland-gaming-monitor.enable = 
+      lib.mkEnableOption "enables gaming monitor hyprland";
+  };
+
+  config = lib.mkIf config.hyprland-gaming-monitor.enable {
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -128,5 +134,6 @@
           ];
         
       };
+  };
   };
 }
