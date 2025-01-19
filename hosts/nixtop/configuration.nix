@@ -7,6 +7,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ../../modules/nixosModules
     inputs.home-manager.nixosModules.default
   ];
 
@@ -19,7 +20,7 @@
   locale.enable = true;
   networkingModule.enable = true;
   spacemouse.enable = false;
-  steam.enable = false;
+  steam.enable = true;
   stylixModule.enable = true;
   zsh.enable = true;
   users.enable = true;
