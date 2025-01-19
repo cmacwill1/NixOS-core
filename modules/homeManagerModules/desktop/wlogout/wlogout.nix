@@ -1,6 +1,12 @@
-{ config, ... }:
+{ lib, config, ... }:
 
 {
+  options = {
+    wlogout.enable = 
+      lib.mkEnableOption "enables wlogout";
+  };
+
+  config = lib.mkIf config.wlogout.enable {
   programs.wlogout = {
     enable = true;
     layout = [
@@ -99,5 +105,6 @@
       	background-image: image(url("../../NixOS-core/modules/homeManagerModules/desktop/wlogout/hibernate.png"));
       }
     '';
+  };
   };
 }

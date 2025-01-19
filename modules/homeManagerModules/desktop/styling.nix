@@ -1,6 +1,12 @@
-{ pkgs, ... }:
+{ pkgs, lib, config, ... }:
 
 {
+  options = {
+    styling.enable =      
+      lib.mkEnableOption "enables gtk / stylix theming";
+  };
+
+  config = lib.mkIf config.styling.enable {
   stylix.targets.waybar.enable = false;
   stylix.targets.rofi.enable = false;
   gtk = {
@@ -14,5 +20,6 @@
     gtk4.extraConfig = {
       gtk-applications-prefer-dark-theme = 1;
     };
+  };
   };
 }

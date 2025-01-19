@@ -1,11 +1,18 @@
-{ pkgs, ... }:
+{ pkgs, lib, config, ... }:
 
 {
-  home.packages = with pkgs; [
-    freecad-wayland
-    kicad
-    blender
-    bambu-studio
-  ];
+  options = {
+    cad.enable =
+      lib.mkEnableOption "enables CAD programs";
+  };
+
+  config = lib.mkIf config.cad.enable {
+    home.packages = with pkgs; [
+      freecad-wayland
+      kicad
+      blender
+      bambu-studio
+    ];
+  };
 }
 
