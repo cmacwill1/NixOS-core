@@ -191,7 +191,7 @@ with lib;
           border-color: #${config.lib.stylix.colors.base0A};
           border-radius: 10px;
           margin: 4px;
-          background-color: rgba(32, 32, 32, 0.5);
+          background-color: rgba(32, 32, 32, 0.75);
           box-shadow: 0 0 2px 2px #${config.lib.stylix.colors.base00};
         }
 
