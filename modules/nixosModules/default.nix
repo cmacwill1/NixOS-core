@@ -36,7 +36,7 @@
     brightnessctl
     qmk
     hyprshot
-    discord
+    vesktop
   ];
 
   fonts.packages = with pkgs; [

@@ -11,6 +11,7 @@
       enable = true;
       base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
       image = ../../../wallpapers/forest.jpg;
+      opacity.applications = 0.5;
     };
   };
 }
