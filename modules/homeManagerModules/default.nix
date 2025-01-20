@@ -22,4 +22,11 @@
     ./programs/nvim/nvim.nix
     ./programs/scripts.nix
   ];
+
+  programs.btop = {
+    enable = true;
+    settings = {
+      proc_tree = true;
+    };
+  };
 }

@@ -32,7 +32,6 @@
     curl
     fastfetch
     htop
-    btop
     wayland-utils
     brightnessctl
     qmk
