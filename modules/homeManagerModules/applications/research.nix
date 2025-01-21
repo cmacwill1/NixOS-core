@@ -12,6 +12,7 @@
       zotero
       openconnect
       x2goclient
+      weasis
     ];
   };
 }
