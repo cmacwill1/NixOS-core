@@ -10,6 +10,7 @@
     home.packages = with pkgs; [
       obsidian
       zotero
+      teams-for-linux
       openconnect
       x2goclient
       weasis
