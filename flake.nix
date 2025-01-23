@@ -8,6 +8,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix.url = "github:danth/stylix";
+    inputs.nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, ... }@inputs: {
@@ -17,6 +21,7 @@
       modules = [
         ./hosts/nixtop/configuration.nix
         inputs.home-manager.nixosModules.home-manager
+	inputs.nixvim.homeManagerModules.nixvim
         inputs.stylix.nixosModules.stylix
       ];
     };
