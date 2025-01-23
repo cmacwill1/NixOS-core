@@ -7,8 +7,14 @@
   };
 
   config = lib.mkIf config.styling.enable {
-  stylix.targets.waybar.enable = false;
-  stylix.targets.rofi.enable = false;
+  stylix = {
+    targets = {
+      waybar.enable = false;
+      rofi.enable = false;
+      nixvim.enable = true;
+    };
+    opacity.terminal = 0.75;
+  };
   gtk = {
     iconTheme = {
       name = "Papirus-Dark";
