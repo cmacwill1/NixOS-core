@@ -7,7 +7,7 @@
   };
 
   config = lib.mkIf config.locale.enable {
-    time.timeZone = "America/Denver";
+    time.timeZone = "America/Indianapolis";
 
     # Select internationalisation properties.
     i18n.defaultLocale = "en_US.UTF-8";
