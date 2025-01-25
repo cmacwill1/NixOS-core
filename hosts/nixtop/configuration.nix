@@ -35,6 +35,9 @@
       "cmacwill" = import ./home.nix;
     };
     useGlobalPkgs = true;
+    sharedModules = [
+      inputs.nixvim.homeManagerModules.nixvim
+    ];
   };
 
   system.stateVersion = "24.05";
