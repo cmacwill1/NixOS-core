@@ -26,6 +26,7 @@
   #All that follows defines host-agnostic system defaults
   environment.systemPackages = with pkgs; [
     vim
+    zip
     unzip
     wget
     git
