@@ -10,7 +10,7 @@
     ../../modules/homeManagerModules
   ];
   
-  cad.enable = true;
+  cad.enable = false;
   firefox.enable = true;
   office.enable = true;
   research.enable = true;
