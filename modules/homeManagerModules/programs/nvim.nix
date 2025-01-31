@@ -7,6 +7,10 @@
   };
 
   config = lib.mkIf config.nvim.enable {
+    home.packages = with pkgs; [
+      ltex-ls
+    ];
+
     programs.nixvim = {
       enable = true;
 
@@ -17,13 +21,22 @@
         lualine.enable = true;
 	bufferline.enable = true;
 	web-devicons.enable = true;
+	vimtex = {
+	  enable = true;
+	  settings = {
+            view_method = "mupdf";
+	  };
+	};
+
 	lsp = {
 	  enable = true;
 	  servers = {
 	    nixd.enable = true;
 	    pyright.enable = true;
+	    ltex.enable = true;
 	  };
 	};
+	
 	cmp = {
           enable = true;
           autoEnableSources = true;
@@ -49,6 +62,7 @@
         cmp-nvim-lsp.enable = true;
         cmp-buffer.enable = true;
         cmp-path.enable = true;
+	cmp-vimtex.enable = true;
       };
       
       clipboard.providers.wl-copy.enable = true;

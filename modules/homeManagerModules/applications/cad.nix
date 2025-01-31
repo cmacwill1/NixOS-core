@@ -7,7 +7,8 @@
   };
 
   config = lib.mkIf config.cad.enable {
-    home.packages = with pkgs; [
+
+  home.packages = with pkgs; [
       freecad-wayland
       kicad
       blender
