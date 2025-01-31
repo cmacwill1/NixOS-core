@@ -11,7 +11,6 @@
       freecad-wayland
       kicad
       blender
-      bambu-studio
     ];
   };
 }
