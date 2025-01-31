@@ -31,6 +31,9 @@
     wget
     git
     tree
+    dmidecode
+    mesa-demos
+    gpu-viewer
     curl
     fastfetch
     htop
