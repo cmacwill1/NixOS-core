@@ -42,6 +42,7 @@
     qmk
     hyprshot
     vesktop
+    mupdf
   ];
 
   fonts.packages = with pkgs; [
