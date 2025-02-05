@@ -21,7 +21,6 @@
       modules = [
         ./hosts/nixtop/configuration.nix
         inputs.home-manager.nixosModules.home-manager
-#	inputs.nixvim.homeManagerModules.nixvim
         inputs.stylix.nixosModules.stylix
       ];
     };
