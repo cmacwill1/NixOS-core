@@ -19,7 +19,7 @@
     #Programs
     ./git.nix
     ./kitty.nix
-    ./nvim.nix
+    ./nixvim.nix
     ./scripts.nix
   ];
 
