@@ -3,24 +3,24 @@
 {
   imports = [
     #Applications
-    ./applications/cad.nix
-    ./applications/firefox.nix
-    ./applications/office.nix
-    ./applications/research.nix
+    ./cad.nix
+    ./firefox.nix
+    ./office.nix
+    ./research.nix
 
     #Desktop
-    ./desktop/hyprland-gaming-monitor.nix
-    ./desktop/hyprland.nix
-    ./desktop/rofi.nix
-    ./desktop/styling.nix
-    ./desktop/waybar.nix
-    ./desktop/wlogout/wlogout.nix
+    ./hyprland-gaming-monitor.nix
+    ./hyprland.nix
+    ./rofi.nix
+    ./styling.nix
+    ./waybar.nix
+    ./wlogout/wlogout.nix
 
     #Programs
-    ./programs/git.nix
-    ./programs/kitty.nix
-    ./programs/nvim.nix
-    ./programs/scripts.nix
+    ./git.nix
+    ./kitty.nix
+    ./nvim.nix
+    ./scripts.nix
   ];
 
   programs.btop = {
