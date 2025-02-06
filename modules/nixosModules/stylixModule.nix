@@ -14,12 +14,18 @@
       fonts = {
 	monospace = {
 	  package = pkgs.nerd-fonts.jetbrains-mono;
-	  name = "JetBrains Mono";
+	  name = "JetBrainsMono Nerd Font Mono";
 	};
 	serif = config.stylix.fonts.monospace;
 	sansSerif = config.stylix.fonts.monospace;
 	emoji = config.stylix.fonts.monospace;
+	sizes = {
+	  applications = 12;
+	  terminal = 15;
+	  desktop = 10;
+	  popups = 10;
 	};
       };
     };
+  };
 }
