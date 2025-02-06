@@ -20,6 +20,7 @@
     ./git.nix
     ./kitty.nix
     ./nixvim.nix
+    ./lf/lf.nix
     ./screenshotter.nix
     ./scripts.nix
   ];
@@ -29,9 +30,5 @@
     settings = {
       proc_tree = true;
     };
-  };
-
-  programs.lf = {
-    enable = true;
   };
 }
