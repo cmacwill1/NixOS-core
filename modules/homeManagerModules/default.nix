@@ -30,4 +30,8 @@
       proc_tree = true;
     };
   };
+
+  programs.lf = {
+    enable = true;
+  };
 }
