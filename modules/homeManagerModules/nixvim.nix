@@ -2,11 +2,11 @@
 
 {
   options = {
-    nvim.enable =
-      lib.mkEnableOption "enables nvim";
+    nixvim.enable =
+      lib.mkEnableOption "enables nixvim";
   };
 
-  config = lib.mkIf config.nvim.enable {
+  config = lib.mkIf config.nixvim.enable {
     home.packages = with pkgs; [
       ltex-ls
     ];

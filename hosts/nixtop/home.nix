@@ -25,6 +25,7 @@
   git.enable = true;
   kitty.enable = true;
   nixvim.enable = true;
+  screenshotter.enable = true;
   scripts.enable = true;
 
   programs.home-manager.enable = true;
