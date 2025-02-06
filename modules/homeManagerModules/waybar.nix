@@ -69,7 +69,7 @@ with lib;
             critical = 15;
           };
           format = "{icon} {capacity}%";
-          format-charging = "󰂄 {capacity}%";
+          format-charging = "󰂄{capacity}%";
           format-plugged = "󱘖 {capacity}%";
           format-icons = [
             "󰁺"
@@ -128,17 +128,17 @@ with lib;
 
         "disk" = {
           intervel = 30;
-          format = "󰋊  {percentage_used}%";
+          format = "󰋊 {percentage_used}%";
           tooltip-format = "{used} used out of {total} on \"{path}\" ({percentage_used}%)";
         };
         "memory" = {
           interval = 5;
-          format = "  {used}";
+          format = " {used}";
           tooltip-format = "{used}GiB used of {total}GiB ({percentage}%)";
         };
         "cpu" = {
           interval = 10;
-          format = "  {usage}%";
+          format = " {usage}%";
         };
         "temperature" = {
           interval = 10;
@@ -147,7 +147,7 @@ with lib;
         "clock" = {
           timezone = "America/Indiana/Indianapolis";
           interval = 1;
-          format = "   {:%I:%M:%S %p    %m/%d} ";
+          format = " {:%I:%M:%S %p   %m/%d} ";
           tooltip-format = ''
             <big>{:%Y %B}</big>
             <tt><small>{calendar}</small></tt>'';
