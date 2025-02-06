@@ -10,7 +10,7 @@
     stylix = {
       enable = true;
       base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-soft.yaml";
-      image = ../../wallpapers/gruvbox.png;
+      image = ../../wallpapers/gruvbox1.jpg;
       fonts = {
 	monospace = {
 	  package = pkgs.nerd-fonts.jetbrains-mono;
@@ -20,8 +20,8 @@
 	sansSerif = config.stylix.fonts.monospace;
 	emoji = config.stylix.fonts.monospace;
 	sizes = {
-	  applications = 12;
-	  terminal = 15;
+	  applications = 13;
+	  terminal = 13;
 	  desktop = 10;
 	  popups = 10;
 	};
