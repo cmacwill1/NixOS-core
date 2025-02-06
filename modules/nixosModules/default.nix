@@ -45,10 +45,6 @@
     mupdf
   ];
 
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-  ];
-
   # experimental settings enable.
   nix.settings.experimental-features = [
     "nix-command"

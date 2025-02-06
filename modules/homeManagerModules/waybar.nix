@@ -175,8 +175,8 @@ with lib;
       ''
         * {
           border: none;
-          font-weight: bolder;
-        }
+	  font-family: "JetBrains Mono 12", monospace;
+	}
 
 
         window#waybar {

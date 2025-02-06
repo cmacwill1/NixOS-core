@@ -21,7 +21,7 @@
         show-icons = true;
         icon-theme = "Papirus";
         location = 0;
-        font = "JetBrainsMono Nerd Font Mono 12";
+	font = "JetBrains Mono 12";
       };
 
       theme =
