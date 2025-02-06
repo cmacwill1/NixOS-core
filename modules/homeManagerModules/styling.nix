@@ -15,6 +15,7 @@
     };
     opacity.terminal = 0.75;
   };
+
   gtk = {
     iconTheme = {
       name = "Papirus-Dark";
