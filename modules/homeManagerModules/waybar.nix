@@ -175,7 +175,7 @@ with lib;
       ''
         * {
           border: none;
-	  font-family: "JetBrainsMono Nerd Font Mono 12";
+	  font-family: "JetBrainsMono Nerd Font 12";
 	}
 
 
