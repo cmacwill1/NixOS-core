@@ -13,4 +13,8 @@
       ignorecase = true;
     };  
   };
+
+  programs.yazi = {
+    enable = true;
+  };
 }

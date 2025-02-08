@@ -7,6 +7,7 @@
     ./amdgpu.nix
     ./generic-gpu.nix
     ./laptop.nix
+    ./usbModule.nix
     ./spacemouse.nix
     
     #Localization
