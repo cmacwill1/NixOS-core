@@ -46,6 +46,10 @@
     mupdf
   ];
 
+  #
+  programs.neovim.enable = true;
+  programs.neovim.defaultEditor = true;
+
   # Nix Helper
 
   programs.nh = {

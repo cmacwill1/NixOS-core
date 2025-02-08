@@ -24,6 +24,8 @@
     ./screenshotter.nix
     ./scripts.nix
   ];
+  
+  home.sessionVariables.EDITOR = "nvim";
 
   programs.btop = {
     enable = true;
