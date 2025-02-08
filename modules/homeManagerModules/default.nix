@@ -20,7 +20,7 @@
     ./git.nix
     ./kitty.nix
     ./nixvim.nix
-    ./lf/lf.nix
+    ./yazi.nix
     ./screenshotter.nix
     ./scripts.nix
   ];
