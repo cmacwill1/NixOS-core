@@ -7,7 +7,6 @@
   };
 
   config = lib.mkIf config.networkingModule.enable {
-    networking.hostName = "nixos"; 
     # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
     # Configure network proxy if necessary

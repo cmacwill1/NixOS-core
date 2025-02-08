@@ -11,6 +11,8 @@
     inputs.home-manager.nixosModules.default
   ];
 
+  networking.hostName = "portable"; 
+
   amdgpu.enable = true;
   audio.enable = true;
   bluetooth.enable = true;

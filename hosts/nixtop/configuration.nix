@@ -11,6 +11,8 @@
     inputs.home-manager.nixosModules.default
   ];
 
+  networking.hostName = "nixtop"; 
+
   amdgpu.enable = true;
   audio.enable = true;
   bluetooth.enable = true;
