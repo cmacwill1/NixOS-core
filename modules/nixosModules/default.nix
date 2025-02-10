@@ -22,6 +22,9 @@
     ./steam.nix
     ./stylixModule.nix
     ./zsh.nix
+
+    #testing:
+    ./tailscale.nix
   ];
  
   #All that follows defines host-agnostic system defaults
