@@ -25,6 +25,7 @@
 
     #testing:
     ./tailscale.nix
+    ./ssh.nix
   ];
  
   #All that follows defines host-agnostic system defaults
