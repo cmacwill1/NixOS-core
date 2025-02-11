@@ -18,6 +18,7 @@
 
     #Programs
     ./git.nix
+    ./direnv.nix
     ./kitty.nix
     ./nixvim.nix
     ./yazi.nix

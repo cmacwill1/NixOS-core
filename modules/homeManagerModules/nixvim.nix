@@ -21,6 +21,7 @@
         lualine.enable = true;
 	bufferline.enable = true;
 	web-devicons.enable = true;
+	direnv.enable = true;
 	vimtex = {
 	  enable = true;
 	  settings = {

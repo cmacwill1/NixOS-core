@@ -12,6 +12,7 @@
       enableCompletion = true;
       autosuggestions.enable = true;
       promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+      shellInit = ''eval "$(direnv hook zsh)"'';
     };
   };
 }
