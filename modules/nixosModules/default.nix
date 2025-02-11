@@ -25,6 +25,7 @@
 
     #testing:
     ./tailscale.nix
+    ./nasModule.nix
     ./ssh.nix
   ];
  
