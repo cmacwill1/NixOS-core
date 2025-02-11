@@ -5,10 +5,8 @@
     nfs-utils
   ];
 
-  fileSystems."NAS" = {
-    device = "100.ip.addr.here/hostSharePoint";
+  fileSystems."/home/cmacwill/nasTest" = {
+    device = "truenas-scale:/mnt/Main_Core/Core_1/Charles/cmacwill";
     fsType = "nfs";
-    mountPoint = "/home/USER/clientSharePoint";
-    options = [ "?" ];
   };
 }
