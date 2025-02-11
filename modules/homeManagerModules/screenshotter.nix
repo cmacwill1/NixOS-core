@@ -18,7 +18,10 @@
         grim -g "$(slurp -w 0)" - | wl-copy
       '')
       (writeShellScriptBin "screenshotter-save-default" ''
-	grim -g "$(slurp -w 0)" "$HOME/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png" && wl-copy < $HOME/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png
+	if [ ! -d "$HOME/screenshots" ]; then
+	  mkdir "$HOME/screenshots"
+	fi
+	grim -g "$(slurp -w 0)" "$HOME/screenshots/$(date +%Y-%m-%d_%H-%M-%S).png" && wl-copy < $HOME/screenshots/$(date +%Y-%m-%d_%H-%M-%S).png
       '')
       (writeShellScriptBin "screenshotter-swappy" ''
         grim -g "$(slurp -w 0)" - | swappy -f -
