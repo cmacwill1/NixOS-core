@@ -12,7 +12,6 @@
       freecad-wayland
       orca-slicer
       kicad
-#      blender #wtf
     ];
   };
 }
