@@ -21,6 +21,7 @@
   styling.enable = true;
   waybar.enable = true;
   wlogout.enable = false;
+  screenshotter.enable = true;
 
   git.enable = true;
   kitty.enable = true;
