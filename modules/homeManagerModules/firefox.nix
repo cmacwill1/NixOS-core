@@ -1,4 +1,4 @@
-{ lib, config, pkgs, ... }:
+{ lib, config, pkgs, inputs, ... }:
 
 {
   options = {
@@ -46,6 +46,16 @@
 	userChrome = ''                         
 	  /* some css */                        
 	'';
+
+	extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+	  ublock-origin
+	  sponsorblock
+	  darkreader
+	  #untrap-for-youtube
+	  youtube-shorts-block
+	  #youtube-recommended-videos
+	  zotero-connector
+	];
       };
     };
   };

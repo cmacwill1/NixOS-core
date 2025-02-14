@@ -28,7 +28,8 @@
     ./nasModule.nix
     ./ssh.nix
   ];
- 
+
+
   #All that follows defines host-agnostic system defaults
   environment.systemPackages = with pkgs; [
     vim
