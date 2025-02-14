@@ -5,6 +5,7 @@
   # manage.
   home.username = "cmacwill";
   home.homeDirectory = "/home/cmacwill";
+
  
   imports = [
     ../../modules/homeManagerModules
