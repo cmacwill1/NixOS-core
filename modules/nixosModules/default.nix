@@ -19,6 +19,7 @@
     ./audio.nix
     ./bluetooth.nix
     ./bootloader.nix
+    ./homeManagerModule.nix
     ./steam.nix
     ./stylixModule.nix
     ./zsh.nix

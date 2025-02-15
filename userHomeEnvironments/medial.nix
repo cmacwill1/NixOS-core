@@ -7,7 +7,7 @@
   home.homeDirectory = "/home/cmacwill";
  
   imports = [
-    ../../modules/homeManagerModules
+    ../modules/homeManagerModules
   ];
   
   cad.enable = true;

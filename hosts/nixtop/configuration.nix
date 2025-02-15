@@ -27,7 +27,13 @@
   zsh.enable = true;
   users.enable = true;
 
+  homeManagerModule = {
+    enable = true;
+    variation = "medial";
+  };
+
   #Home manager stuff; inherit home configuration for cmacwill
+  /*
   home-manager = {
     extraSpecialArgs = {
       inherit inputs;
@@ -41,6 +47,7 @@
       inputs.nixvim.homeManagerModules.nixvim
     ];
   };
+  */
 
   system.stateVersion = "24.05";
 }
