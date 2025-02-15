@@ -53,17 +53,9 @@
     mupdf
   ];
 
-  #
-  programs.neovim.enable = true;
-  programs.neovim.defaultEditor = true;
-
-  # Nix Helper
-
-  programs.nh = {
+  programs.neovim = {
     enable = true;
-    clean.enable = true;
-    clean.extraArgs = "--keep-since 4d --keep 5";
-    flake = "/home/cmacwill/NixOS-core/";
+    defaultEditor = true;
   };
 
   # experimental settings enable.

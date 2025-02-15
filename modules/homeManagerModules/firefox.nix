@@ -41,11 +41,8 @@
 	  "browser.download.panel.shown" = true;
 	  "identity.fxaccounts.enabled" = false;
 	  "signon.rememberSignons" = false;
+	  "extensions.autoDisableScopes" = 0;
 	};
-
-	userChrome = ''                         
-	  /* some css */                        
-	'';
 
 	extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
 	  ublock-origin
