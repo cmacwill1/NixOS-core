@@ -32,22 +32,5 @@
     variation = "medial";
   };
 
-  #Home manager stuff; inherit home configuration for cmacwill
-  /*
-  home-manager = {
-    extraSpecialArgs = {
-      inherit inputs;
-    };
-
-    users = {
-      "cmacwill" = import ./home.nix;
-    };
-    useGlobalPkgs = true;
-    sharedModules = [
-      inputs.nixvim.homeManagerModules.nixvim
-    ];
-  };
-  */
-
   system.stateVersion = "24.05";
 }

@@ -27,19 +27,9 @@
   zsh.enable = true;
   users.enable = true;
 
-  #Home manager stuff; inherit home configuration for cmacwill
-  home-manager = {
-    extraSpecialArgs = {
-      inherit inputs;
-    };
-
-    users = {
-      "cmacwill" = import ./home.nix;
-    };
-    useGlobalPkgs = true;
-    sharedModules = [
-      inputs.nixvim.homeManagerModules.nixvim
-    ];
+  homeManagerModule = {
+    enable = true;
+    variation = "maximal";
   };
 
   system.stateVersion = "24.05";
