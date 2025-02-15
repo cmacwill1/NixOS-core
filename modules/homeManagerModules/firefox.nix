@@ -7,6 +7,36 @@
   };
 
   config = lib.mkIf config.firefox.enable {
+
+    textfox = {
+      enable = true;
+      profile = "cmacwill";
+      config = {
+        background = {
+          color = "#${config.lib.stylix.colors.base00}";
+        };
+        border = {
+          color = "#${config.lib.stylix.colors.base09}";
+          width = "2px";
+          transition = "0.2s ease";
+          radius = "5px";
+        };
+	tabs = {
+	  vertical = {
+	    enable = true;
+	    margin = "5px";
+	  };
+	  horizontal.enable = false;
+	};
+        displayWindowControls = true;
+        displayNavButtons = true;
+        displayUrlbarIcons = true;
+        displaySidebarTools = true;
+        displayTitles = false;
+        newtabLogo = "     /\\  \\‾\\  /\\    \\A     \\ \\  \\ \\/ /    \\A  /‾‾‾  ‾‾‾\\  / /\\  \\A   ‾‾/‾/‾‾‾‾\\ \\/ /  \\A ___/ /      \\/ /‾‾⟩\\A⟨__  /\\      / /‾‾‾ \\A  / /\\ \\____/_/__   \\A  \\/ /  \\___  ___/  \\A    / /\\ \\  \\ \\     \\A    \\/  \\_\\  \\/     \\A";
+      };
+  };
+
     programs.firefox = {
       enable = true;
       profiles.cmacwill = {
@@ -37,7 +67,7 @@
 	];
 
 	settings = {
-	  "dom.security.https_only_mode" = true;
+	  "dom.security.https_only_mode" = false;
 	  "browser.download.panel.shown" = true;
 	  "identity.fxaccounts.enabled" = false;
 	  "signon.rememberSignons" = false;
@@ -48,6 +78,7 @@
 	  ublock-origin
 	  sponsorblock
 	  darkreader
+	  #firefox-color
 	  #untrap-for-youtube
 	  youtube-shorts-block
 	  #youtube-recommended-videos

@@ -21,6 +21,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    textfox.url = "github:adriankarlen/textfox";
+
   };
 
   outputs = { nixpkgs, ... }@inputs: {
