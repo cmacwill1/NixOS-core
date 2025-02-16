@@ -16,7 +16,7 @@
           color = "#${config.lib.stylix.colors.base00}";
         };
         border = {
-          color = "#${config.lib.stylix.colors.base09}";
+          color = "#${config.lib.stylix.colors.base02}";
           width = "2px";
           transition = "0.2s ease";
           radius = "5px";
@@ -28,7 +28,7 @@
 	  };
 	  horizontal.enable = false;
 	};
-        displayWindowControls = true;
+        displayWindowControls = false;
         displayNavButtons = true;
         displayUrlbarIcons = true;
         displaySidebarTools = true;
@@ -78,10 +78,7 @@
 	  ublock-origin
 	  sponsorblock
 	  darkreader
-	  #firefox-color
 	  #untrap-for-youtube
-	  youtube-shorts-block
-	  #youtube-recommended-videos
 	  zotero-connector
 	];
       };
