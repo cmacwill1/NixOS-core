@@ -15,6 +15,7 @@
   firefox.enable = true;
   office.enable = true;
   research.enable = true;
+  minecraftClient.enable = true;
 
   rofi.enable = true;
   hyprland-gaming-monitor.enable = true;

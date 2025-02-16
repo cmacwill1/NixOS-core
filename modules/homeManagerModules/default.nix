@@ -24,6 +24,7 @@
     ./yazi.nix
     ./screenshotter.nix
     ./scripts.nix
+    ./minecrafClient.nix
   ];
   
   home.sessionVariables.EDITOR = "nvim";
