@@ -51,6 +51,7 @@
     hyprshot
     vesktop
     mupdf
+    lm_sensors
   ];
 
   programs.neovim = {

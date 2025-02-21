@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 
 {
   options = {
@@ -14,5 +14,9 @@
     };
 
     services.xserver.videoDrivers = ["amdgpu"];
+
+    environment.systemPackages = with pkgs; [
+      nvtopPackages.amd
+    ];
   };
 }
