@@ -8,6 +8,7 @@
   config = lib.mkIf config.minecraftClient.enable {
     home.packages = with pkgs; [
       prismlauncher
+      packwiz
     ];
   };
 }
