@@ -11,7 +11,7 @@
     mountConfig = {
       options = "noatime";
     };
-    what = "truenas-scale:/mnt/Main_Core/Core_1/Charles/cmacwill";
+    what = "100.101.227.116:/mnt/Main_Core/Core_1/Charles/cmacwill";
     where = "/home/cmacwill/externalNetworkDrives/jmacwillNAS";
   }];
 
