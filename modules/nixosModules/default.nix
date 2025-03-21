@@ -59,6 +59,9 @@
     defaultEditor = true;
   };
 
+  security.pam.services.hyprlock = { };
+
+
   # experimental settings enable.
   nix.settings.experimental-features = [
     "nix-command"

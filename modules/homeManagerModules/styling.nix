@@ -11,6 +11,7 @@
     targets = {
       waybar.enable = false;
       rofi.enable = false;
+      hyprlock.enable = false;
       nixvim.enable = true;
     };
     opacity.terminal = 0.75;

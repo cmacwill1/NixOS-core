@@ -11,6 +11,7 @@
     #Desktop
     ./hyprland-gaming-monitor.nix
     ./hyprland.nix
+    ./hyprlock.nix
     ./rofi.nix
     ./styling.nix
     ./waybar.nix

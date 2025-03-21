@@ -1,4 +1,4 @@
-{lib, config, ... }:
+{lib, config, pkgs, ... }:
 
 {
   options = {
@@ -97,6 +97,7 @@
             "$mainMod, P, pseudo"
             "$mainMod, J, togglesplit"
             "$mainMod, F, fullscreen"
+            "$mainMod, L, exec, ${pkgs.hyprlock}/bin/hyprlock"
             "$mainMod, left, movefocus, l"
             "$mainMod, right, movefocus, r"
             "$mainMod, up, movefocus, u"
