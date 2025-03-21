@@ -1,12 +1,20 @@
 {lib, config, pkgs, ... }:
 
 {
+  imports = [
+    ./hyprlock.nix
+    ./hypridle.nix
+  ];
+
   options = {
     hyprland.enable = 
       lib.mkEnableOption "enables hyprland config";
   };
 
   config = lib.mkIf config.hyprland.enable {
+
+  hyprlock.enable = true;
+  hypridle.enable = true;
 
   wayland.windowManager.hyprland = {
     enable = true;

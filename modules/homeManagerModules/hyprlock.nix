@@ -1,6 +1,12 @@
-{ config, ... }: 
+{ config, lib, ... }: 
 
 {
+  options = {
+    hyprlock.enable = 
+      lib.mkEnableOption "enables hyprlock within hyprland";
+  };
+
+  config = lib.mkIf config.hyprlock.enable {
   programs.hyprlock = {
     enable = true;
     settings = {
@@ -44,6 +50,7 @@
           shadow_passes = 2;
         };
     };
+  };
   };
 }
 
