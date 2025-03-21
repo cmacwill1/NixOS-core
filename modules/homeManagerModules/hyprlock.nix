@@ -21,12 +21,10 @@
       
       image = [
         {
-          path = "/home/cmacwill/NixOS-core/pfp.jpg";
-          size = 150;
-          border_size = 4;
-          border_color = "rgb(0C96F9)";
-          rounding = -1; # Negative means circle
-          position = "0, 200";
+          path = "/home/cmacwill/NixOS-core/wallpapers/nix.png";
+          size = 200;
+          border_size = 0;
+          position = "0, 100";
           halign = "center";
           valign = "center";
         }
