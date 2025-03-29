@@ -1,12 +1,21 @@
 {lib, config, ... }:
 
 {
+  imports = [
+    ./hyprlock.nix
+    ./hypridle.nix
+  ];
+
   options = {
     hyprland-gaming-monitor.enable = 
-      lib.mkEnableOption "enables gaming monitor hyprland";
+      lib.mkEnableOption "enables hyprland config";
   };
 
   config = lib.mkIf config.hyprland-gaming-monitor.enable {
+
+  hyprlock.enable = true;
+  hypridle.enable = true;
+
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
