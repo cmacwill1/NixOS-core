@@ -32,10 +32,10 @@
             ",preffered,auto,1"
           ];
           windowrule = [
-            "float, io.github.kaii_lb.Overskride"
-            "center, io.github.kaii_lb.Overskride"
-            "size 200 500, io.github.kaii_lb.Overskride"
-            "float, org.pulseaudio.pavucontrol"
+            "float, class:io.github.kaii_lb.Overskride"
+            "center, class:io.github.kaii_lb.Overskride"
+            "size 200 500, class:io.github.kaii_lb.Overskride"
+            "float, class:org.pulseaudio.pavucontrol"
           ];      
           env = [
             "HYPRSHOT_DIR, ~/Screenshots:$PATH"
