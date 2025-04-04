@@ -16,6 +16,8 @@
   hyprlock.enable = true;
   hypridle.enable = true;
 
+  programs.hyprcursor-phinger.enable = true;
+
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -38,7 +40,8 @@
             "float, class:org.pulseaudio.pavucontrol"
           ];      
           env = [
-            "HYPRSHOT_DIR, ~/Screenshots:$PATH"
+	    #"HYPRCURSOR_THEME,capitaine_gruvbox"
+	    #"HYPRCURSOR_SIZE,24"
           ]; 
           general = {
             gaps_in = 5;
