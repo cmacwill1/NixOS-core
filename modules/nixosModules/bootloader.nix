@@ -7,11 +7,22 @@
   };
 
   config = lib.mkIf config.bootloader.enable  {
-    # Bootloader
+/*
+# Bootloader
     boot.loader = { 
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
+
+*/
+  boot.loader.grub= { 
+    enable = true;
+    devices = [ "nodev" ];
+    efiInstallAsRemovable = true;
+    efiSupport = true;
+    useOSProber = false;
+    #theme = pkgs.nixos-grub2-theme;
+  };
 
     # Install greeter
     environment.systemPackages = with pkgs; [
