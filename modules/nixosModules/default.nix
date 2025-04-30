@@ -52,6 +52,12 @@
     vesktop
     mupdf
     lm_sensors
+    termusic
+    obs-studio
+    vlc
+    davinci-resolve
+    ffmpeg
+    jellyfin-media-player
   ];
 
   programs.neovim = {
