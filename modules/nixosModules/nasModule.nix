@@ -6,20 +6,37 @@
   ];
 
   services.rpcbind.enable = true; # needed for NFS
-  systemd.mounts = [{
-    type = "nfs";
-    mountConfig = {
-      options = "noatime";
-    };
+  systemd.mounts = [
+  {
     what = "100.101.227.116:/mnt/Main_Core/Core_1/Charles/cmacwill";
-    where = "/home/cmacwill/externalNetworkDrives/jmacwillNAS";
-  }];
+    where = "/run/mount/jmacwillNAS"; 
+    type = "nfs";
+    options = "noatime";
+  }
 
-  systemd.automounts = [{
+  {
+    what = "100.104.103.21:/mnt/zpool/user/cmacwill";
+    where = "/run/mount/cmacwillNAS"; 
+    type = "nfs";
+    options = "noatime";
+  }
+  ];
+
+  systemd.automounts = [
+  {
     wantedBy = [ "multi-user.target" ];
     automountConfig = {
       TimeoutIdleSec = "600";
     };
-    where = "/home/cmacwill/externalNetworkDrives/jmacwillNAS";
-  }];
+    where = "/run/mount/jmacwillNAS"; 
+  }
+
+  {
+    wantedBy = [ "multi-user.target" ];
+    automountConfig = {
+      TimeoutIdleSec = "600";
+    };
+    where = "/run/mount/cmacwillNAS"; 
+  }
+  ];
 }

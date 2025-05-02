@@ -14,7 +14,7 @@
       hyprlock.enable = false;
       nixvim.enable = true;
     };
-    opacity.terminal = 0.75;
+    opacity.terminal = 0.85;
   };
 
   gtk = {
