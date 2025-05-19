@@ -23,6 +23,7 @@
   networkingModule.enable = true;
   spacemouse.enable = false;
   steam.enable = true;
+  sunshine.enable = true;
   stylixModule.enable = true;
   zsh.enable = true;
   users.enable = true;

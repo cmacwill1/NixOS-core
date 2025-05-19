@@ -21,6 +21,7 @@
     ./bootloader.nix
     ./homeManagerModule.nix
     ./steam.nix
+    ./sunshine.nix
     ./stylixModule.nix
     ./zsh.nix
 
