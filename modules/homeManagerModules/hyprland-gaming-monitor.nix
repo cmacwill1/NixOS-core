@@ -137,6 +137,7 @@
             "$mainMod, mouse_down, workspace, e+1"
             "$mainMod, mouse_up, workspace, e-1"
             "$mainMod SHIFT, S, exec, screenshotter-save-default"
+	    "$mainMod, F1, exec, steam -bigpicture"
             ",XF86MonBrightnessDown,exec,brightnessctl set 5%-"
             ",XF86MonBrightnessUp,exec,brightnessctl set +5%"
           ];
