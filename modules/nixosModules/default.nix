@@ -56,9 +56,10 @@
     termusic
     obs-studio
     vlc
-    davinci-resolve
+    #davinci-resolve
     ffmpeg
     jellyfin-media-player
+    antimicrox
   ];
 
   programs.neovim = {
