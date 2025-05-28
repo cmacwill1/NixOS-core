@@ -33,7 +33,7 @@
 	git_status = {
           conflicted = "=$count ";
 	  deleted = "✘$count ";
-	  format = "[[($conflicted$untracked$staged$modified$renamed$deleted)](218) ($ahead_behind$stashed)]($style) ";
+	  format = "[[($conflicted$untracked$staged$modified$renamed$deleted)]($style) ($ahead_behind$stashed)]($style) ";
 	  modified = "!$count ";
 	  renamed = "»$count ";
 	  staged = "+$count ";
