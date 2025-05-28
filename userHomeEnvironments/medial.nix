@@ -22,6 +22,8 @@
   waybar.enable = true;
   wlogout.enable = true;
   minecraftClient.enable = true;
+  fish.enable = true;
+  starship.enable = true;
 
   git.enable = true;
   kitty.enable = true;
