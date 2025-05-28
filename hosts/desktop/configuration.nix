@@ -25,8 +25,7 @@
   steam.enable = true;
   sunshine.enable = true;
   stylixModule.enable = true;
-  zsh.enable = true;
-  users.enable = true;
+  zsh.enable = false;
 
   homeManagerModule = {
     enable = true;

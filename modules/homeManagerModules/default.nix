@@ -25,6 +25,8 @@
     ./screenshotter.nix
     ./scripts.nix
     ./minecrafClient.nix
+    ./fish.nix
+    ./starship.nix
   ];
   
   home.sessionVariables.EDITOR = "nvim";

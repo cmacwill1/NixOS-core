@@ -1,20 +1,13 @@
-{ pkgs, lib, config, ... }:
+{ pkgs, ... }:
 
 {
-  options = {
-    users.enable =
-      lib.mkEnableOption "user support";
+  users.users.cmacwill = {
+    isNormalUser = true;
+    description = "cmacwill";
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    shell = pkgs.fish;
   };
-
-  config = lib.mkIf config.users.enable {
-    users.users.cmacwill = {
-      isNormalUser = true;
-      description = "cmacwill";
-      extraGroups = [
-        "networkmanager"
-        "wheel"
-      ];
-      shell = pkgs.zsh;
-    };
- };
 }

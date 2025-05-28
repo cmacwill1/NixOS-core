@@ -24,6 +24,8 @@
   waybar.enable = true;
   wlogout.enable = false;
   screenshotter.enable = true;
+  fish.enable = true;
+  starship.enable = true;
 
   git.enable = true;
   kitty.enable = true;

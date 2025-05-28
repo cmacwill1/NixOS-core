@@ -61,6 +61,8 @@
     jellyfin-media-player
     antimicrox
   ];
+  
+  programs.fish.enable = true;
 
   programs.neovim = {
     enable = true;
