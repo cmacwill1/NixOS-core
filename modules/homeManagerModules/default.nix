@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -49,6 +49,10 @@
     automount = true;
     notify = true;
   };
+
+  home.packages = with pkgs; [
+    udiskie
+  ];
 
   programs.btop = {
     enable = true;

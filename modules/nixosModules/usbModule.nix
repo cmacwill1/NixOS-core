@@ -1,6 +1,10 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   services.udisks2.enable = true;
-  #Please note that automounting daemon udiskie is given by home-manager
+
+  environment.systemPackages = with pkgs; [
+    udiskie
+  ];
+  #Please note that the udiskie automounting daemon is managed by home-manager
 }
