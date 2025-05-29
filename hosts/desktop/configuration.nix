@@ -26,6 +26,7 @@
   sunshine.enable = true;
   stylixModule.enable = true;
   zsh.enable = false;
+  virtualisationModule.enable = true;
 
   homeManagerModule = {
     enable = true;

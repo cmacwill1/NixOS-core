@@ -24,6 +24,7 @@
     ./sunshine.nix
     ./stylixModule.nix
     ./zsh.nix
+    ./virtualization.nix
 
     #testing:
     ./tailscale.nix
