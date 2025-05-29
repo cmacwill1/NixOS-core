@@ -44,6 +44,12 @@
     };
   };
 
+  services.udiskie = {
+    enable = true;
+    automount = true;
+    notify = true;
+  };
+
   programs.btop = {
     enable = true;
     settings = {
