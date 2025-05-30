@@ -61,6 +61,7 @@
     ffmpeg
     jellyfin-media-player
     antimicrox
+    libnotify
   ];
   
   programs.fish.enable = true;

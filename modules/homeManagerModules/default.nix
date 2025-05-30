@@ -52,6 +52,7 @@
 
   home.packages = with pkgs; [
     udiskie
+    bluebubbles
   ];
 
   programs.btop = {
