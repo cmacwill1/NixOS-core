@@ -20,7 +20,7 @@
     devices = [ "nodev" ];
     efiInstallAsRemovable = true;
     efiSupport = true;
-    useOSProber = false;
+    useOSProber = true;
     #theme = pkgs.nixos-grub2-theme;
   };
 
