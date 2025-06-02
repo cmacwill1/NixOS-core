@@ -18,11 +18,6 @@
       fsType = "ext4";
     };
 
-  fileSystems."/home/cmacwill/externalNetworkDrives/jmacwillNAS" =
-    { device = "systemd-1";
-      fsType = "autofs";
-    };
-
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/9DD7-DB12";
       fsType = "vfat";
@@ -40,6 +35,7 @@
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp10s0.useDHCP = lib.mkDefault true;
   # networking.interfaces.tailscale0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.virbr0.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp9s0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
