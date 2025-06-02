@@ -13,6 +13,7 @@
       rofi.enable = false;
       hyprlock.enable = false;
       nixvim.enable = true;
+      fish.enable = true;
     };
     opacity.terminal = 0.85;
   };

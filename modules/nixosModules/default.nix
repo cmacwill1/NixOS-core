@@ -62,6 +62,7 @@
     jellyfin-media-player
     antimicrox
     libnotify
+    bat
   ];
   
   programs.fish.enable = true;

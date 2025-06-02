@@ -9,6 +9,7 @@
   config = lib.mkIf config.stylixModule.enable {
     stylix = {
       enable = true;
+      #base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
       base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-soft.yaml";
       targets.grub.enable = false;
       image = ../../wallpapers/gruvbox1.jpg;
