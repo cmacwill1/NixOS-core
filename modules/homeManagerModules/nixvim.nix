@@ -48,6 +48,7 @@
               { name = "luasnip"; }
               { name = "buffer"; }
               { name = "path"; }
+              { name = "bibtex"; }
             ];
             mapping = {
               "<CR>" = "cmp.mapping.confirm({ select = true })";
@@ -66,6 +67,23 @@
         cmp-path.enable = true;
 	cmp-vimtex.enable = true;
       };
+
+      extraPlugins = [(pkgs.vimUtils.buildVimPlugin {
+	name = "cmp-bibtex";
+	src = pkgs.fetchFromGitHub {
+	  owner = "liamvdvyver";
+	  repo = "cmp-bibtex";
+	  rev = "5c30c7c3d748975d3f3b309ccbc06a08cf6a42ab";
+	  hash = "sha256-0sNzbUh0LsMHI2DMp1MOTbSecm/AG26GchdKs0BVvrE=";
+	};
+      })];
+
+      extraConfigLua = ''
+       require("cmp-bibtex").setup({
+	 files = { "./references.bib", "../references.bib" },
+	 filetypes = { "markdown", "rmd", "tex" }
+       })
+      '';
       
       clipboard.providers.wl-copy.enable = true;
 
