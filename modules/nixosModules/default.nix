@@ -64,6 +64,8 @@
     libnotify
     bat
     ghostty
+    inkscape
+    gimp3
   ];
   
   programs.fish.enable = true;
