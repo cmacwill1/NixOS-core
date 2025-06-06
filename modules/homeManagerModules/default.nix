@@ -50,6 +50,10 @@
     notify = true;
   };
 
+  programs.lazygit = {
+    enable = true;
+  };
+
   home.packages = with pkgs; [
     udiskie
     bluebubbles
