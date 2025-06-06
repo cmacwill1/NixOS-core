@@ -66,9 +66,21 @@
     ghostty
     inkscape
     gimp3
+    spacenav-cube-example
+    spacenavd
+    pciutils
+    usbutils
   ];
   
   programs.fish.enable = true;
+
+  #hardware.spacenavd.enable = true;
+  #systemd.services.spacenavd.wantedBy = [ "graphical.target" ];
+  /*
+  services.udev.extraRules = ''
+    SUBSYSTEM=="hidraw", ATTRS{idVendor}=="256f", ATTRS{idProduct}=="c63a", MODE="0666"
+  '';
+  */
 
   programs.neovim = {
     enable = true;
