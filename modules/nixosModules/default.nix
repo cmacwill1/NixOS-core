@@ -63,6 +63,7 @@
     antimicrox
     libnotify
     bat
+    ghostty
   ];
   
   programs.fish.enable = true;
