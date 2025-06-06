@@ -63,6 +63,8 @@
     antimicrox
     libnotify
     bat
+    inkscape
+    gimp3
   ];
   
   programs.fish.enable = true;
