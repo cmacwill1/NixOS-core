@@ -31,7 +31,8 @@
             "blur, rofi"
           ];
           monitor = [
-            ",2560x1440@180,auto,1"
+            "DP-2,2560x1440@180,0x0,1"
+	    "HDMI-A-1,1920x1080@60,-1080x-250,1,transform,1"
           ];
           windowrule = [
             "float, class:io.github.kaii_lb.Overskride"
