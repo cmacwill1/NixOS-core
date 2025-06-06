@@ -44,11 +44,12 @@
           autoEnableSources = true;
           settings = {
             sources = [
+	      { name = "vimtex"; }
+              { name = "path"; }
               { name = "nvim_lsp"; }
               { name = "luasnip"; }
               { name = "buffer"; }
-              { name = "path"; }
-              { name = "bibtex"; }
+              #{ name = "bibtex"; }
             ];
             mapping = {
               "<CR>" = "cmp.mapping.confirm({ select = true })";
@@ -62,12 +63,14 @@
             };
           };
         };
+	/*
         cmp-nvim-lsp.enable = true;
         cmp-buffer.enable = true;
         cmp-path.enable = true;
 	cmp-vimtex.enable = true;
+	*/
       };
-
+/*
       extraPlugins = [(pkgs.vimUtils.buildVimPlugin {
 	name = "cmp-bibtex";
 	src = pkgs.fetchFromGitHub {
@@ -84,7 +87,7 @@
 	 filetypes = { "markdown", "rmd", "tex" }
        })
       '';
-      
+  */    
       clipboard.providers.wl-copy.enable = true;
 
       globals.mapleader = " ";
