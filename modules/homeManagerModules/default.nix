@@ -44,6 +44,10 @@
     };
   };
 
+  programs.tmux = {
+    enable = true;
+  };
+
   services.udiskie = {
     enable = true;
     automount = true;
