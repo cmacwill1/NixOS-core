@@ -63,18 +63,18 @@
     antimicrox
     libnotify
     bat
-    ghostty
     inkscape
     gimp3
     spacenav-cube-example
     spacenavd
+    libspnav
     pciutils
     usbutils
   ];
   
   programs.fish.enable = true;
 
-  #hardware.spacenavd.enable = true;
+  hardware.spacenavd.enable = true;
   #systemd.services.spacenavd.wantedBy = [ "graphical.target" ];
   /*
   services.udev.extraRules = ''
