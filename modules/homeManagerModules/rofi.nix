@@ -64,7 +64,7 @@
           "inputbar" = {
             enabled = true;
             padding = mkLiteral "0px";
-            margin = mkLiteral "10px";
+            margin = mkLiteral "10px 10px 0px 10px";
             background-color = mkLiteral "transparent";
             border-radius = "10px";
             orientation = mkLiteral "horizontal";
