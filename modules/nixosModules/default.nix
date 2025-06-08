@@ -70,17 +70,14 @@
     libspnav
     pciutils
     usbutils
+    openrgb
   ];
   
   programs.fish.enable = true;
 
   hardware.spacenavd.enable = true;
-  #systemd.services.spacenavd.wantedBy = [ "graphical.target" ];
-  /*
-  services.udev.extraRules = ''
-    SUBSYSTEM=="hidraw", ATTRS{idVendor}=="256f", ATTRS{idProduct}=="c63a", MODE="0666"
-  '';
-  */
+
+  services.hardware.openrgb.enable = true;
 
   programs.neovim = {
     enable = true;
