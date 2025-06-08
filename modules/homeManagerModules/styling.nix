@@ -7,28 +7,23 @@
   };
 
   config = lib.mkIf config.styling.enable {
-  stylix = {
-    targets = {
-      waybar.enable = false;
-      rofi.enable = false;
-      hyprlock.enable = false;
-      nixvim.enable = true;
-      fish.enable = true;
+    stylix = {
+      targets = {
+	waybar.enable = false;
+	rofi.enable = false;
+	hyprlock.enable = false;
+	nixvim.enable = true;
+	fish.enable = true;
+	kitty.enable = true;
+      };
+      opacity.terminal = 0.85;
     };
-    opacity.terminal = 0.85;
-  };
 
-  gtk = {
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
+    gtk = {
+      iconTheme = {
+	name = "Papirus-Dark";
+	package = pkgs.papirus-icon-theme;
+      };
     };
-    gtk3.extraConfig = {
-      gtk-applications-prefer-dark-theme = 1;
-    };
-    gtk4.extraConfig = {
-      gtk-applications-prefer-dark-theme = 1;
-    };
-  };
   };
 }
