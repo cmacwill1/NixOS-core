@@ -22,7 +22,6 @@
   hyprland.enable = false;
   styling.enable = true;
   waybar.enable = true;
-  wlogout.enable = false;
   screenshotter.enable = true;
   fish.enable = true;
   starship.enable = true;

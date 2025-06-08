@@ -20,7 +20,6 @@
   hyprland.enable = true;
   styling.enable = true;
   waybar.enable = true;
-  wlogout.enable = true;
   minecraftClient.enable = true;
   fish.enable = true;
   starship.enable = true;

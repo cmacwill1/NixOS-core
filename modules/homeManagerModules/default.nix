@@ -14,7 +14,6 @@
     ./rofi.nix
     ./styling.nix
     ./waybar.nix
-    ./wlogout/wlogout.nix
 
     #Programs
     ./git.nix

@@ -20,7 +20,6 @@
   hyprland.enable = true;
   styling.enable = true;
   waybar.enable = true;
-  wlogout.enable = false;
 
   git.enable = true;
   kitty.enable = true;
