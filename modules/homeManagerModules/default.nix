@@ -47,6 +47,10 @@
     enable = true;
   };
 
+  programs.cava = {
+    enable = true;
+  };
+
   services.udiskie = {
     enable = true;
     automount = true;
