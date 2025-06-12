@@ -26,6 +26,7 @@
     ./minecrafClient.nix
     ./fish.nix
     ./starship.nix
+    ./ssh.nix
   ];
   
   home.sessionVariables.EDITOR = "nvim";
