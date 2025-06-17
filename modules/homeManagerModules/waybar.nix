@@ -62,6 +62,7 @@ with lib;
           format-wifi = "{icon} {signalStrength}%";
           format-disconnected = "󰤮";
           tooltip = false;
+	  on-click = "hyprctl dispatch exec [float] 'kitty -- fish -c 'nmtui''";
         };
         
         "battery" = {
@@ -108,7 +109,7 @@ with lib;
               ""
             ];
           };
-          on-click = "sleep 0.1 && pavucontrol";
+          on-click = "sleep 0.1 && hyprctl dispatch exec [float] 'kitty -- fish -c 'pulsemixer''";
         };
 
         "bluetooth" = {
