@@ -71,6 +71,8 @@
     pciutils
     usbutils
     openrgb
+    whatsie
+    bagels
   ];
   
   programs.fish.enable = true;

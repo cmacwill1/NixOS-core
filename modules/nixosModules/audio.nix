@@ -18,6 +18,8 @@
  
     environment.systemPackages = with pkgs; [
       pavucontrol
+      pulsemixer
+      ncpamixer
     ];
   };
 }
