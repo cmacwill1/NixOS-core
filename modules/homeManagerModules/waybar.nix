@@ -17,7 +17,7 @@ with lib;
     settings = [
       {
         layer = "top";
-	output = "DP-2";
+	#output = "DP-2";
         position = "top";
         height = 54;
         margin = "1";
