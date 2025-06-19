@@ -88,6 +88,28 @@
        })
       '';
   */    
+      extraPlugins = [
+      (pkgs.vimUtils.buildVimPlugin {
+	name = "scnvim";
+	src = pkgs.fetchFromGitHub {
+	  owner = "davidgranstrom";
+	  repo = "scnvim";
+	  rev = "7fcfd73d6d3b4cf6a31f62f07de3e35744962a20";
+	  hash = "sha256-K+AbvYMYwFf1uD5RsMvTGbWuDqBMnmlB7Pci7g7g2rw=";
+	};
+      })
+
+      (pkgs.vimUtils.buildVimPlugin {
+	name = "vim-tidal";
+	src = pkgs.fetchFromGitHub {
+	  owner = "tidalcycles";
+	  repo = "vim-tidal";
+	  rev = "e440fe5bdfe07f805e21e6872099685d38e8b761";
+	  hash = "sha256-8gyk17YLeKpLpz3LRtxiwbpsIbZka9bb63nK5/9IUoA=";
+	};
+      })];
+
+
       clipboard.providers.wl-copy.enable = true;
 
       globals.mapleader = " ";

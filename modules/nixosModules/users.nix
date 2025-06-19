@@ -8,6 +8,7 @@
       "networkmanager"
       "wheel"
       "input"
+      "jackaudio"
     ];
     shell = pkgs.fish;
   };
