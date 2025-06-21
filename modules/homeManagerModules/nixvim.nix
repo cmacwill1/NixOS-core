@@ -1,4 +1,4 @@
-{pkgs, lib, config, ... }:
+{ pkgs, lib, config, ... }:
 
 {
   options = {
@@ -88,6 +88,8 @@
        })
       '';
   */    
+
+  /*
       extraPlugins = [
       (pkgs.vimUtils.buildVimPlugin {
 	name = "scnvim";
@@ -109,7 +111,9 @@
 	};
       })];
 
+*/
 
+      extraPlugins = [pkgs.vimPlugins.vim-tidal];
       clipboard.providers.wl-copy.enable = true;
 
       globals.mapleader = " ";

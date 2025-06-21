@@ -29,10 +29,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    tidal = {
+      url = "github:cmacwill1/tidalcycles";
+    };
+
     hyprcursor-phinger.url = "github:jappie3/hyprcursor-phinger";
   };
 
-  outputs = { nixpkgs, ... }@inputs: {
+  outputs = { nixpkgs, ... }@inputs:{
     nixosConfigurations = {
       nixtop = nixpkgs.lib.nixosSystem {
 	system = "x86_64-linux";
@@ -51,11 +55,15 @@
 	  ./hosts/desktop/configuration.nix
 	  inputs.home-manager.nixosModules.default
 	  inputs.stylix.nixosModules.stylix
+	  {
+	    nixpkgs.overlays = [inputs.tidal.overlays.default];
+	  }
 	];
       };
       portable = nixpkgs.lib.nixosSystem {
 	system = "x86_64-linux";
 	specialArgs = {inherit inputs;};
+	overlays = [ inputs.tidal.overlays.default ];
 	modules = [
 	  ./hosts/portable/configuration.nix
 	  inputs.home-manager.nixosModules.default

@@ -8,7 +8,6 @@
 
   config = lib.mkIf config.research.enable {
     home.packages = with pkgs; [
-      obsidian
       zotero
       teams-for-linux
       openconnect
