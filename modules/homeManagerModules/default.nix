@@ -19,7 +19,7 @@
     ./git.nix
     ./direnv.nix
     ./kitty.nix
-    ./nixvim.nix
+    ./nixvim/nixvim.nix
     ./yazi.nix
     ./screenshotter.nix
     ./scripts.nix
