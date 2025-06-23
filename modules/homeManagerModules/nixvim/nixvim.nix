@@ -166,7 +166,7 @@
       number = true;
       # You can also add relative line numbers, to help with jumping.
       #  Experiment for yourself to see if you like it!
-      #relativenumber = true
+      relativenumber = true;
 
       # Enable mouse mode, can be useful for resizing splits for example!
       mouse = "a";
@@ -343,6 +343,9 @@
       sleuth = {
         enable = true;
       };
+      lualine.enable = true;
+      #bufferline.enable = true;
+      direnv.enable = true;
     };
 
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraplugins
