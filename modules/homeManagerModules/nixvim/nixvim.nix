@@ -19,7 +19,7 @@
     ./plugins/nvim-cmp.nix
     ./plugins/todo-comments.nix
     ./plugins/mini.nix
-    ./plugins/treesitter.nix
+    #./plugins/treesitter.nix
 
     # NOTE: Add/Configure additional plugins for Kickstart.nixvim
     #
