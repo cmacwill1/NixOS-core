@@ -119,20 +119,6 @@
     viAlias = true;
     defaultEditor = true;
 
-    # You can easily change to a different colorscheme.
-    # Add your colorscheme here and enable it.
-    # Don't forget to disable the colorschemes you arent using
-    #
-    # If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    /*
-    colorschemes = {
-      # https://nix-community.github.io/nixvim/colorschemes/tokyonight/index.html
-      gruvbox = {
-        enable = true;
-      };
-    };
-*/
-
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=globals#globals
     globals = {
       # Set <space> as the leader key
@@ -141,7 +127,7 @@
       maplocalleader = " ";
 
       # Set to true if you have a Nerd Font installed and selected in the terminal
-      have_nerd_font = false;
+      have_nerd_font = true;
     };
 
     #  See `:help 'clipboard'`
@@ -162,28 +148,17 @@
     #  For more options, you can see `:help option-list`
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=globals#opts
     opts = {
-      # Show line numbers
       number = true;
-      # You can also add relative line numbers, to help with jumping.
-      #  Experiment for yourself to see if you like it!
       relativenumber = true;
-
-      # Enable mouse mode, can be useful for resizing splits for example!
       mouse = "a";
-
-      # Don't show the mode, since it's already in the statusline
       showmode = false;
-
       # Enable break indent
       breakindent = true;
-
       # Save undo history
       undofile = true;
-
       # Case-insensitive searching UNLESS \C or one or more capital letters in the search term
       ignorecase = true;
       smartcase = true;
-
       # Keep signcolumn on by default
       signcolumn = "yes";
 
@@ -346,12 +321,20 @@
       lualine.enable = true;
       #bufferline.enable = true;
       direnv.enable = true;
+      vimtex = {
+	      enable = true;
+	      texlivePackage = null;
+	      settings = {
+          view_method = "mupdf";
+	      };
+      };
     };
 
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraplugins
     extraPlugins = with pkgs.vimPlugins; [
       # Useful for getting pretty icons, but requires a Nerd Font.
       nvim-web-devicons # TODO: Figure out how to configure using this with telescope
+      vim-tidal
     ];
 
     # TODO: Figure out where to move this

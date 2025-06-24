@@ -78,6 +78,8 @@
         pyright = {
            enable = true;
          };
+
+        nixd.enable = true;
         # rust_analyzer = {
         #   enable = true;
         # };

@@ -29,7 +29,6 @@
         completion = {
           completeopt = "menu,menuone,noinsert";
         };
-
         # For an understanding of why these mappings were
         # chosen, you will need to read `:help ins-completion`
         #
@@ -121,6 +120,12 @@
           # https://nix-community.github.io/nixvim/plugins/cmp-nvim-lsp-signature-help.html
           {
             name = "nvim_lsp_signature_help";
+          }
+          {
+            name = "buffer";
+          }
+          {
+            name = "vimtex";
           }
         ];
       };
