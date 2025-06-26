@@ -11,6 +11,8 @@
     inputs.home-manager.nixosModules.default
   ];
 
+  services.logind.lidSwitchExternalPower = "ignore";
+
   networking.hostName = "nixtop"; 
 
   amdgpu.enable = true;
