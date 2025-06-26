@@ -222,6 +222,10 @@
           desc = "Exit terminal mode";
         };
       }
+      {
+        action = "<cmd>NvimTreeToggle<CR>";
+        key = "<leader>te";
+      }
       # TIP: Disable arrow keys in normal mode
       /*
       {
@@ -327,6 +331,9 @@
 	      settings = {
           view_method = "mupdf";
 	      };
+      };
+      nvim-tree = {
+        enable = true;
       };
     };
 
