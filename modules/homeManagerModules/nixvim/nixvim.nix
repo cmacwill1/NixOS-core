@@ -11,7 +11,7 @@
     #inputs.nixvim.nixDarwinModules.nixvim
 
     # Plugins
-    ./plugins/gitsigns.nix
+    #./plugins/gitsigns.nix
     ./plugins/which-key.nix
     ./plugins/telescope.nix
     ./plugins/lsp.nix
@@ -19,7 +19,7 @@
     ./plugins/nvim-cmp.nix
     ./plugins/todo-comments.nix
     ./plugins/mini.nix
-    #./plugins/treesitter.nix
+    ./plugins/treesitter.nix
 
     # NOTE: Add/Configure additional plugins for Kickstart.nixvim
     #
@@ -118,6 +118,15 @@
     vimAlias = true;
     viAlias = true;
     defaultEditor = true;
+
+    colorschemes.gruvbox-material = { 
+      enable = true;
+      settings = {
+        background.transparent = true;
+        contrast = "soft";
+        signs.force_background = true;
+      };
+    };
 
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=globals#globals
     globals = {

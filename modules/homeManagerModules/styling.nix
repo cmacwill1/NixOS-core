@@ -12,9 +12,7 @@
 	waybar.enable = false;
 	rofi.enable = false;
 	hyprlock.enable = false;
-	nixvim = {
-	  enable = true;
-	};
+	nixvim.enable = false;
 	fish.enable = true;
 	kitty.enable = true;
       };

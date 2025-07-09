@@ -7,6 +7,7 @@
 
       # TODO: Don't think I need this as nixGrammars is true which should auto install these???
       settings = {
+      /*
         ensureInstalled = [
           "bash"
           "c"
@@ -20,7 +21,7 @@
           "vim"
           "vimdoc"
         ];
-
+*/
         highlight = {
           enable = true;
 

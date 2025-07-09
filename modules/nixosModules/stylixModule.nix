@@ -10,7 +10,7 @@
     stylix = {
       enable = true;
       #base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-soft.yaml";
+      base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
       targets.grub.enable = false;
       image = ../../wallpapers/gruvbox1.jpg;
       fonts = {
