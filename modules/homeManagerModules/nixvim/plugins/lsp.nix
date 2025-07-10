@@ -78,6 +78,8 @@
         pyright = {
            enable = true;
          };
+        texlab.enable = true;
+        marksman.enable = true;
 
         nixd.enable = true;
         # rust_analyzer = {

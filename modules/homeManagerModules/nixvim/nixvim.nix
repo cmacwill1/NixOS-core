@@ -344,6 +344,14 @@
       nvim-tree = {
         enable = true;
       };
+      render-markdown = {
+        enable = true;
+        settings = {
+          heading = {
+            backgrounds = false;
+          };
+        };
+      };
     };
 
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraplugins
