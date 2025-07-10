@@ -53,10 +53,12 @@
     hyprshot
     vesktop
     mupdf
+    zathura
     lm_sensors
     termusic
     obs-studio
     vlc
+    libvlc
     #davinci-resolve
     ffmpeg
     jellyfin-media-player

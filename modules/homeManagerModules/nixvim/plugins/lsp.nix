@@ -78,7 +78,21 @@
         pyright = {
            enable = true;
          };
-        texlab.enable = true;
+        texlab = {
+          enable = true;
+          settings = {
+            formatting = {
+              lineLength = 80;
+              indentation = {
+                spaces = 2;
+                tabStops = 1;
+              };
+            };
+          };
+        };
+
+
+
         marksman.enable = true;
 
         nixd.enable = true;
