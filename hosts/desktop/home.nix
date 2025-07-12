@@ -18,8 +18,7 @@
   minecraftClient.enable = true;
 
   rofi.enable = true;
-  hyprland-gaming-monitor.enable = true;
-  hyprland.enable = false;
+  hyprland.enable = true;
   styling.enable = true;
   waybar.enable = true;
   screenshotter.enable = true;

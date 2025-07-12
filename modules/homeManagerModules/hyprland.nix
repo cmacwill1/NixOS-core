@@ -1,4 +1,24 @@
-{lib, config, pkgs, ... }:
+{pkgs, lib, config, ... }:
+
+let
+  monitors = config.monitors;
+  monitorMain = builtins.elemAt monitors 0;
+  workspaceBase = map (i:
+    "${toString i}, monitor:${monitorMain.name}${if i == 1 then ", default:true" else ""}"
+  ) (builtins.genList (i: i + 1) 10);
+  auxWorkspace = if builtins.length monitors > 1 then
+    [ "aux, monitor:${(builtins.elemAt monitors 1).name}" ]
+  else
+    [ ];
+in
+
+  /*
+{
+  workspace = workspaceBase ++ auxWorkspace;
+}
+*/
+
+
 
 {
   imports = [
@@ -16,11 +36,13 @@
   hyprlock.enable = true;
   hypridle.enable = true;
 
+  programs.hyprcursor-phinger.enable = true;
+
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
     systemd.enable = true;
-    settings = { 
+    settings = {
           exec-once = [
             "waybar"
           ];
@@ -28,9 +50,15 @@
             "blur, waybar"
             "blur, rofi"
           ];
-          monitor = [
-            ",preffered,auto,1"
-          ];
+          monitor = map
+            (m:
+              let
+                resolution = "${toString m.width}x${toString m.height}@${toString m.refreshRate}";
+                position = "${toString m.x}x${toString m.y}";
+              in
+              "${m.name},${if m.enabled then "${resolution},${position},1${m.rotated}" else "disable"}"
+            )
+            (config.monitors);
           windowrule = [
             "float, class:io.github.kaii_lb.Overskride"
             "center, class:io.github.kaii_lb.Overskride"
@@ -38,7 +66,8 @@
             "float, class:org.pulseaudio.pavucontrol"
           ];      
           env = [
-            "HYPRSHOT_DIR, ~/Screenshots:$PATH"
+	    #"HYPRCURSOR_THEME,capitaine_gruvbox"
+	    #"HYPRCURSOR_SIZE,24"
           ]; 
           general = {
             gaps_in = 5;
@@ -53,12 +82,12 @@
 	  misc = {
             disable_hyprland_logo = true;
 	  };
-         
+
           input = {
             kb_layout = "us";
             follow_mouse = 1;
           };
-          
+
           decoration = {
             rounding = 10;
             shadow = {
@@ -94,6 +123,8 @@
             preserve_split = true;
           };
 
+          workspace = workspaceBase ++ auxWorkspace;
+
           "$mainMod" = "SUPER";
 
           bind = [
@@ -113,7 +144,6 @@
             "$mainMod, SPACE, exec, rofi -show drun"
             #"$mainMod, escape, exec, rofi -show power-menu"
 	    "$mainMod, Escape, exec, rofi -show p -modi p:'rofi-power-menu --symbols-font \"Symbols Nerd Font Mono\"' -font 'JetBrains Mono NF 16' -theme-str 'window { width: 8em; } listview { lines: 6; } entry { enabled: false; } inputbar { margin: 0px 10px 0px 10px; }'"
-	    "$mainMod, S, exec, rofi -show ssh"
             "$mainMod, 1, workspace, 1"
             "$mainMod, 2, workspace, 2"
             "$mainMod, 3, workspace, 3"
@@ -137,17 +167,13 @@
             "$mainMod, mouse_down, workspace, e+1"
             "$mainMod, mouse_up, workspace, e-1"
             "$mainMod SHIFT, S, exec, screenshotter-save-default"
+	    "$mainMod, F1, exec, steam -bigpicture"
             ",XF86MonBrightnessDown,exec,brightnessctl set 5%-"
             ",XF86MonBrightnessUp,exec,brightnessctl set +5%"
           ];
           bindm = [
           "$mainMod, mouse:272, movewindow"
           "$mainMod, mouse:273, resizewindow"
-          ];
-
-          bindl = [
-            ",switch:on:Lid Switch, exec, hyprctl keyword monitor 'eDP-1, disable'"
-            ",switch:off:Lid Switch, exec, hyprctl keyword monitor 'eDP-1, enable'"
           ];
         
       };

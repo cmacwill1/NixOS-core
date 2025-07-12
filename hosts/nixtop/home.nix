@@ -16,7 +16,6 @@
   research.enable = true;
 
   rofi.enable = true;
-  hyprland-gaming-monitor.enable = false;
   hyprland.enable = true;
   styling.enable = true;
   waybar.enable = true;
