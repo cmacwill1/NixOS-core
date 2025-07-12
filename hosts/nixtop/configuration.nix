@@ -28,9 +28,10 @@
   stylixModule.enable = true;
   zsh.enable = false;
 
-  homeManagerModule = {
-    enable = true;
-    variation = "medial";
+  home-manager = {
+    users = {
+      "cmacwill" = import ./home.nix;
+    };
   };
 
   system.stateVersion = "24.05";

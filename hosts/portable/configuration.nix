@@ -27,9 +27,10 @@
   zsh.enable = true;
   users.enable = true;
 
-  homeManagerModule = {
-    enable = true;
-    variation = "maximal";
+  home-manager = {
+    users = {
+      "cmacwill" = import ./home.nix;
+    };
   };
 
   system.stateVersion = "24.05";
