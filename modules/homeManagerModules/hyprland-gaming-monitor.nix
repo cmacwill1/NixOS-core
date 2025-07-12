@@ -30,10 +30,15 @@
             "blur, waybar"
             "blur, rofi"
           ];
-          monitor = [
-            "DP-2,2560x1440@180,0x0,1"
-	    "HDMI-A-1,1920x1080@60,-1080x-250,1,transform,1"
-          ];
+          monitor = map
+            (m:
+              let
+                resolution = "${toString m.width}x${toString m.height}@${toString m.refreshRate}";
+                position = "${toString m.x}x${toString m.y}";
+              in
+              "${m.name},${if m.enabled then "${resolution},${position},1${m.rotated}" else "disable"}"
+            )
+            (config.monitors);
           windowrule = [
             "float, class:io.github.kaii_lb.Overskride"
             "center, class:io.github.kaii_lb.Overskride"

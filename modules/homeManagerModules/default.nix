@@ -9,6 +9,7 @@
     ./research.nix
 
     #Desktop
+    ./monitors.nix
     ./hyprland-gaming-monitor.nix
     ./hyprland.nix
     ./rofi.nix

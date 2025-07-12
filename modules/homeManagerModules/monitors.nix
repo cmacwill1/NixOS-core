@@ -35,6 +35,15 @@ in
           type = types.bool;
           default = true;
         };
+        rotated = mkOption {
+          type = types.str;
+          example = "transform,1";
+          default = ""; #See https://deepwiki.com/hyprwm/hyprland-wiki/3.5-monitors-and-workspaces#rotation
+        };
+        showWaybar = mkOption {
+          type = types.bool;
+          default = true;
+        };
       };
     });
     default = [ ];
