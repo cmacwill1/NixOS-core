@@ -17,7 +17,13 @@ with lib;
     settings = [
       {
         layer = "top";
-	#output = "DP-2";
+
+        output = map
+          (m:
+            "${if m.enabled && m.showWaybar then "${m.name}" else ""}"
+          )
+          (config.monitors);
+
         position = "top";
         height = 54;
         margin = "1";
@@ -62,7 +68,7 @@ with lib;
           format-wifi = "{icon} {signalStrength}%";
           format-disconnected = "󰤮";
           tooltip = false;
-	  on-click = "hyprctl dispatch exec [float] 'kitty -- fish -c 'nmtui''";
+	  on-click = "hyprctl dispatch exec [float] 'kitty -- fish -c 'nmtui''&& sleep 0.1 && hyprctl dispatch resizeactive exact 50% 50% && hyprctl dispatch centerwindow";
         };
         
         "battery" = {
@@ -109,7 +115,7 @@ with lib;
               ""
             ];
           };
-          on-click = "sleep 0.1 && hyprctl dispatch exec [float] 'kitty -- fish -c 'pulsemixer''";
+          on-click = "sleep 0.1 && hyprctl dispatch exec [float] 'kitty -- fish -c 'pulsemixer'' && sleep 0.1 && hyprctl dispatch resizeactive exact 50% 50% && hyprctl dispatch centerwindow";
         };
 
         "bluetooth" = {

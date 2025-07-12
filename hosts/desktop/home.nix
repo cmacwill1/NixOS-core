@@ -48,6 +48,7 @@
       x = -1080;
       y = 0;
       rotated = ",transform,1";
+      showWaybar = false;
     }
   ];
 
