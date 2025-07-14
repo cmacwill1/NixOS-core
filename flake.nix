@@ -32,8 +32,6 @@
     tidal = {
       url = "github:cmacwill1/tidalcycles";
     };
-
-    hyprcursor-phinger.url = "github:jappie3/hyprcursor-phinger";
   };
 
   outputs = { nixpkgs, ... }@inputs:{
