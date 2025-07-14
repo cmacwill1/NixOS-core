@@ -20,6 +20,7 @@
     ./direnv.nix
     ./kitty.nix
     ./nixvim/nixvim.nix
+    ./rmpc.nix
     ./yazi.nix
     ./screenshotter.nix
     ./scripts.nix

@@ -9,6 +9,7 @@
       "wheel"
       "input"
       "jackaudio"
+      "audio"
     ];
     shell = pkgs.fish;
   };
