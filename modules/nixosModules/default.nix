@@ -20,6 +20,7 @@
     ./bluetooth.nix
     ./bootloader.nix
     ./homeManagerModule.nix
+    ./mpd.nix
     ./steam.nix
     ./sunshine.nix
     ./stylixModule.nix
@@ -75,6 +76,8 @@
     openrgb
     whatsie
     bagels
+    xsettingsd
+    xorg.xrdb
   ];
   
   programs.fish.enable = true;
@@ -88,18 +91,24 @@
     defaultEditor = true;
   };
 
-  xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal
-    ];
-    configPackages = [
-      pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-hyprland
-      pkgs.xdg-desktop-portal
-    ];
+  xdg = {
+    icons = {
+      enable = true;
+      fallbackCursorThemes = [ "Capitaine Cursors (Gruvbox)" ];
+    };
+    portal = {
+      enable = true;
+      wlr.enable = true;
+      extraPortals = [
+        pkgs.xdg-desktop-portal-gtk
+        pkgs.xdg-desktop-portal
+      ];
+      configPackages = [
+        pkgs.xdg-desktop-portal-gtk
+        pkgs.xdg-desktop-portal-hyprland
+        pkgs.xdg-desktop-portal
+      ];
+    };
   };
 
 

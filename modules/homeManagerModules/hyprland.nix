@@ -36,8 +36,6 @@ in
   hyprlock.enable = true;
   hypridle.enable = true;
 
-  programs.hyprcursor-phinger.enable = true;
-
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -45,6 +43,7 @@ in
     settings = {
           exec-once = [
             "waybar"
+            "hyprctl setcursor 'Capitaine Cursors (Gruvbox)' 24"
           ];
           layerrule = [
             "blur, waybar"
@@ -68,6 +67,8 @@ in
           env = [
 	    #"HYPRCURSOR_THEME,capitaine_gruvbox"
 	    #"HYPRCURSOR_SIZE,24"
+            "XCURSOR_THEME,Capitaine Cursors (Gruvbox)"
+            "XCURSOR_SIZE,24"
           ]; 
           general = {
             gaps_in = 5;
@@ -94,7 +95,8 @@ in
 	            enabled = true;
 	            range = 7;
 	            render_power = 2;
-	            color = lib.mkForce "rgba(${config.lib.stylix.colors.base00}ed)";
+	            color = lib.mkForce "rgba(${config.lib.stylix.colors.base04}66)";
+	            color_inactive = lib.mkForce "rgba(${config.lib.stylix.colors.base00}ed)";
             };
 
             blur = {
@@ -107,12 +109,15 @@ in
 
           animations = {
             enabled = true;
-            bezier = "myBezier, 0.2, 0.9, 0.1, 1.05";
+            bezier = [
+              "myBezier, 0.2, 0.9, 0.1, 1.05"
+              "linear, 0.0, 0.0, 1.0, 1.0"
+            ];
             animation = [
               "windows, 1, 5, myBezier"
               "windowsOut, 1, 7, default, popin 80%"
               "border, 1, 10, default"
-              "borderangle, 1, 8, default"
+              "borderangle, 1, 50, linear, loop"
               "fade, 1, 5, default"
               "workspaces, 1, 5, default"
               "layers, 1, 5, myBezier, fade"
@@ -136,7 +141,9 @@ in
             "$mainMod, P, pseudo"
             "$mainMod, J, togglesplit"
             "$mainMod, F, fullscreen"
+            "$mainMod, B, exec, firefox"
             "$mainMod, L, exec, ${pkgs.hyprlock}/bin/hyprlock"
+            "$mainMod, Y, exec, yazi-window"
             "$mainMod, left, movefocus, l"
             "$mainMod, right, movefocus, r"
             "$mainMod, up, movefocus, u"
@@ -167,7 +174,8 @@ in
             "$mainMod, mouse_down, workspace, e+1"
             "$mainMod, mouse_up, workspace, e-1"
             "$mainMod SHIFT, S, exec, screenshotter-save-default"
-	    "$mainMod, F1, exec, steam -bigpicture"
+	    "$mainMod, F1, exec, audio-window"
+	    "$mainMod, F2, exec, network-window"
             ",XF86MonBrightnessDown,exec,brightnessctl set 5%-"
             ",XF86MonBrightnessUp,exec,brightnessctl set +5%"
           ];

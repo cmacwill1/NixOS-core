@@ -9,7 +9,6 @@
     sharedModules = [
       inputs.nixvim.homeManagerModules.nixvim
       inputs.textfox.homeManagerModules.default
-      inputs.hyprcursor-phinger.homeManagerModules.hyprcursor-phinger
     ];
   };
 }
