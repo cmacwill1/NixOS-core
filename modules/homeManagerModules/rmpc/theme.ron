@@ -8,7 +8,7 @@
     format_tag_separator: " | ",
     browser_column_widths: [20, 38, 42],
     background_color: None,
-    text_color: None,
+    text_color: "white",
     header_background_color: None,
     modal_background_color: None,
     modal_backdrop: false,
@@ -16,7 +16,7 @@
     preview_metadata_group_style: (fg: "yellow", modifiers: "Bold"),
     tab_bar: (
         enabled: true,
-        active_style: (fg: "black", bg: "blue", modifiers: "Bold"),
+        active_style: (fg: "black", bg: "magenta", modifiers: "Bold"),
         inactive_style: (),
     ),
     highlighted_item_style: (fg: "blue", modifiers: "Bold"),
