@@ -17,7 +17,8 @@
       confirm_os_window_close = 0;
       tab_bar_style = "powerline";
       enable_audio_bell = "no";
-      };
+      allow_remote_control = "yes";
+    };
   };
   };
 }
