@@ -44,6 +44,11 @@ in
           type = types.bool;
           default = true;
         };
+        offSwitch = mkOption {
+          type = types.str;
+          example = "Lid Switch"; #See `hyprctl devices`
+          default = "";
+        };
       };
     });
     default = [ ];

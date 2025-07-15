@@ -10,6 +10,21 @@ let
     [ "aux, monitor:${(builtins.elemAt monitors 1).name}" ]
   else
     [ ];
+            bindl1 = map
+            (m:
+              ",switch:on:${m.offSwitch}, exec, hyprctl keyword monitor '${m.name}, disable'"
+            )
+            (config.monitors);
+
+          bindl2 = map
+            (m:
+              let
+                resolution = "${toString m.width}x${toString m.height}@${toString m.refreshRate}";
+                position = "${toString m.x}x${toString m.y}";
+              in
+              ",switch:off:${m.offSwitch}, exec, hyprctl keyword monitor '${m.name},${resolution},${position},1'"
+            )
+            (config.monitors);
 in
 
   /*
@@ -183,7 +198,7 @@ in
           "$mainMod, mouse:272, movewindow"
           "$mainMod, mouse:273, resizewindow"
           ];
-        
+          bindl = bindl1 ++ bindl2;
       };
   };
   };
