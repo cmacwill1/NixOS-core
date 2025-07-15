@@ -78,6 +78,8 @@
     bagels
     xsettingsd
     xorg.xrdb
+    yt-dlp
+    mpv
   ];
   
   programs.fish.enable = true;
