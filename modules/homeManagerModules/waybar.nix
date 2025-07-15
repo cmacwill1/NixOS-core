@@ -18,12 +18,13 @@ with lib;
       {
         layer = "top";
 
+          /*
         output = map
           (m:
             "${if m.enabled && m.showWaybar then "${m.name}" else ""}"
           )
           (config.monitors);
-
+*/
         position = "top";
         height = 54;
         margin = "1";
