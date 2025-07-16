@@ -35,7 +35,8 @@ with lib;
           "network"
           "pulseaudio"
           "bluetooth"
-          "hyprland/window" 
+          #"hyprland/window" 
+          "cava"
         ];
         modules-center = [ "hyprland/workspaces" ];
         modules-right = [
@@ -178,6 +179,29 @@ with lib;
           icon-size = 24;
           max-length = 75;
         };
+        "cava" = {
+          #cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+          framerate = 60;
+          autosens = 1;
+          #data_format = "ascii";
+           #ascii_max_range = 9;
+            #sensitivity = 10;
+          bars = 14;
+          lower_cutoff_freq = 50;
+          higher_cutoff_freq =  10000;
+          hide_on_silence = false;
+          #format_silent = "quiet";
+          method = "pipewire";
+          source = "auto";
+          stereo = true;
+          reverse = false;
+          bar_delimiter = 0;
+          monstercat = false;
+          waves = false;
+          noise_reduction = 0.77;
+          input_delay = 2;
+          format-icons = ["▁" "▂" "▃" "▄" "▅" "▆" "▇" "█" ];
+        };
       }
     ];
     style = concatStrings [
@@ -202,6 +226,13 @@ with lib;
           margin: 4px;
           background-color: rgba(32, 32, 32, 0.85);
           box-shadow: 0 0 2px 2px #${config.lib.stylix.colors.base00};
+        }
+
+        #cava {
+	  color: #${config.lib.stylix.colors.base05};
+          min-height: 20px;
+          margin: 0;
+          padding: 0 5px;
         }
 
 
