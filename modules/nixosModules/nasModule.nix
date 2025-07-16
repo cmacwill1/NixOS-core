@@ -20,6 +20,13 @@
     type = "nfs";
     options = "noatime";
   }
+  {
+    what = "100.104.103.21:/mnt/zpool/media/music";
+    where = "/run/mount/music"; 
+    type = "nfs";
+    options = "noatime";
+  }
+
   ];
 
   systemd.automounts = [
@@ -38,5 +45,13 @@
     };
     where = "/run/mount/cmacwillNAS"; 
   }
+  {
+    wantedBy = [ "multi-user.target" ];
+    automountConfig = {
+      TimeoutIdleSec = "600";
+    };
+    where = "/run/mount/music"; 
+  }
+
   ];
 }

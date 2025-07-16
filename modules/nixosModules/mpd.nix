@@ -4,7 +4,7 @@
   services = {
     mpd = {
       enable = true;
-      musicDirectory = "/home/cmacwill/Music";
+      musicDirectory = "/run/mount/music";
       user = "cmacwill";
       extraConfig = ''
         audio_output {
