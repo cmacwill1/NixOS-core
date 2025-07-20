@@ -13,6 +13,8 @@
     (import ../../scripts/audio-window.nix {inherit pkgs; })
     (import ../../scripts/network-window.nix {inherit pkgs; })
     (import ../../scripts/yazi-window.nix {inherit pkgs; })
+    (import ../../scripts/yt-mp3.nix {inherit pkgs; })
+    (import ../../scripts/video-picker.nix {inherit pkgs; })
   ];
   };
 }
