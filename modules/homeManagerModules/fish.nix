@@ -14,6 +14,7 @@
 	direnv hook fish | source
 	export MANPAGER="less -M -R -i --use-color -Dd+R -Du+B -DHkC -j5" # https://felipec.wordpress.com/2021/06/05/adventures-with-man-color/
 	export MANROFFOPT="-c"  # unclear if this does anything on nixos
+	fish_vi_key_bindings
       '';
       
     };

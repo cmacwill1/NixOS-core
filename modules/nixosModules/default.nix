@@ -50,7 +50,6 @@
     htop
     wayland-utils
     brightnessctl
-    qmk
     hyprshot
     vesktop
     mupdf
@@ -75,11 +74,11 @@
     usbutils
     openrgb
     whatsie
-    bagels
     xsettingsd
     xorg.xrdb
     yt-dlp
     mpv
+    ripgrep
   ];
   
   programs.fish.enable = true;

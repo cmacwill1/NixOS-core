@@ -19,6 +19,7 @@
     ./git.nix
     ./direnv.nix
     ./kitty.nix
+    ./fzf.nix
     ./nixvim/nixvim.nix
     ./rmpc
     ./yazi.nix
