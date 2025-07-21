@@ -21,6 +21,7 @@
     ./kitty.nix
     ./fzf.nix
     ./nixvim/nixvim.nix
+    ./newsboat.nix
     ./rmpc
     ./yazi.nix
     ./screenshotter.nix
