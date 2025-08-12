@@ -79,6 +79,11 @@
     yt-dlp
     mpv
     ripgrep
+    openvpn
+    paraview
+    gdb
+    id3v2
+    peco
   ];
   
   programs.fish.enable = true;
@@ -125,7 +130,9 @@
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
   nixpkgs.config.allowUnfree = true;
-
+  nixpkgs.config.permittedInsecurePackages = [
+    "libsoup-2.74.3"
+  ];
   # Configure keymap in X11
   services = {
     xserver = {

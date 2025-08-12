@@ -157,7 +157,7 @@ in
             "$mainMod, J, togglesplit"
             "$mainMod, F, fullscreen"
             "$mainMod, B, exec, firefox"
-            "$mainMod, R, exec, pkill waybar && hyprctl dispatch exec waybar"
+            "$mainMod, R, movecursortocorner, 1"
             "$mainMod, T, exec, video-picker"
             "$mainMod, L, exec, ${pkgs.hyprlock}/bin/hyprlock"
             "$mainMod, Y, exec, yazi-window"

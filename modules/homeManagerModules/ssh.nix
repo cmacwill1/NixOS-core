@@ -19,6 +19,10 @@
 	user = "cmacwill";
 	identityFile = "~/.ssh/majestix";
       };
+      "*" = {
+	user = "cmacwill";
+	identityFile = "~/.ssh/homelab";
+      };
     };
   };
 }

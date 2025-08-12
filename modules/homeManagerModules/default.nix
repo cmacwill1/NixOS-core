@@ -55,6 +55,14 @@
     enable = true;
   };
 
+  programs.ghostty = {
+    enable = true;
+    settings = {
+      custom-shader="in-game-crt.glsl";
+      window-decoration="none";
+    };
+  };
+
   services.udiskie = {
     enable = true;
     automount = true;
@@ -68,6 +76,7 @@
   home.packages = with pkgs; [
     udiskie
     bluebubbles
+    python313Packages.pylatexenc
   ];
 
   programs.btop = {

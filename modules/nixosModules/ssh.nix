@@ -6,7 +6,7 @@
     ports = [ 22 ];
     allowSFTP = true;
     settings = {
-      PasswordAuthentication = true;
+      PasswordAuthentication = false;
       UseDns = true;
     };
   };
