@@ -23,6 +23,11 @@
 	user = "cmacwill";
 	identityFile = "~/.ssh/homelab";
       };
+      "github.com" = {
+	hostname = "github.com";
+	user = "git";
+	identityFile = "~/.ssh/id_ed25519";
+      };
     };
   };
 }
