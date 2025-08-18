@@ -32,9 +32,15 @@
     tidal = {
       url = "github:cmacwill1/tidalcycles";
     };
+    #NUR
+    flake-utils.url = "github:numtide/flake-utils";
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, ... }@inputs:{
+  outputs = { nixpkgs, nur, ... }@inputs:{
     nixosConfigurations = {
       nixtop = nixpkgs.lib.nixosSystem {
 	system = "x86_64-linux";
@@ -56,6 +62,10 @@
 	  ./hosts/desktop/configuration.nix
 	  inputs.home-manager.nixosModules.default
 	  inputs.stylix.nixosModules.stylix
+	  # Adds the NUR overlay
+	  nur.modules.nixos.default
+	  # NUR modules to import
+	  nur.legacyPackages."x86_64-linux".repos.iopq.modules.xraya
 	  {
 	    nixpkgs.overlays = [inputs.tidal.overlays.default];
 	  }

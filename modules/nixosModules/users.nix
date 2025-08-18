@@ -10,6 +10,7 @@
       "input"
       "jackaudio"
       "audio"
+      "disk"
     ];
     shell = pkgs.fish;
   };

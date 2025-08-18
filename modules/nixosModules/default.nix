@@ -84,6 +84,11 @@
     gdb
     id3v2
     peco
+    tplay
+    wf-recorder
+    rpi-imager
+    cage
+    #nur.repos.robertodr.tlclient
   ];
   
   programs.fish.enable = true;
@@ -130,9 +135,29 @@
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.permittedInsecurePackages = [
-    "libsoup-2.74.3"
+
+  /*
+  nixpkgs.overlays = [
+    (final: prev: {
+      coin3d = prev.coin3d.overrideAttrs (oldAttrs: {
+        src = final.fetchFromGitHub {
+          owner = "coin3d";
+          repo = "coin";
+          rev = "v4.0.3";
+          hash = "sha256-dUFmcUOdNc3ZFtr+Hnh3Q3OY/JA/WxmiRJiU2RFSSus=";
+        };
+      });
+
+      freecad = prev.freecad.override {
+        coin3d = final.coin3d;
+      };
+    })
   ];
+  */
+
+
+
+
   # Configure keymap in X11
   services = {
     xserver = {
