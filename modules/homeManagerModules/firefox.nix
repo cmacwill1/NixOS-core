@@ -54,9 +54,46 @@
 	    icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
 	    definedAliases = [ "@np" ];
 	  };
-	};
-	search.force = true;
+	  "Nix Options" = {
+	    urls = [{
+	      template = "https://search.nixos.org/packages";
+	      params = [
+		{ name = "type"; value = "options"; }
+		{ name = "query"; value = "{searchTerms}"; }
+	      ];
+	    }];
 
+	    icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+	    definedAliases = [ "@no" ];
+	  };
+	  "Google Scholar" = {
+	    urls = [{
+	      template = "https://scholar.google.com/scholar";
+	      params = [
+		{ name = "h1"; value = "en"; }
+		{ name = "q"; value = "{searchTerms}"; }
+	      ];
+	    }];
+
+	    definedAliases = [ "@gs" ];
+            iconMapObj."16" = "https://scholar.google.com/favicon.ico";
+	  };
+	  "youtube" = {
+	    urls = [{
+	      template = "https://www.youtube.com/results";
+	      params = [
+		{ name = "search_query"; value = "{searchTerms}"; }
+	      ];
+	    }];
+
+	    definedAliases = [ "@yt" ];
+            iconMapObj."16" = "https://www.youtube.com/favicon.ico";
+	  };
+	};
+
+	  search.force = true;
+
+	  /*
 	bookmarks = [
 	  {
 	    name = "wikipedia";
@@ -65,7 +102,7 @@
 	    url = "https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go";
 	  }
 	];
-
+*/
 	settings = {
 	  "dom.security.https_only_mode" = false;
 	  "browser.download.panel.shown" = true;
@@ -79,14 +116,17 @@
 	  "browser.newtabpage.activity-stream.default.sites" = "";
 	};
 
-	extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+	/*
+	extensions.packages = with inputs.firefox-addons.packages."x86_64-linux"; [
 	  ublock-origin
 	  sponsorblock
 	  darkreader
 	  #untrap-for-youtube
 	  zotero-connector
 	];
+	*/
       };
     };
+    stylix.targets.firefox.profileNames = [ "cmacwill" ];
   };
 }

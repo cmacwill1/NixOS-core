@@ -119,7 +119,7 @@
     viAlias = true;
     defaultEditor = true;
 
-    colorschemes.gruvbox-material = { 
+    colorschemes.gruvbox-material-nvim = { 
       enable = true;
       settings = {
         background.transparent = true;

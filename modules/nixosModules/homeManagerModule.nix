@@ -7,7 +7,7 @@
     useGlobalPkgs = true;
 
     sharedModules = [
-      inputs.nixvim.homeManagerModules.nixvim
+      inputs.nixvim.homeModules.nixvim
       inputs.textfox.homeManagerModules.default
     ];
   };

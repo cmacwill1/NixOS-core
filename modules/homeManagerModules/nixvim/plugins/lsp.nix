@@ -105,7 +105,7 @@
         #    `https://nix-community.github.io/nixvim/plugins/typescript-tools/index.html?highlight=typescript-tools#pluginstypescript-toolspackage`
         #
         # But for many setups the LSP (`tsserver`) will work just fine
-        tsserver = {
+        ts_ls = {
           enable = true;
         };
 
