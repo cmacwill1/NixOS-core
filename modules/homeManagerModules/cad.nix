@@ -10,7 +10,7 @@
 
   home.packages = with pkgs; [
       freecad-wayland
-      #orca-slicer
+      orca-slicer
       kicad
       blender
     ];
