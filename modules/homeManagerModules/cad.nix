@@ -11,7 +11,7 @@
   home.packages = with pkgs; [
       freecad-wayland
       orca-slicer
-      kicad
+      #kicad
       blender
     ];
   };
