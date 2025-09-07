@@ -3,7 +3,7 @@
 {
   services.mpd = {
     enable = true;
-    musicDirectory = "/run/mount/music";
+    musicDirectory = "/home/cmacwill/Music/";
     extraConfig = ''
       audio_output {
         type "pipewire"
