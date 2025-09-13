@@ -20,6 +20,7 @@
     ./bluetooth.nix
     ./bootloader.nix
     ./homeManagerModule.nix
+    ./ollama.nix
     ./steam.nix
     ./sunshine.nix
     ./stylixModule.nix
