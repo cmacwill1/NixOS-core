@@ -14,6 +14,11 @@
 	user = "cmacwill";
 	identityFile = "~/.ssh/utopia";
       };
+      "dogmatix" = {
+	hostname = "10.165.53.37";
+	user = "cmacwill";
+	identityFile = "~/.ssh/dogmatix";
+      };
       "majestix" = {
 	hostname = "majestix.ecn.purdue.edu";
 	user = "cmacwill";
