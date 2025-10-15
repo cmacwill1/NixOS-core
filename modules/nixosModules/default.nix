@@ -87,6 +87,7 @@
     wf-recorder
     rpi-imager
     cage
+    jellyfin-media-player
   ];
   
   programs.fish.enable = true;

@@ -15,7 +15,7 @@
   programs = {
     rofi = {
       enable = true;
-      package = pkgs.rofi-wayland;
+        #package = pkgs.rofi-wayland;
       extraConfig = {
         modi = "drun,ssh,power-menu:rofi-power-menu";
         show-icons = true;
