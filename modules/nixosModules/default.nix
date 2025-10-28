@@ -88,6 +88,7 @@
     rpi-imager
     cage
     jellyfin-media-player
+    pandoc
   ];
   
   programs.fish.enable = true;
