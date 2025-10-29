@@ -64,7 +64,7 @@
     antimicrox
     libnotify
     bat
-    inkscape
+    inkscape-with-extensions
     gimp3
     spacenav-cube-example
     spacenavd
@@ -88,6 +88,8 @@
     rpi-imager
     cage
     jellyfin-media-player
+    zathura
+    papis
   ];
   
   programs.fish.enable = true;
@@ -118,6 +120,12 @@
         pkgs.xdg-desktop-portal-hyprland
         pkgs.xdg-desktop-portal
       ];
+    };
+    mime = {
+      enable = true;
+      defaultApplications = {
+          "application/pdf" = "org.pwmt.zathura.desktop";
+      };
     };
   };
 

@@ -338,7 +338,7 @@
 	      enable = true;
 	      texlivePackage = null;
 	      settings = {
-          view_method = "mupdf";
+          view_method = "zathura_simple";
 	      };
       };
       nvim-tree = {
