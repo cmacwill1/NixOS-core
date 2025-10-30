@@ -90,6 +90,7 @@
     jellyfin-media-player
     zathura
     papis
+    pdftk
   ];
   
   programs.fish.enable = true;
