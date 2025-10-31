@@ -53,7 +53,6 @@
     hyprshot
     vesktop
     mupdf
-    zathura
     lm_sensors
     termusic
     obs-studio
@@ -88,9 +87,10 @@
     rpi-imager
     cage
     jellyfin-media-player
-    zathura
     papis
     pdftk
+    (pkgs.zathura.override { plugins = with pkgs.zathuraPkgs; [ zathura_pdf_mupdf ]; })
+    calibre
   ];
   
   programs.fish.enable = true;
