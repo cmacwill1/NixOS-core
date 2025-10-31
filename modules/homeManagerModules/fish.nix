@@ -16,7 +16,28 @@
 	export MANROFFOPT="-c"  # unclear if this does anything on nixos
 	fish_vi_key_bindings
       '';
-      
+      shellAliases = {
+	g = "git";
+	lg = "lazygit";
+	gt = "go_to_project";
+	y = "yazi";
+	z = "zathura";
+	v = "nvim";
+      };
+      functions = {
+	go_to_project = {
+	  body = ''
+	    set dir (find ~/projects -type d \
+		-name .git -prune -o \
+		-name .direnv -prune -o \
+		-name __pycache__ -prune -o \
+		-type d -print | fzf)
+	    if test -n "$dir"
+		cd "$dir"
+	    end
+	  '';
+	};
+      };
     };
   };
 }

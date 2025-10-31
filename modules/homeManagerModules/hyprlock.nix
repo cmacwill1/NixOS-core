@@ -27,7 +27,7 @@
       
       image = [
         {
-          path = "/home/cmacwill/NixOS-core/wallpapers/nix.png";
+          path = "/home/cmacwill/projects/NixOS-core/wallpapers/nix.png";
           size = 200;
           border_size = 0;
           position = "0, 100";
