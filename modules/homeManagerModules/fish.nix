@@ -22,7 +22,7 @@
 	gt = "go_to_project";
 	y = "yazi";
 	z = "zathura";
-	v = "nvim";
+	v = "nvim_open";
       };
       functions = {
 	go_to_project = {
@@ -35,6 +35,15 @@
 	    if test -n "$dir"
 		cd "$dir"
 	    end
+	  '';
+	};
+	nvim_open = {
+	  body = ''
+	      if count $argv > /dev/null
+		  nvim $argv
+	      else
+		  nvim +":lua require('telescope.builtin').find_files()"
+	      end
 	  '';
 	};
       };
