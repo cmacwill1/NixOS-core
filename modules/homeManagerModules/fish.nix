@@ -21,7 +21,7 @@
 	lg = "lazygit";
 	gt = "go_to_project";
 	y = "yazi";
-	z = "zathura";
+	pdf = "zathura_open";
 	v = "nvim_open";
       };
       functions = {
@@ -43,6 +43,15 @@
 		  nvim $argv
 	      else
 		  nvim +":lua require('telescope.builtin').find_files()"
+	      end
+	  '';
+	};
+	zathura_open = {
+	  body = ''
+	      if count $argv > /dev/null
+		  zathura $argv
+	      else
+		  fish -c 'set selected (find . -name "*.pdf" | fzf); and nohup zathura $selected >/dev/null 2>&1 &'
 	      end
 	  '';
 	};
