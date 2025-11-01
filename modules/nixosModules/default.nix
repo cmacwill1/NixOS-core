@@ -62,7 +62,6 @@
     ffmpeg
     antimicrox
     libnotify
-    bat
     inkscape-with-extensions
     gimp3
     spacenav-cube-example
