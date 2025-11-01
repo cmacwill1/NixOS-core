@@ -16,6 +16,7 @@
     ./waybar.nix
 
     #Programs
+    ./bat.nix
     ./git.nix
     ./direnv.nix
     ./kitty.nix
@@ -85,5 +86,9 @@
     settings = {
       proc_tree = true;
     };
+  };
+
+  programs.fd = {
+    enable = true;
   };
  }
