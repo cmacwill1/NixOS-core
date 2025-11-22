@@ -62,7 +62,6 @@
     ffmpeg
     antimicrox
     libnotify
-    inkscape-with-extensions
     gimp3
     spacenav-cube-example
     spacenavd
@@ -89,6 +88,7 @@
     papis
     pdftk
     (pkgs.zathura.override { plugins = with pkgs.zathuraPkgs; [ zathura_pdf_mupdf ]; })
+    (inkscape-with-extensions.override { inkscapeExtensions = [ inkscape-extensions.textext ]; })
     calibre
   ];
   
