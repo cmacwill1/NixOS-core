@@ -70,7 +70,6 @@
     pciutils
     usbutils
     openrgb
-    whatsie
     xsettingsd
     xorg.xrdb
     yt-dlp
@@ -85,7 +84,7 @@
     wf-recorder
     rpi-imager
     cage
-    jellyfin-media-player
+    #jellyfin-media-player
     papis
     pdftk
     (pkgs.zathura.override { plugins = with pkgs.zathuraPkgs; [ zathura_pdf_mupdf ]; })
@@ -141,10 +140,11 @@
   # for nixd
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
+  /*
               nixpkgs.config.permittedInsecurePackages = [
                 "qtwebengine-5.15.19"
               ];
-
+*/
   nixpkgs.config.allowUnfree = true;
   # Configure keymap in X11
   services = {

@@ -77,7 +77,7 @@
 
   home.packages = with pkgs; [
     udiskie
-    bluebubbles
+    #bluebubbles
     python313Packages.pylatexenc
   ];
 
