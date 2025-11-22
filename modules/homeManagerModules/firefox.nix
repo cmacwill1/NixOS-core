@@ -46,26 +46,37 @@
 	    urls = [{
 	      template = "https://search.nixos.org/packages";
 	      params = [
-		{ name = "type"; value = "packages"; }
+		{ name = "channel"; value = "unstable"; }
 		{ name = "query"; value = "{searchTerms}"; }
 	      ];
 	    }];
-
 	    icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
 	    definedAliases = [ "@np" ];
 	  };
+
 	  "Nix Options" = {
 	    urls = [{
-	      template = "https://search.nixos.org/packages";
+	      template = "https://search.nixos.org/options";
 	      params = [
-		{ name = "type"; value = "options"; }
+		{ name = "channel"; value = "unstable"; }
 		{ name = "query"; value = "{searchTerms}"; }
 	      ];
 	    }];
-
 	    icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
 	    definedAliases = [ "@no" ];
 	  };
+
+	  "Home Manager Options" = {
+	    urls = [{
+	      template = "https://home-manager-options.extranix.com";
+	      params = [
+		{ name = "query"; value = "{searchTerms}"; }
+	      ];
+	    }];
+	    icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+	    definedAliases = [ "@hm" ];
+	  };
+
 	  "Google Scholar" = {
 	    urls = [{
 	      template = "https://scholar.google.com/scholar";
@@ -74,10 +85,10 @@
 		{ name = "q"; value = "{searchTerms}"; }
 	      ];
 	    }];
-
 	    definedAliases = [ "@gs" ];
             iconMapObj."16" = "https://scholar.google.com/favicon.ico";
 	  };
+
 	  "youtube" = {
 	    urls = [{
 	      template = "https://www.youtube.com/results";
