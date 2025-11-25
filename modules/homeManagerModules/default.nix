@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [
@@ -32,7 +32,21 @@
     ./fish.nix
     ./starship.nix
     ./ssh.nix
+    inputs.scientific-fhs.nixosModules.default
   ];
+
+  programs.scientific-fhs = {
+    enable = true;
+    juliaVersions = [
+      {
+        version = "1.11.6";
+        default = true;
+      }
+    ];
+    enableNVIDIA = false;
+  };
+
+
   
   home.sessionVariables.EDITOR = "nvim";
 

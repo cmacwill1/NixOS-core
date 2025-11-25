@@ -34,6 +34,11 @@
     tidal = {
       url = "github:cmacwill1/tidalcycles";
     };
+
+    scientific-fhs = {
+      url = "github:olynch/scientific-fhs";
+    };
+
     #NUR
     flake-utils.url = "github:numtide/flake-utils";
     nur = {

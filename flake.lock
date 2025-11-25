@@ -323,6 +323,19 @@
     },
     "nixpkgs_2": {
       "locked": {
+        "lastModified": 1743827369,
+        "narHash": "sha256-rpqepOZ8Eo1zg+KJeWoq1HAOgoMCDloqv5r2EAa9TSA=",
+        "path": "/nix/store/inbabfz8n7fxflkis0a05zcli4a1q2bp-source",
+        "rev": "42a1c966be226125b48c384171c44c651c236c22",
+        "type": "path"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
         "lastModified": 1750134718,
         "narHash": "sha256-v263g4GbxXv87hMXMCpjkIxd/viIF7p3JpJrwgKdNiI=",
         "owner": "nixos",
@@ -436,9 +449,28 @@
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
         "nur": "nur",
+        "scientific-fhs": "scientific-fhs",
         "stylix": "stylix",
         "textfox": "textfox",
         "tidal": "tidal"
+      }
+    },
+    "scientific-fhs": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1755448562,
+        "narHash": "sha256-aPgNuN+/nXz/yatw5PIOGFtLbeC5CG92AZjiVXo9u+w=",
+        "owner": "olynch",
+        "repo": "scientific-fhs",
+        "rev": "e1f2d5f0a9bd3fc94388c77c637e7dd63fc73423",
+        "type": "github"
+      },
+      "original": {
+        "owner": "olynch",
+        "repo": "scientific-fhs",
+        "type": "github"
       }
     },
     "stylix": {
@@ -575,7 +607,7 @@
     "tidal": {
       "inputs": {
         "dirt-samples-src": "dirt-samples-src",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs_3",
         "superdirt-src": "superdirt-src",
         "tidal-src": "tidal-src",
         "vim-tidal-src": "vim-tidal-src",
