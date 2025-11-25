@@ -86,12 +86,21 @@
     #jellyfin-media-player
     papis
     pdftk
-    (pkgs.zathura.override { plugins = with pkgs.zathuraPkgs; [ zathura_pdf_mupdf ]; })
+    (pkgs.zathura.override { plugins = with pkgs.zathuraPkgs; [ zathura_pdf_mupdf zathura_cb ]; })
     (inkscape-with-extensions.override { inkscapeExtensions = [ inkscape-extensions.textext ]; })
     calibre
+    distrobox
   ];
   
+
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
+
   programs.fish.enable = true;
+
+  programs.nix-ld.enable = true;
 
   hardware.spacenavd.enable = true;
 
