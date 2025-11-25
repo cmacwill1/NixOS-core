@@ -75,6 +75,16 @@
         cmake = {
           enable = true;
         };
+        #Install lsp
+        #julia --project=~/.julia/environments/nvim-lspconfig -e 'using Pkg; Pkg.add("LanguageServer"); Pkg.add("SymbolServer"); Pkg.add("StaticLint")'
+        #Update current install
+        #julia --project=~/.julia/environments/nvim-lspconfig -e 'using Pkg; Pkg.update()'
+        #instantiate project for the lsp to read
+        #julia --project=/path/to/my/project -e 'using Pkg; Pkg.instantiate()'
+        julials = {
+          enable = true;
+          package = null;
+        };
         # gopls = {
         #   enable = true;
         # };
