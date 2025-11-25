@@ -27,6 +27,13 @@
     type = "nfs";
     options = "noatime";
   }
+  {
+    what = "100.104.103.21:/mnt/zpool/media/books";
+    where = "/run/mount/books"; 
+    type = "nfs";
+    options = "noatime";
+  }
+
 
   ];
 
@@ -52,6 +59,13 @@
       TimeoutIdleSec = "600";
     };
     where = "/run/mount/music"; 
+  }
+  {
+    wantedBy = [ "multi-user.target" ];
+    automountConfig = {
+      TimeoutIdleSec = "600";
+    };
+    where = "/run/mount/books"; 
   }
 
   ];
