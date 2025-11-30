@@ -205,6 +205,12 @@
 
       # See `:help hlsearch`
       hlsearch = true;
+
+      #Tab shit
+      expandtab = true;
+      tabstop = 4;
+      shiftwidth = 4;
+      softtabstop = 4;
     };
 
     # [[ Basic Keymaps ]]
@@ -374,7 +380,7 @@
       # Detect tabstop and shiftwidth automatically
       # https://nix-community.github.io/nixvim/plugins/sleuth/index.html
       sleuth = {
-        enable = true;
+        enable = false;
       };
       lualine.enable = true;
       #bufferline.enable = true;
