@@ -320,7 +320,7 @@
       }
       {
         mode = "n";
-        key = "<localleader>rl";
+        key = "<localleader>ml";
         action = ":MoltenEvaluateLine<CR>";
         options = {
           silent = true;
@@ -329,7 +329,7 @@
       }
       {
         mode = "n";
-        key = "<localleader>rr";
+        key = "<localleader>mr";
         action = ":MoltenReevaluateCell<CR>";
         options = {
           silent = true;
@@ -337,8 +337,26 @@
         };
       }
       {
+        mode = "n";
+        key = "<localleader>md";
+        action = ":MoltenDelete<CR>";
+        options = {
+          silent = true;
+          desc = "delete cell";
+        };
+      }
+      {
+        mode = "n";
+        key = "<localleader>mD";
+        action = ":MoltenDelete!<CR>";
+        options = {
+          silent = true;
+          desc = "delete all cells";
+        };
+      }
+      {
         mode = "v";
-        key = "<localleader>r";
+        key = "<localleader>m";
         action = ":<C-u>MoltenEvaluateVisual<CR>gv";
         options = {
           silent = true;
