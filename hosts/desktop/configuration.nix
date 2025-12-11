@@ -24,7 +24,7 @@
   spacemouse.enable = false;
   steam.enable = true;
   sunshine.enable = true;
-  ollama.enable = true;
+  ollama.enable = false;
   stylixModule.enable = true;
   zsh.enable = false;
   virtualisationModule.enable = false;
