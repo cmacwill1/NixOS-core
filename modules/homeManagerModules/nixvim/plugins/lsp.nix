@@ -71,6 +71,7 @@
       servers = {
         clangd = {
           enable = true;
+          package = null; #provide in dev shell
         };
         cmake = {
           enable = true;
