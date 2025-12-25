@@ -5,8 +5,10 @@
         enable = true;
         keyMode = "vi";
         terminal = "xterm-kitty";
+        mouse = true;
 
         plugins = with pkgs.tmuxPlugins; [
+            sensible
             vim-tmux-navigator
             gruvbox
         ];
@@ -27,9 +29,18 @@
             # theme
             set -g @tmux-gruvbox 'dark256'
             set-option -g status-position top
-            set -g base-index 1
             set -g pane-active-border-style bg=default,fg=green
             set -g pane-border-style fg=green
+
+            # Better numbering
+            set -g base-index 1
+            set -g pane-base-index 1
+            set-window-option -g pane-base-index 1
+            set-option -g renumber-windows on
+
+            # split to cwd
+            bind '"' split-window -v -c "#{pane_current_path}"
+            bind % split-window -h -c "#{pane_current_path}"
         '';
     };
 }
