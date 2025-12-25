@@ -25,6 +25,7 @@
     ./nixvim/nixvim.nix
     ./newsboat.nix
     ./rmpc
+    ./tmux.nix
     ./yazi.nix
     ./screenshotter.nix
     ./scripts.nix
@@ -61,10 +62,6 @@
       border-size = 2;
       border-radius = 5;
     };
-  };
-
-  programs.tmux = {
-    enable = true;
   };
 
   programs.cava = {
