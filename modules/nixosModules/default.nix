@@ -89,6 +89,7 @@
     (inkscape-with-extensions.override { inkscapeExtensions = [ inkscape-extensions.textext ]; })
     calibre
     distrobox
+    zoom-us
   ];
   
 
