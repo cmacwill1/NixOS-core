@@ -61,8 +61,8 @@ in
             "hyprctl setcursor 'Capitaine Cursors (Gruvbox)' 24"
           ];
           layerrule = [
-            "blur, waybar"
-            "blur, rofi"
+            "blur on, match:namespace waybar"
+            "blur on, match:namespace rofi"
           ];
           monitor = map
             (m:
@@ -74,11 +74,8 @@ in
             )
             (config.monitors);
           windowrule = [
-            "float, class:io.github.kaii_lb.Overskride"
-            "center, class:io.github.kaii_lb.Overskride"
-            "size 200 500, class:io.github.kaii_lb.Overskride"
-            "float, class:org.pulseaudio.pavucontrol"
-          ];      
+            "float on, match:class org.pulseaudio.pavucontrol"
+          ];
           env = [
 	    #"HYPRCURSOR_THEME,capitaine_gruvbox"
 	    #"HYPRCURSOR_SIZE,24"

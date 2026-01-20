@@ -27,14 +27,14 @@
       functions = {
 	go_to_project = {
 	  body = ''
-	    set dir (find ~/projects -type d \
-		-name .git -prune -o \
-		-name .direnv -prune -o \
-		-name __pycache__ -prune -o \
-		-type d -print | fzf)
-	    if test -n "$dir"
-		cd "$dir"
-	    end
+      set cd_directory (fd --type d --type f \
+          -E build | fzf)
+      if test -n "$cd_directory" && test -d "$cd_directory"
+          cd "$cd_directory"
+      end
+      if test -n "$cd_directory" && test -f "$cd_directory"
+          cd (dirname "$cd_directory")
+      end
 	  '';
 	};
 	nvim_open = {
