@@ -83,7 +83,7 @@
     wf-recorder
     rpi-imager
     cage
-    #jellyfin-media-player
+    jellyfin-media-player
     pdftk
     (pkgs.zathura.override { plugins = with pkgs.zathuraPkgs; [ zathura_pdf_mupdf zathura_cb ]; })
     (inkscape-with-extensions.override { inkscapeExtensions = [ inkscape-extensions.textext ]; })
