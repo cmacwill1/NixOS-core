@@ -399,7 +399,7 @@
       # Detect tabstop and shiftwidth automatically
       # https://nix-community.github.io/nixvim/plugins/sleuth/index.html
       sleuth = {
-        enable = false;
+        enable = true;
       };
       lualine.enable = true;
       #bufferline.enable = true;
