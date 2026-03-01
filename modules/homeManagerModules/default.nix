@@ -11,9 +11,10 @@
     #Desktop
     ./monitors.nix
     ./hyprland.nix
+    ./noctalia.nix
     ./rofi.nix
     ./styling.nix
-    ./waybar.nix
+    #./waybar.nix
 
     #Programs
     ./bat.nix

@@ -19,7 +19,7 @@
   rofi.enable = true;
   hyprland.enable = true;
   styling.enable = true;
-  waybar.enable = true;
+  #waybar.enable = true;
   screenshotter.enable = true;
   fish.enable = true;
   starship.enable = true;

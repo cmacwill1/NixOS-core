@@ -57,11 +57,11 @@ in
       systemd.enable = true;
       settings = {
         exec-once = [
-          "waybar"
+          #"waybar"
+          "noctalia-shell"
           "hyprctl setcursor 'Capitaine Cursors (Gruvbox)' 24"
         ];
         layerrule = [
-          "blur on, match:namespace waybar"
           "blur on, match:namespace rofi"
         ];
         monitor = map (

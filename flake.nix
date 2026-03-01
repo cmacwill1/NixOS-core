@@ -45,6 +45,18 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.noctalia-qs.follows = "noctalia-qs";
+    };
+
+    noctalia-qs = {
+      url = "github:noctalia-dev/noctalia-qs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =
@@ -71,6 +83,7 @@
                 sharedModules = [
                   inputs.nixvim.homeModules.nixvim
                   inputs.textfox.homeManagerModules.default
+                  inputs.noctalia.homeModules.default
                 ];
 
                 users = {
@@ -106,6 +119,7 @@
                 sharedModules = [
                   inputs.nixvim.homeModules.nixvim
                   inputs.textfox.homeManagerModules.default
+                  inputs.noctalia.homeModules.default
                 ];
 
                 users = {
