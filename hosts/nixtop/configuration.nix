@@ -13,7 +13,7 @@
 
   services.logind.lidSwitchExternalPower = "ignore";
 
-  networking.hostName = "nixtop"; 
+  networking.hostName = "nixtop";
 
   amdgpu.enable = true;
   audio.enable = true;
@@ -27,12 +27,6 @@
   steam.enable = true;
   stylixModule.enable = true;
   zsh.enable = false;
-
-  home-manager = {
-    users = {
-      "cmacwill" = import ./home.nix;
-    };
-  };
 
   system.stateVersion = "24.05";
 }

@@ -19,7 +19,6 @@
     ./audio.nix
     ./bluetooth.nix
     ./bootloader.nix
-    ./homeManagerModule.nix
     ./ollama.nix
     ./steam.nix
     ./sunshine.nix

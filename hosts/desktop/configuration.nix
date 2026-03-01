@@ -29,11 +29,5 @@
   zsh.enable = false;
   virtualisationModule.enable = false;
 
-  home-manager = {
-    users = {
-      "cmacwill" = import ./home.nix;
-    };
-  };
-
   system.stateVersion = "24.05";
 }
