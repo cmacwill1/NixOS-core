@@ -67,8 +67,8 @@
     pciutils
     usbutils
     openrgb
-    xsettingsd
-    xorg.xrdb
+    #xsettingsd
+    #xorg.xrdb
     yt-dlp
     mpv
     ripgrep
@@ -92,7 +92,6 @@
     (inkscape-with-extensions.override { inkscapeExtensions = [ inkscape-extensions.textext ]; })
     calibre
     distrobox
-    zoom-us
   ];
 
   virtualisation.podman = {
