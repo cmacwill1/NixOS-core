@@ -18,10 +18,10 @@
       profile = "cmacwill";
       config = {
         background = {
-          color = "#${config.lib.stylix.colors.base00}";
+          color = "#292828";
         };
         border = {
-          color = "#${config.lib.stylix.colors.base02}";
+          color = "#504945";
           width = "2px";
           transition = "0.2s ease";
           radius = "5px";
@@ -177,6 +177,5 @@
         */
       };
     };
-    stylix.targets.firefox.profileNames = [ "cmacwill" ];
   };
 }

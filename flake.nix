@@ -9,11 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix = {
-      url = "github:danth/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -69,7 +64,6 @@
           modules = [
             ./hosts/nixtop/configuration.nix
             inputs.home-manager.nixosModules.home-manager
-            inputs.stylix.nixosModules.stylix
             {
               nixpkgs.overlays = [ inputs.tidal.overlays.default ];
             }
@@ -101,7 +95,6 @@
           modules = [
             ./hosts/desktop/configuration.nix
             inputs.home-manager.nixosModules.default
-            inputs.stylix.nixosModules.stylix
             # Adds the NUR overlay
             nur.modules.nixos.default
             # NUR modules to import

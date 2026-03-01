@@ -22,7 +22,6 @@
     ./ollama.nix
     ./steam.nix
     ./sunshine.nix
-    ./stylixModule.nix
     ./zsh.nix
     ./virtualization.nix
 
