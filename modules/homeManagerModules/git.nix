@@ -8,9 +8,13 @@
   config = lib.mkIf config.git.enable {
     programs.git = {
       enable = true;
-      userName = "cmacwill1";
-      userEmail = "charles.macwilliams@gmail.com";
-      extraConfig.credential.helper = "store";
+      settings = {
+        user = {
+          name = "cmacwill1";
+          email = "charles.macwilliams@gmail.com";
+        };
+        credential.helper = "store";
+      };
     };
   };
 }
