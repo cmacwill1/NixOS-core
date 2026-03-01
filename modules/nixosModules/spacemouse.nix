@@ -2,8 +2,7 @@
 
 {
   options = {
-    spacemouse.enable = 
-      lib.mkEnableOption "enables spacemouse hardware support";
+    spacemouse.enable = lib.mkEnableOption "enables spacemouse hardware support";
   };
 
   config = lib.mkIf config.spacemouse.enable {

@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.nixvim = {
     # Dependencies
     # { 'Bilal2453/luvit-meta', lazy = true },
@@ -71,7 +72,7 @@
       servers = {
         clangd = {
           enable = true;
-          package = null; #provide in dev shell
+          package = null; # provide in dev shell
         };
         cmake = {
           enable = true;
@@ -90,8 +91,8 @@
         #   enable = true;
         # };
         pyright = {
-           enable = true;
-         };
+          enable = true;
+        };
         texlab = {
           enable = true;
           settings = {
@@ -104,8 +105,6 @@
             };
           };
         };
-
-
 
         marksman.enable = true;
 
@@ -122,7 +121,6 @@
         ts_ls = {
           enable = true;
         };
-      
 
         lua_ls = {
           enable = true;
@@ -228,7 +226,10 @@
           # Execute a code action, usually your cursor needs to be on top of an error
           # or a suggestion from your LSP for this to activate.
           "<leader>ca" = {
-            mode = ["n" "x"];
+            mode = [
+              "n"
+              "x"
+            ];
             action = "code_action";
             desc = "LSP: [C]ode [A]ction";
           };

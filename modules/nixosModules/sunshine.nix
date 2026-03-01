@@ -2,8 +2,7 @@
 
 {
   options = {
-    sunshine.enable =
-      lib.mkEnableOption "enables sunshine server";
+    sunshine.enable = lib.mkEnableOption "enables sunshine server";
   };
 
   config = lib.mkIf config.sunshine.enable {

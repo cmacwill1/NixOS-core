@@ -2,8 +2,7 @@
 
 {
   options = {
-   ollama.enable =
-     lib.mkEnableOption "enables ollama (does not declare models)";
+    ollama.enable = lib.mkEnableOption "enables ollama (does not declare models)";
   };
 
   config = lib.mkIf config.ollama.enable {

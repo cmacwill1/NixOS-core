@@ -2,8 +2,7 @@
 
 {
   options = {
-    locale.enable =
-      lib.mkEnableOption "general locale config";
+    locale.enable = lib.mkEnableOption "general locale config";
   };
 
   config = lib.mkIf config.locale.enable {

@@ -47,8 +47,6 @@
     enableNVIDIA = false;
   };
 
-
-  
   home.sessionVariables.EDITOR = "nvim";
 
   services.mako = {
@@ -71,8 +69,8 @@
   programs.ghostty = {
     enable = true;
     settings = {
-      custom-shader="in-game-crt.glsl";
-      window-decoration="none";
+      custom-shader = "in-game-crt.glsl";
+      window-decoration = "none";
     };
   };
 
@@ -102,4 +100,4 @@
   programs.fd = {
     enable = true;
   };
- }
+}

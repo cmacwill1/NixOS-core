@@ -2,7 +2,7 @@
 
 {
   programs.newsboat = {
-    enable=true;
+    enable = true;
     extraConfig = ''
       prepopulate-query-feeds yes
       run-on-startup select-tag

@@ -2,8 +2,7 @@
 
 {
   options = {
-    starship.enable =
-      lib.mkEnableOption "enables starship";
+    starship.enable = lib.mkEnableOption "enables starship";
   };
 
   config = lib.mkIf config.starship.enable {
@@ -30,17 +29,17 @@
         git_branch = {
           symbol = " ";
         };
-	git_status = {
+        git_status = {
           conflicted = "=$count ";
-	  deleted = "✘$count ";
-	  format = "[[($conflicted$untracked$staged$modified$renamed$deleted)]($style) ($ahead_behind$stashed)]($style) ";
-	  modified = "!$count ";
-	  renamed = "»$count ";
-	  staged = "+$count ";
-	  stashed = "≡$count ";
-	  untracked = "?$count ";
-	  style = "bold red";
-	};
+          deleted = "✘$count ";
+          format = "[[($conflicted$untracked$staged$modified$renamed$deleted)]($style) ($ahead_behind$stashed)]($style) ";
+          modified = "!$count ";
+          renamed = "»$count ";
+          staged = "+$count ";
+          stashed = "≡$count ";
+          untracked = "?$count ";
+          style = "bold red";
+        };
         golang = {
           symbol = " ";
         };
@@ -90,4 +89,3 @@
     };
   };
 }
-

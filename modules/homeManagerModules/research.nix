@@ -1,9 +1,13 @@
-{ pkgs, lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 
 {
   options = {
-    research.enable =
-      lib.mkEnableOption "enables research packages";
+    research.enable = lib.mkEnableOption "enables research packages";
   };
 
   config = lib.mkIf config.research.enable {

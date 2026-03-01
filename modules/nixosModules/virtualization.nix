@@ -1,16 +1,18 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 
 {
   options = {
-    virtualisationModule.enable =
-      lib.mkEnableOption "enables support for virt-manager";
+    virtualisationModule.enable = lib.mkEnableOption "enables support for virt-manager";
   };
 
   config = lib.mkIf config.virtualisationModule.enable {
 
-    users.groups.libvirtd.members = ["cmacwill"];
-
-
+    users.groups.libvirtd.members = [ "cmacwill" ];
 
     virtualisation.libvirtd.enable = true; # Essential for managing VMs on the host
 
@@ -25,18 +27,18 @@
     virtualisation.libvirtd.qemu.ovmf.enable = true; # Uses OVMF firmware for UEFI boot
     # Enable software tpm for VMs (recommended for modern OSes like Windows 11)
     virtualisation.libvirtd.qemu.swtpm.enable = true; # Uses OVMF firmware for UEFI boot
-/*
-  # Set default libvirt URI for all users (system-wide)
-  environment.sessionVariables = {
-    LIBVIRT_DEFAULT_URI = "qemu:///system";
-  };
-*/
-  # System packages for the host
-  environment.systemPackages = with pkgs; [
-    virt-viewer # Graphical console client for connecting to VMs
-    spice-gtk # SPICE client for enhanced display, clipboard, and USB redirection
-    win-virtio
-    win-spice
-  ];
+    /*
+      # Set default libvirt URI for all users (system-wide)
+      environment.sessionVariables = {
+        LIBVIRT_DEFAULT_URI = "qemu:///system";
+      };
+    */
+    # System packages for the host
+    environment.systemPackages = with pkgs; [
+      virt-viewer # Graphical console client for connecting to VMs
+      spice-gtk # SPICE client for enhanced display, clipboard, and USB redirection
+      win-virtio
+      win-spice
+    ];
   };
 }

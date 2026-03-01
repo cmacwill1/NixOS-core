@@ -1,42 +1,41 @@
-{ config, lib, ... }: 
+{ config, lib, ... }:
 
 {
   options = {
-    hyprlock.enable = 
-      lib.mkEnableOption "enables hyprlock within hyprland";
+    hyprlock.enable = lib.mkEnableOption "enables hyprlock within hyprland";
   };
 
   config = lib.mkIf config.hyprlock.enable {
-  programs.hyprlock = {
-    enable = true;
-    settings = {
-      general = {
-        disable_loading_bar = true;
-        grace = 1;
-        hide_cursor = true;
-        no_fade_in = false;
-      };
-      
-      background = [
-        {
-          path = "screenshot";
-          blur_passes = 3;
-          blur_size = 8;
-        }
-      ];
-      
-      image = [
-        {
-          path = "/home/cmacwill/projects/NixOS-core/wallpapers/nix.png";
-          size = 200;
-          border_size = 0;
-          position = "0, 100";
-          halign = "center";
-          valign = "center";
-        }
-      ];
-    
-      input-field = {
+    programs.hyprlock = {
+      enable = true;
+      settings = {
+        general = {
+          disable_loading_bar = true;
+          grace = 1;
+          hide_cursor = true;
+          no_fade_in = false;
+        };
+
+        background = [
+          {
+            path = "screenshot";
+            blur_passes = 3;
+            blur_size = 8;
+          }
+        ];
+
+        image = [
+          {
+            path = "/home/cmacwill/projects/NixOS-core/wallpapers/nix.png";
+            size = 200;
+            border_size = 0;
+            position = "0, 100";
+            halign = "center";
+            valign = "center";
+          }
+        ];
+
+        input-field = {
           size = "200, 50";
           position = "0, -80";
           monitor = "";
@@ -49,8 +48,7 @@
           placeholder_text = "Password";
           shadow_passes = 2;
         };
+      };
     };
   };
-  };
 }
-

@@ -2,8 +2,7 @@
 
 {
   options = {
-    generic-gpu.enable = 
-      lib.mkEnableOption "enables general GPU support (superceeded by proper GPU.nix)";
+    generic-gpu.enable = lib.mkEnableOption "enables general GPU support (superceeded by proper GPU.nix)";
   };
 
   config = lib.mkIf config.generic-gpu.enable {

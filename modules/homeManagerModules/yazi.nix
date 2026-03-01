@@ -4,17 +4,16 @@
   programs.yazi = {
     enable = true;
     keymap = {
-          # add keymaps for shortcuts
-      manager.prepend_keymap =
-        [
-	  # dropping to shell
-          {
-            on = "!";
-            run = # sh
-	      ''shell "$SHELL" --block --confirm'';
-            desc = "Open shell here";
-          }
-	];
+      # add keymaps for shortcuts
+      manager.prepend_keymap = [
+        # dropping to shell
+        {
+          on = "!";
+          run = # sh
+            ''shell "$SHELL" --block --confirm'';
+          desc = "Open shell here";
+        }
+      ];
     };
 
     settings = {

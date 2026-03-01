@@ -1,9 +1,13 @@
-{pkgs, lib, config, ...}:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 
 {
   options = {
-    screenshotter.enable = 
-      lib.mkEnableOption "enables (wayland) screenshotting";
+    screenshotter.enable = lib.mkEnableOption "enables (wayland) screenshotting";
   };
 
   config = lib.mkIf config.screenshotter.enable {
@@ -18,10 +22,10 @@
         grim -g "$(slurp -w 0)" - | wl-copy
       '')
       (writeShellScriptBin "screenshotter-save-default" ''
-	if [ ! -d "$HOME/screenshots" ]; then
-	  mkdir "$HOME/screenshots"
-	fi
-	grim -g "$(slurp -w 0)" "$HOME/screenshots/$(date +%Y-%m-%d_%H-%M-%S).png" && wl-copy < $HOME/screenshots/$(date +%Y-%m-%d_%H-%M-%S).png
+        	if [ ! -d "$HOME/screenshots" ]; then
+        	  mkdir "$HOME/screenshots"
+        	fi
+        	grim -g "$(slurp -w 0)" "$HOME/screenshots/$(date +%Y-%m-%d_%H-%M-%S).png" && wl-copy < $HOME/screenshots/$(date +%Y-%m-%d_%H-%M-%S).png
       '')
       (writeShellScriptBin "screenshotter-swappy" ''
         grim -g "$(slurp -w 0)" - | swappy -f -

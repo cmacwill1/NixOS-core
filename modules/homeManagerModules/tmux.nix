@@ -1,46 +1,46 @@
 { pkgs, ... }:
 
 {
-    programs.tmux = {
-        enable = true;
-        keyMode = "vi";
-        terminal = "xterm-kitty";
-        mouse = true;
+  programs.tmux = {
+    enable = true;
+    keyMode = "vi";
+    terminal = "xterm-kitty";
+    mouse = true;
 
-        plugins = with pkgs.tmuxPlugins; [
-            sensible
-            vim-tmux-navigator
-            gruvbox
-        ];
+    plugins = with pkgs.tmuxPlugins; [
+      sensible
+      vim-tmux-navigator
+      gruvbox
+    ];
 
-        extraConfig = ''
-            set -g allow-passthrough on
+    extraConfig = ''
+      set -g allow-passthrough on
 
-            unbind C-b
-            set -g prefix C-Space
-            bind C-Space send-prefix
+      unbind C-b
+      set -g prefix C-Space
+      bind C-Space send-prefix
 
-            # Vim style pane selection
-            bind h select-pane -L
-            bind j select-pane -D
-            bind k select-pane -U
-            bind l select-pane -R
+      # Vim style pane selection
+      bind h select-pane -L
+      bind j select-pane -D
+      bind k select-pane -U
+      bind l select-pane -R
 
-            # theme
-            set -g @tmux-gruvbox 'dark256'
-            set-option -g status-position top
-            set -g pane-active-border-style bg=default,fg=green
-            set -g pane-border-style fg=green
+      # theme
+      set -g @tmux-gruvbox 'dark256'
+      set-option -g status-position top
+      set -g pane-active-border-style bg=default,fg=green
+      set -g pane-border-style fg=green
 
-            # Better numbering
-            set -g base-index 1
-            set -g pane-base-index 1
-            set-window-option -g pane-base-index 1
-            set-option -g renumber-windows on
+      # Better numbering
+      set -g base-index 1
+      set -g pane-base-index 1
+      set-window-option -g pane-base-index 1
+      set-option -g renumber-windows on
 
-            # split to cwd
-            bind '"' split-window -v -c "#{pane_current_path}"
-            bind % split-window -h -c "#{pane_current_path}"
-        '';
-    };
+      # split to cwd
+      bind '"' split-window -v -c "#{pane_current_path}"
+      bind % split-window -h -c "#{pane_current_path}"
+    '';
+  };
 }

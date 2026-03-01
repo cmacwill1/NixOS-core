@@ -11,7 +11,7 @@
     inputs.home-manager.nixosModules.default
   ];
 
-  networking.hostName = "desktop"; 
+  networking.hostName = "desktop";
 
   amdgpu.enable = true;
   audio.enable = true;

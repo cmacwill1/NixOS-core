@@ -1,9 +1,13 @@
-{ pkgs, lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 
 {
   options = {
-    audio.enable =
-      lib.mkEnableOption "enables general audio support";
+    audio.enable = lib.mkEnableOption "enables general audio support";
   };
 
   config = lib.mkIf config.audio.enable {

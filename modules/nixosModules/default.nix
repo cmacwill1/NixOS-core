@@ -9,12 +9,12 @@
     ./laptop.nix
     ./usbModule.nix
     ./spacemouse.nix
-    
+
     #Localization
     ./locale.nix
     ./networkingModule.nix
     ./users.nix
-    
+
     #Software
     ./audio.nix
     ./bluetooth.nix
@@ -31,7 +31,6 @@
     ./nasModule.nix
     ./ssh.nix
   ];
-
 
   #All that follows defines host-agnostic system defaults
   environment.systemPackages = with pkgs; [
@@ -84,13 +83,17 @@
     cage
     jellyfin-media-player
     pdftk
-    (pkgs.zathura.override { plugins = with pkgs.zathuraPkgs; [ zathura_pdf_mupdf zathura_cb ]; })
+    (pkgs.zathura.override {
+      plugins = with pkgs.zathuraPkgs; [
+        zathura_pdf_mupdf
+        zathura_cb
+      ];
+    })
     (inkscape-with-extensions.override { inkscapeExtensions = [ inkscape-extensions.textext ]; })
     calibre
     distrobox
     zoom-us
   ];
-  
 
   virtualisation.podman = {
     enable = true;
@@ -131,14 +134,12 @@
     mime = {
       enable = true;
       defaultApplications = {
-          "application/pdf" = "org.pwmt.zathura.desktop";
+        "application/pdf" = "org.pwmt.zathura.desktop";
       };
     };
   };
 
-
   security.pam.services.hyprlock = { };
-
 
   # experimental settings enable.
   nix.settings.experimental-features = [
@@ -152,7 +153,7 @@
               nixpkgs.config.permittedInsecurePackages = [
                 "qtwebengine-5.15.19"
               ];
-*/
+  */
   nixpkgs.config.allowUnfree = true;
   # Configure keymap in X11
   services = {

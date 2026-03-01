@@ -2,8 +2,7 @@
 
 {
   options = {
-    laptop.enable =
-      lib.mkEnableOption "laptop features such as battery";
+    laptop.enable = lib.mkEnableOption "laptop features such as battery";
   };
 
   config = lib.mkIf config.laptop.enable {
