@@ -16,6 +16,7 @@
     ./users.nix
 
     #Software
+    ./fonts.nix
     ./audio.nix
     ./bluetooth.nix
     ./bootloader.nix
