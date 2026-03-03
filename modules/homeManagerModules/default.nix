@@ -11,9 +11,8 @@
     #Desktop
     ./monitors.nix
     ./hyprland.nix
-    ./rofi.nix
+    ./noctalia.nix
     ./styling.nix
-    ./waybar.nix
 
     #Programs
     ./bat.nix
@@ -89,13 +88,6 @@
     #bluebubbles
     python313Packages.pylatexenc
   ];
-
-  programs.btop = {
-    enable = true;
-    settings = {
-      proc_tree = true;
-    };
-  };
 
   programs.fd = {
     enable = true;

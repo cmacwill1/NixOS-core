@@ -37,10 +37,6 @@ in
 */
 
 {
-  imports = [
-    ./hyprlock.nix
-    ./hypridle.nix
-  ];
 
   options = {
     hyprland.enable = lib.mkEnableOption "enables hyprland config";
@@ -48,20 +44,17 @@ in
 
   config = lib.mkIf config.hyprland.enable {
 
-    hyprlock.enable = true;
-    hypridle.enable = true;
-
     wayland.windowManager.hyprland = {
       enable = true;
       xwayland.enable = true;
       systemd.enable = true;
       settings = {
         exec-once = [
-          "waybar"
+          #"waybar"
+          "noctalia-shell"
           "hyprctl setcursor 'Capitaine Cursors (Gruvbox)' 24"
         ];
         layerrule = [
-          "blur on, match:namespace waybar"
           "blur on, match:namespace rofi"
         ];
         monitor = map (
@@ -87,9 +80,8 @@ in
           border_size = 2;
           layout = "dwindle";
           resize_on_border = true;
-          "col.active_border" =
-            lib.mkForce "rgb(${config.lib.stylix.colors.base09}) rgb(${config.lib.stylix.colors.base0A}) 45deg";
-          "col.inactive_border" = lib.mkForce "rgba(${config.lib.stylix.colors.base00}ed)";
+          "col.active_border" = lib.mkForce "rgb(e78a4e) rgb(d8a657) 45deg";
+          "col.inactive_border" = "rgba(292828ed)";
           allow_tearing = false;
         };
         misc = {
@@ -107,8 +99,8 @@ in
             enabled = true;
             range = 7;
             render_power = 2;
-            color = lib.mkForce "rgba(${config.lib.stylix.colors.base04}66)";
-            color_inactive = lib.mkForce "rgba(${config.lib.stylix.colors.base00}ed)";
+            color = lib.mkForce "rgba(bdae9366)";
+            color_inactive = lib.mkForce "rgba(292828ed)";
           };
 
           blur = {
@@ -156,14 +148,14 @@ in
           "$mainMod, B, exec, firefox"
           "$mainMod, R, movecursortocorner, 1"
           "$mainMod, T, exec, video-picker"
-          "$mainMod, L, exec, ${pkgs.hyprlock}/bin/hyprlock"
+          "$mainMod, L, exec, noctalia-shell ipc call lockScreen lock"
           "$mainMod, Y, exec, yazi-window"
           "$mainMod, left, movefocus, l"
           "$mainMod, right, movefocus, r"
           "$mainMod, up, movefocus, u"
           "$mainMod, down, movefocus, d"
-          "$mainMod, SPACE, exec, rofi -show drun"
-          #"$mainMod, escape, exec, rofi -show power-menu"
+          "$mainMod, SPACE, exec, noctalia-shell ipc call launcher toggle"
+          "$mainMod, escape, exec, noctalia-shell ipc call sessionMenu toggle"
           "$mainMod, Escape, exec, rofi -show p -modi p:'rofi-power-menu --symbols-font \"Symbols Nerd Font Mono\"' -font 'JetBrains Mono NF 16' -theme-str 'window { width: 8em; } listview { lines: 6; } entry { enabled: false; } inputbar { margin: 0px 10px 0px 10px; }'"
           "$mainMod, 1, workspace, 1"
           "$mainMod, 2, workspace, 2"

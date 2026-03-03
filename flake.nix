@@ -9,11 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix = {
-      url = "github:danth/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -45,6 +40,18 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.noctalia-qs.follows = "noctalia-qs";
+    };
+
+    noctalia-qs = {
+      url = "github:noctalia-dev/noctalia-qs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =
@@ -57,7 +64,6 @@
           modules = [
             ./hosts/nixtop/configuration.nix
             inputs.home-manager.nixosModules.home-manager
-            inputs.stylix.nixosModules.stylix
             {
               nixpkgs.overlays = [ inputs.tidal.overlays.default ];
             }
@@ -71,6 +77,7 @@
                 sharedModules = [
                   inputs.nixvim.homeModules.nixvim
                   inputs.textfox.homeManagerModules.default
+                  inputs.noctalia.homeModules.default
                 ];
 
                 users = {
@@ -88,7 +95,6 @@
           modules = [
             ./hosts/desktop/configuration.nix
             inputs.home-manager.nixosModules.default
-            inputs.stylix.nixosModules.stylix
             # Adds the NUR overlay
             nur.modules.nixos.default
             # NUR modules to import
@@ -106,6 +112,7 @@
                 sharedModules = [
                   inputs.nixvim.homeModules.nixvim
                   inputs.textfox.homeManagerModules.default
+                  inputs.noctalia.homeModules.default
                 ];
 
                 users = {

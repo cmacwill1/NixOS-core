@@ -25,7 +25,6 @@
   networkingModule.enable = true;
   spacemouse.enable = false;
   steam.enable = true;
-  stylixModule.enable = true;
   zsh.enable = false;
 
   system.stateVersion = "24.05";

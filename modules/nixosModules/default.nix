@@ -16,13 +16,13 @@
     ./users.nix
 
     #Software
+    ./fonts.nix
     ./audio.nix
     ./bluetooth.nix
     ./bootloader.nix
     ./ollama.nix
     ./steam.nix
     ./sunshine.nix
-    ./stylixModule.nix
     ./zsh.nix
     ./virtualization.nix
 
@@ -48,7 +48,6 @@
     htop
     wayland-utils
     brightnessctl
-    hyprshot
     vesktop
     mupdf
     lm_sensors
@@ -92,6 +91,7 @@
     (inkscape-with-extensions.override { inkscapeExtensions = [ inkscape-extensions.textext ]; })
     calibre
     distrobox
+    btop
   ];
 
   virtualisation.podman = {
@@ -105,7 +105,8 @@
 
   hardware.spacenavd.enable = true;
 
-  services.hardware.openrgb.enable = true;
+  services.upower.enable = true;
+  services.power-profiles-daemon.enable = true;
 
   programs.neovim = {
     enable = true;

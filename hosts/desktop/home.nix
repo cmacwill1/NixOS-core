@@ -16,16 +16,13 @@
   research.enable = true;
   minecraftClient.enable = true;
 
-  rofi.enable = true;
   hyprland.enable = true;
-  styling.enable = true;
-  waybar.enable = true;
+  #waybar.enable = true;
   screenshotter.enable = true;
   fish.enable = true;
   starship.enable = true;
 
   git.enable = true;
-  kitty.enable = true;
   #nixvim.enable = true;
   scripts.enable = true;
 

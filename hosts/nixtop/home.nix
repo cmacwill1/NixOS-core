@@ -15,16 +15,12 @@
   office.enable = true;
   research.enable = true;
 
-  rofi.enable = true;
   hyprland.enable = true;
-  styling.enable = true;
-  waybar.enable = true;
   minecraftClient.enable = true;
   fish.enable = true;
   starship.enable = true;
 
   git.enable = true;
-  kitty.enable = true;
   screenshotter.enable = true;
   scripts.enable = true;
 
