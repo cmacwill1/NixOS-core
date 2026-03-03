@@ -48,7 +48,6 @@
     htop
     wayland-utils
     brightnessctl
-    hyprshot
     vesktop
     mupdf
     lm_sensors
@@ -92,6 +91,7 @@
     (inkscape-with-extensions.override { inkscapeExtensions = [ inkscape-extensions.textext ]; })
     calibre
     distrobox
+    btop
   ];
 
   virtualisation.podman = {

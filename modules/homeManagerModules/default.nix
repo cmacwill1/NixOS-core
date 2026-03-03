@@ -89,13 +89,6 @@
     python313Packages.pylatexenc
   ];
 
-  programs.btop = {
-    enable = true;
-    settings = {
-      proc_tree = true;
-    };
-  };
-
   programs.fd = {
     enable = true;
   };
