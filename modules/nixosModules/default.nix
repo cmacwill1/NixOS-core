@@ -6,25 +6,19 @@
     #Hardware
     ./amdgpu.nix
     ./generic-gpu.nix
-    ./laptop.nix
-    ./usbModule.nix
     ./spacemouse.nix
 
     #Localization
     ./locale.nix
     ./networkingModule.nix
-    ./users.nix
 
     #Software
     ./fonts.nix
     ./audio.nix
     ./bluetooth.nix
     ./bootloader.nix
-    ./ollama.nix
     ./steam.nix
     ./sunshine.nix
-    ./zsh.nix
-    ./virtualization.nix
 
     #testing:
     ./tailscale.nix
@@ -34,6 +28,7 @@
 
   #All that follows defines host-agnostic system defaults
   environment.systemPackages = with pkgs; [
+    udiskie
     vim
     zip
     unzip
@@ -55,19 +50,11 @@
     obs-studio
     vlc
     libvlc
-    #davinci-resolve
     ffmpeg
-    antimicrox
     libnotify
     gimp3
-    spacenav-cube-example
-    spacenavd
-    libspnav
     pciutils
     usbutils
-    openrgb
-    #xsettingsd
-    #xorg.xrdb
     yt-dlp
     mpv
     ripgrep
@@ -92,6 +79,16 @@
     calibre
     distrobox
     btop
+    fd
+    lazygit
+    freecad-wayland
+    blender
+    orca-slicer
+    libreoffice
+    zotero
+    teams-for-linux
+    openconnect
+    weasis
   ];
 
   virtualisation.podman = {
@@ -99,11 +96,11 @@
     dockerCompat = true;
   };
 
+  programs.niri.enable = true;
+
   programs.fish.enable = true;
 
   programs.nix-ld.enable = true;
-
-  hardware.spacenavd.enable = true;
 
   services.upower.enable = true;
   services.power-profiles-daemon.enable = true;
@@ -125,21 +122,8 @@
         pkgs.xdg-desktop-portal-gtk
         pkgs.xdg-desktop-portal
       ];
-      configPackages = [
-        pkgs.xdg-desktop-portal-gtk
-        pkgs.xdg-desktop-portal-hyprland
-        pkgs.xdg-desktop-portal
-      ];
-    };
-    mime = {
-      enable = true;
-      defaultApplications = {
-        "application/pdf" = "org.pwmt.zathura.desktop";
-      };
     };
   };
-
-  security.pam.services.hyprlock = { };
 
   # experimental settings enable.
   nix.settings.experimental-features = [
@@ -149,12 +133,8 @@
   # for nixd
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
-  /*
-              nixpkgs.config.permittedInsecurePackages = [
-                "qtwebengine-5.15.19"
-              ];
-  */
   nixpkgs.config.allowUnfree = true;
+
   # Configure keymap in X11
   services = {
     xserver = {
@@ -163,5 +143,26 @@
         variant = "";
       };
     };
+  };
+
+  services.udisks2.enable = true;
+
+  users.users.cmacwill = {
+    isNormalUser = true;
+    description = "cmacwill";
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "input"
+      "jackaudio"
+      "audio"
+      "disk"
+    ];
+    shell = pkgs.fish;
+  };
+  programs.direnv = {
+    enable = true;
+    silent = true;
+    nix-direnv.enable = true;
   };
 }

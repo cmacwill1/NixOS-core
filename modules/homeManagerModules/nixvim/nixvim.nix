@@ -473,8 +473,6 @@
     extraPlugins = with pkgs.vimPlugins; [
       # Useful for getting pretty icons, but requires a Nerd Font.
       nvim-web-devicons # TODO: Figure out how to configure using this with telescope
-      vim-tidal
-      julia-vim
     ];
 
     # TODO: Figure out where to move this

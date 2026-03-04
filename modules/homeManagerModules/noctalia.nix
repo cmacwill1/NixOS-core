@@ -65,7 +65,7 @@
               clockColor = "none";
               customFont = "";
               formatHorizontal = "HH:mm ddd, MMM dd";
-              formatVertical = "hh MM AP";
+              formatVertical = "hh mm AP";
               id = "Clock";
               tooltipFormat = "hh:mm AP ddd, MMM dd, yyyy";
               useCustomFont = false;
@@ -659,10 +659,10 @@
 
       idle = {
         enabled = true;
-        screenOffTimeout = 600;
-        lockTimeout = 660;
-        suspendTimeout = 1800;
-        fadeDuration = 5;
+        screenOffTimeout = 660;
+        lockTimeout = 600;
+        suspendTimeout = 0;
+        fadeDuration = 10;
         screenOffCommand = "";
         lockCommand = "";
         suspendCommand = "";

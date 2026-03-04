@@ -1,31 +1,20 @@
 {
-  inputs,
   ...
 }:
 
 {
   imports = [
-    # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../../modules/nixosModules
-    inputs.home-manager.nixosModules.default
   ];
-
-  services.logind.lidSwitchExternalPower = "ignore";
 
   networking.hostName = "nixtop";
 
   amdgpu.enable = true;
-  audio.enable = true;
-  bluetooth.enable = true;
-  bootloader.enable = true;
-  generic-gpu.enable = false;
-  laptop.enable = true;
-  locale.enable = true;
-  networkingModule.enable = true;
   spacemouse.enable = false;
-  steam.enable = true;
-  zsh.enable = false;
+  sunshine.enable = false;
+
+  services.logind.lidSwitchExternalPower = "ignore";
 
   system.stateVersion = "24.05";
 }

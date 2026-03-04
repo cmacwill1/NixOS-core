@@ -14,30 +14,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    /*
-      firefox-addons = {
-        url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-        inputs.nixpkgs.follows = "nixpkgs";
-      };
-    */
-
     textfox = {
       url = "github:adriankarlen/textfox";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    tidal = {
-      url = "github:cmacwill1/tidalcycles";
-    };
-
-    scientific-fhs = {
-      url = "github:olynch/scientific-fhs";
-    };
-
-    #NUR
-    flake-utils.url = "github:numtide/flake-utils";
-    nur = {
-      url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -51,11 +29,10 @@
       url = "github:noctalia-dev/noctalia-qs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
   };
 
   outputs =
-    { nixpkgs, nur, ... }@inputs:
+    { nixpkgs, ... }@inputs:
     {
       nixosConfigurations = {
         nixtop = nixpkgs.lib.nixosSystem {
@@ -63,10 +40,7 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./hosts/nixtop/configuration.nix
-            inputs.home-manager.nixosModules.home-manager
-            {
-              nixpkgs.overlays = [ inputs.tidal.overlays.default ];
-            }
+            inputs.home-manager.nixosModules.default
 
             {
               home-manager = {
@@ -95,13 +69,6 @@
           modules = [
             ./hosts/desktop/configuration.nix
             inputs.home-manager.nixosModules.default
-            # Adds the NUR overlay
-            nur.modules.nixos.default
-            # NUR modules to import
-            nur.legacyPackages."x86_64-linux".repos.iopq.modules.xraya
-            {
-              nixpkgs.overlays = [ inputs.tidal.overlays.default ];
-            }
 
             {
               home-manager = {
