@@ -89,6 +89,7 @@
     teams-for-linux
     openconnect
     weasis
+    xwayland-satellite
   ];
 
   virtualisation.podman = {
@@ -104,6 +105,14 @@
 
   services.upower.enable = true;
   services.power-profiles-daemon.enable = true;
+
+  services.syncthing = {
+    enable = true;
+    user = "cmacwill";
+    dataDir = "/home/cmacwill";
+    configDir = "/home/cmacwill/.config/syncthing";
+    openDefaultPorts = true;
+  };
 
   programs.neovim = {
     enable = true;
@@ -160,9 +169,11 @@
     ];
     shell = pkgs.fish;
   };
+
   programs.direnv = {
     enable = true;
     silent = true;
     nix-direnv.enable = true;
+    enableFishIntegration = true;
   };
 }
