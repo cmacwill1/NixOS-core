@@ -90,6 +90,7 @@
     openconnect
     weasis
     xwayland-satellite
+    python314Packages.pylatexenc
   ];
 
   virtualisation.podman = {
