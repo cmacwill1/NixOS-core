@@ -87,9 +87,9 @@
           enable = true;
           package = null;
         };
-        # gopls = {
-        #   enable = true;
-        # };
+        gopls = {
+          enable = true;
+        };
         pyright = {
           enable = true;
         };
