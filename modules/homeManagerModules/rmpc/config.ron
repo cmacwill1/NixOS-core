@@ -156,30 +156,30 @@
                             direction: Horizontal,
                             panes: [
                                 (
-                                    size: "70%",
+                                    size: "60%",
                                     borders: "ALL",
                                     pane: Pane(Queue),
                                 ),
                                 (
-                                    size: "30%",
+                                    size: "40%",
                                     borders: "NONE",
                                     pane: Split(
                                         direction: Vertical,
                                         panes: [
                                             (
-                                                size: "75%",
+                                                size: "85%",
                                                 borders: "ALL",
                                                 pane: Pane(AlbumArt),
                                             ),
                                             (
-                                                size: "25%",
+                                                size: "15%",
                                                 borders: "ALL",
                                                 pane: Split(
                                                     direction: Vertical,
                                                     panes: [
                                                         (
                                                             size: "100%",
-                                                            pane: Pane(Cava),
+                                                            pane: Pane(Lyrics),
                                                         ),
                                                     ]
                                                 ),
@@ -194,17 +194,10 @@
             ),
         ),
         (
-            name: "Directories",
+            name: "Albums",
             pane: Split(
                 direction: Horizontal,
-                panes: [(size: "100%", borders: "ALL", pane: Pane(Directories))],
-            ),
-        ),
-        (
-            name: "Artists",
-            pane: Split(
-                direction: Horizontal,
-                panes: [(size: "100%", borders: "ALL", pane: Pane(Artists))],
+                panes: [(size: "100%", borders: "ALL", pane: Pane(Albums))],
             ),
         ),
         (
@@ -215,17 +208,17 @@
             ),
         ),
         (
-            name: "Albums",
+            name: "Artists",
             pane: Split(
                 direction: Horizontal,
-                panes: [(size: "100%", borders: "ALL", pane: Pane(Albums))],
+                panes: [(size: "100%", borders: "ALL", pane: Pane(Artists))],
             ),
         ),
         (
-            name: "Playlists",
+            name: "Directories",
             pane: Split(
                 direction: Horizontal,
-                panes: [(size: "100%", borders: "ALL", pane: Pane(Playlists))],
+                panes: [(size: "100%", borders: "ALL", pane: Pane(Directories))],
             ),
         ),
         (
@@ -236,17 +229,10 @@
             ),
         ),
         (
-            name: "Browser",
+            name: "Playlists",
             pane: Split(
                 direction: Horizontal,
-                panes: [(size: "100%", borders: "ALL", pane: Pane(Browser(root_tag: "Artist")))],
-            ),
-        ),
-        (
-            name: "Lyrics",
-            pane: Split(
-                direction: Horizontal,
-                panes: [(size: "100%", borders: "ALL", pane: Pane(Lyrics))],
+                panes: [(size: "100%", borders: "ALL", pane: Pane(Playlists))],
             ),
         ),
     ],
