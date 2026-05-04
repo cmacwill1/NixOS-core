@@ -20,7 +20,6 @@
       tabs = {
         vertical = {
           enable = true;
-          margin = "5px";
         };
         horizontal.enable = false;
       };

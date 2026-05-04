@@ -91,6 +91,8 @@
     weasis
     xwayland-satellite
     python314Packages.pylatexenc
+    mop
+    tickrs
   ];
 
   virtualisation.podman = {
