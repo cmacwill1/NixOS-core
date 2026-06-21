@@ -143,6 +143,13 @@
   # for nixd
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
+  programs.nh = {
+    enable = true;
+    #    clean.enable = true;
+    #    clean.extraArgs = "--keep-since 4d --keep 3";
+    flake = "/home/cmacwill/projects/NixOS-core/"; # sets NH_OS_FLAKE variable for you
+  };
+
   nixpkgs.config.allowUnfree = true;
 
   # Configure keymap in X11
