@@ -91,13 +91,11 @@
     weasis
     xwayland-satellite
     python314Packages.pylatexenc
-    mop
-    tickrs
+    protonmail-desktop
   ];
 
-  virtualisation.podman = {
+  virtualisation.docker = {
     enable = true;
-    dockerCompat = true;
   };
 
   programs.niri.enable = true;
@@ -169,6 +167,7 @@
       "jackaudio"
       "audio"
       "disk"
+      "docker"
     ];
     shell = pkgs.fish;
   };
