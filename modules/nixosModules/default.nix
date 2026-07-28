@@ -92,6 +92,7 @@
     xwayland-satellite
     python314Packages.pylatexenc
     protonmail-desktop
+    qimgv
   ];
 
   virtualisation.docker = {
